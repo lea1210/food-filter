@@ -1,8 +1,16 @@
+@font-face {
+    font-family: "Ginchiest";
+    src: local("Ginchiest"), url(../../../public/fonts/Ginchiest.ttf) format("truetype")
+}
+
 .header{
-    padding: 5px;
+    padding: 1px;
     background: #548235;
 }
 .headerText{
+    font-size: 34px;
     text-align: left;
+    font-family: Ginchiest;
     color: white;
+    margin-left: 20px;
 }

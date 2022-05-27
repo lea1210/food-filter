@@ -2,6 +2,8 @@ import Styles from "./UserAccountButton.module.css";
 
 export const UserAccountButton = () => {
     return (
-           <button/>
+        <div className={Styles.userAccount}>
+           <button className={Styles.userAccountBtn}/>
+        </div>
     );
 };
