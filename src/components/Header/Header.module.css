@@ -1,9 +1,6 @@
 .header{
-    color: #548235;
-    margin: 15px;
-    padding: 20px;
-    border-bottom-style: solid;
-    border-bottom-color: #548235;
+    padding: 5px;
+    background: #548235;
 }
 .headerText{
     text-align: left;
