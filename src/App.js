@@ -1,18 +1,12 @@
 import './App.css';
 import {Layout} from "./components/Layout/Layout";
+import Home from "./pages";
 
 function App() {
   return (
     <div className="wrapper">
       <Layout>
-
-       <h1>Hallo</h1>
-          <div className="body">
-       <p>
-         Guten Tag
-       </p>
-          </div>
-
+          <Home/>
       </Layout>
     </div>
   );
