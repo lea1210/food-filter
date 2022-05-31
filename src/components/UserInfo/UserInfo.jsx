@@ -8,9 +8,9 @@ const UserInfo = () => {
     return (
         <>
             {isLoggedIn && (
-                <div className={Styles.userInfo}>
-                    <div className={Styles.userInfoContent}>
-                        <img className={Styles.userImage} alt="user image" src="icons/user.png"/>
+                <div>
+                    <div>
+                        <img alt="user image" src="icons/user.png"/>
                         <div>{userName}</div>
                     </div>
                 </div>
