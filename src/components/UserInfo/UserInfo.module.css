@@ -5,6 +5,7 @@
     bottom: 0;
     right: 0;
     backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .userInfo {
@@ -30,17 +31,38 @@
 
 .headline {
     text-align: center;
+    font-style: oblique;
+    margin: 15px;
 }
 
-.close:after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 1rem;
-    content: "\D7"; /* use the hex value here... */
-    font-size: 50px;
-    color: #c5c5c5;
-    line-height: 60px;
-    text-align: right;
+.profileImg{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    color: white;
+    background: #548235;
+    border-radius: 5px;
+    padding: 7px 20px 7px 20px;
+    float: bottom;
+    border-style: none;
+    font-family: "Arial Nova", sans-serif;
+    margin: 10px;
+}
+.saveButton{
+    float: left;
+}
+.cancelButton{
+    float: right;
+}
+
+.buttonBox{
+    float: bottom;
+}
+
+.preferences{
+    text-align: center;
 }

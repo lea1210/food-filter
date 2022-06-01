@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-const LoginButton = () => {
+const LoginForm = () => {
 
 
     return (
@@ -10,5 +10,5 @@ const LoginButton = () => {
     );
 };
 
-export default LoginButton;
+export default LoginForm;
 
