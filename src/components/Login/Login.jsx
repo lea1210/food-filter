@@ -3,18 +3,20 @@ import LoginButton from "../LoginButton/LoginButton";
 import LoginForm from "../LoginForm/LoginForm";
 import {LoginFormContext, useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 
-export const Login = () => {
-    const isLoginFormOpened = useLoginForm();
+const Login = () => {
+    const {isLoginFormOpened} = useLoginForm();
 
 
     return (
         <>
             {isLoginFormOpened && (
-                <div>
-                    <LoginForm/>
+                <div className={Styles.loginWindow}>
+                    <LoginForm className={Styles.loginForm}/>
                     <LoginButton/>
                 </div>
             )}
         </>
     );
 };
+
+export default Login;

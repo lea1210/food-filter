@@ -1,0 +1,9 @@
+.loginButton{
+    color: white;
+    background: #548235;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    float: bottom;
+    border-style: none;
+    font-family: "Arial Nova", sans-serif;
+}

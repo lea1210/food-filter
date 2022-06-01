@@ -1,7 +1,7 @@
 import Styles from "./Header.module.css";
 import {UserAccountButton} from "../UserAccountButton/UserAccountButton";
 import UserInfo from "../UserInfo/UserInfo";
-import {Login} from "../Login/Login";
+import Login from "../Login/Login";
 
 export const Header = () => {
     return (

@@ -1,0 +1,46 @@
+.userInfoBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(4px);
+}
+
+.userInfo {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    padding: 100px;
+    max-width: 800px;
+    top: 30px;
+    bottom: 30px;
+    left:30px;
+    right: 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.userInfoContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.headline {
+    text-align: center;
+}
+
+.close:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 1rem;
+    content: "\D7"; /* use the hex value here... */
+    font-size: 50px;
+    color: #c5c5c5;
+    line-height: 60px;
+    text-align: right;
+}

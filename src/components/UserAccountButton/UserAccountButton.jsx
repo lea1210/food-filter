@@ -2,11 +2,11 @@ import Styles from "./UserAccountButton.module.css";
 import {LoginFormContext, useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 
 export const UserAccountButton = () => {
-    const {openLoginForm} = useLoginForm()
+    const {openLoginForm, closeLoginForm, isLoginFormOpened} = useLoginForm();
 
     const onClick = () => {
-        console.log("useracc öffnen");
-        openLoginForm();
+        if (isLoginFormOpened) closeLoginForm();
+        else openLoginForm();
     };
 
     return (
