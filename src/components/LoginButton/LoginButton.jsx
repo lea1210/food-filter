@@ -7,7 +7,7 @@ const LoginButton = ({ onClick }) => {
 
     return (
         <>
-            <button onClick={onClick} className={Styles.loginButton}>
+            <button onClick={onClick} className={Styles.loginButton} type={"submit"}>
                Login
             </button>
         </>

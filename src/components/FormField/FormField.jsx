@@ -7,6 +7,7 @@ const FormField = ({
                        initialValue,
                        required,
                        label,
+                       type,
                        name,
                        errorMessage,
                        pattern = /.*/,
@@ -37,6 +38,7 @@ const FormField = ({
                 onChange={(value) => setValue(name, value)}
                 name={name}
                 placeholder={label}
+                type={type}
             >
                 <>
                     {label} {required && "*"}

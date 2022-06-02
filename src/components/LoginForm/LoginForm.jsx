@@ -2,18 +2,34 @@ import React from "react";
 import Form from "../Form/Form";
 import FormField from "../FormField/FormField";
 import { useLogin } from "../../contexts/LoginContext/LoginContext";
+import Styles from "../LoginButton/LoginButton.module.css";
+import {useForm} from "../../contexts/FormContext/FormContext";
 
-const LoginForm = ({onSubmit}) => {
-    const { username, password } = useLogin();
+const LoginForm = ({setIsOpen}) => {
+    //const { username, password } = useLogin();
+    const { isLoggedIn, login, logout } = useLogin();
+    const { formFields } = useForm();
+
+
+    const onClick = () => {
+        if (isLoggedIn){
+            logout();
+        } else{
+            login( formFields["username"],  formFields["password"]);
+        }
+        setIsOpen(true);
+        //closeLoginForm();
+    }
 
     return (
-        <Form onSubmit={onSubmit} testID="loginForm">
+        <>
+        <Form onSubmit={setIsOpen(true)} testID="loginForm">
             <FormField
                 pattern={/.{2,42}/}
                 errorMessage="Bitte gib deinen Usernamen an"
                 name="username"
                 label="Username"
-                initialValue={username}
+                type="text"
                 required
             />
 
@@ -22,9 +38,14 @@ const LoginForm = ({onSubmit}) => {
                 errorMessage="Bitte gib dein Passwort an"
                 name="password"
                 label="Passwort"
+                type="password"
                 required
             />
         </Form>
+        <button onClick={onClick} className={Styles.loginButton} type={"submit"}>
+            Login
+        </button>
+        </>
     );
 };
 
