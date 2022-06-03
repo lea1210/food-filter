@@ -3,11 +3,12 @@
     color: white;
     bottom: 0px;
     position: relative;
-    width: 100%;
+    width: auto;
     margin-bottom:0px ;
     padding-left:10%;
     padding-right:10%;
-    margin-top: 10%;
+    float: bottom;
+    margin-top: 50px;
 
 }
 .flex {
