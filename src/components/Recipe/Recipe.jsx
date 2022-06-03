@@ -1,7 +1,7 @@
 import Styles from "../Recipe/Recipe.module.css";
 import PropTypes from "prop-types";
 
-export const Recipe = ({name, onClick, imgUrl}) => {
+export const Recipe = ({name, onClick, imgUrl, ingredients, description}) => {
     return (
         <div data-testid="recipe" onClick={onClick}>
             <div style={{ backgroundImage: `url(${imgUrl})` }} className={Styles.img} />

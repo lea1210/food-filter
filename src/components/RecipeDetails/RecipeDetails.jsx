@@ -2,9 +2,9 @@ import React from "react";
 import Styles from "../RecipeDetails/RecipeDetails.module.css";
 import {Recipe} from "../Recipe/Recipe";
 import {Button} from "../Button/Button";
-import ingredients from "../../hooks/useRecipesData";
+import {ingredients} from "../../hooks/useRecipesData";
 
-export const RecipeDetails = (recipe, onClose) => {
+export const RecipeDetails = ({onClose,name, imgUrl, ingredients, description}) => {
     return (
         <>
             <div className={Styles.Button}>
@@ -12,9 +12,9 @@ export const RecipeDetails = (recipe, onClose) => {
             </div>
             <div className={Styles.recipeHeadline}>
                 <div className={Styles.img}>
-                    <Recipe imgUrl={recipe.imgUrl}></Recipe>
+                    <Recipe imgUrl={imgUrl}></Recipe>
                 </div>
-                <Recipe name={recipe.name}></Recipe>
+                <Recipe name={name}></Recipe>
             </div>
         </>
     );
