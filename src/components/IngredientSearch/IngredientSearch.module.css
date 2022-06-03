@@ -1,0 +1,38 @@
+.centerInput{
+    width: 50%;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 1%;
+
+}
+
+.input{
+    border-radius: 20px;
+    margin: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #548235;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.headerText{
+    text-align: center;
+}
+
+.ingredientSearch{
+    text-align: center;
+}
+
+.search{
+    border-radius: 20px;
+    margin: 10px;
+    padding-left: 16.5%;
+    padding-right: 16.5%;
+    background-color: darkgreen;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
