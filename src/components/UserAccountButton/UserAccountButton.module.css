@@ -1,0 +1,17 @@
+.userAccountBtn{
+    margin-top: 7px;
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #548235;
+}
+.userAccount{
+    float: right;
+}
+
+.userAccountIcon{
+    height: 50px;
+    width: 50px;
+}
