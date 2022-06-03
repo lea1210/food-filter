@@ -3,27 +3,30 @@ import Form from "../Form/Form";
 import FormField from "../FormField/FormField";
 import { useLogin } from "../../contexts/LoginContext/LoginContext";
 import Styles from "../LoginButton/LoginButton.module.css";
-import {useForm} from "../../contexts/FormContext/FormContext";
+import {useCallback, useState} from "react";
+import formField from "../FormField/FormField";
 
-const LoginForm = ({setIsOpen}) => {
-    //const { username, password } = useLogin();
-    const { isLoggedIn, login, logout } = useLogin();
-    const { formFields } = useForm();
+const LoginForm = ({onSubmit, setIsOpen}) => {
+    console.log("set is open in loginform: ", setIsOpen);
+   // const { isLoggedIn, login, logout } = useLogin();
+   // const [password, setPassword] = useState('');
+   // const [user, setUser] = useState('');
 
 
-    const onClick = () => {
+   /* const onSubmitLoginForm = useCallback((formFields) => {
+        console.log("halllllllllo");
         if (isLoggedIn){
             logout();
         } else{
-            login( formFields["username"],  formFields["password"]);
+            console.log("submit funktion");
+            login(formFields["username"], formFields["password"]);
         }
         setIsOpen(true);
-        //closeLoginForm();
-    }
+    }, [user, password, login])*/
 
     return (
         <>
-        <Form onSubmit={setIsOpen(true)} testID="loginForm">
+        <Form testID="loginForm" onSubmit={onSubmit} setIsOpen={setIsOpen()}>
             <FormField
                 pattern={/.{2,42}/}
                 errorMessage="Bitte gib deinen Usernamen an"
@@ -34,17 +37,17 @@ const LoginForm = ({setIsOpen}) => {
             />
 
             <FormField
-                pattern={/^.{0,255}$/}
+                pattern={/.{6,42}/}
                 errorMessage="Bitte gib dein Passwort an"
                 name="password"
                 label="Passwort"
                 type="password"
                 required
             />
+            <button className={Styles.loginButton} type="submit">
+                Loginnnn
+            </button>
         </Form>
-        <button onClick={onClick} className={Styles.loginButton} type={"submit"}>
-            Login
-        </button>
         </>
     );
 };

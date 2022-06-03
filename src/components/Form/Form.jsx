@@ -3,6 +3,7 @@ import {
     FormContextProvider,
     useForm,
 } from "../../contexts/FormContext/FormContext";
+import {useLogin} from "../../contexts/LoginContext/LoginContext";
 
 const FormContextWrapper = ({ testID, children, onSubmit }) => {
     return (
@@ -12,14 +13,23 @@ const FormContextWrapper = ({ testID, children, onSubmit }) => {
     );
 };
 
-const Form = ({ testID, onSubmit, children }) => {
+const Form = ({ testID, onSubmit,setIsOpen, children }) => {
     const { validate, formFields } = useForm();
+    const { isLoggedIn, login, logout } = useLogin();
 
     const submit = (event) => {
+        console.log("im submit??");
         event.preventDefault();
         // skip submitting if validation fails
         if (validate()) {
-            onSubmit(formFields);
+            console.log("validierung war erfolgreichhh");
+           // onSubmit(formFields);
+
+            console.log("submit funktion, name: ", formFields["username"]);
+            login(formFields["username"].value, formFields["password"].value);
+
+            console.log(setIsOpen);
+            setIsOpen(true);
         }
     };
 

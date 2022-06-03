@@ -36,7 +36,7 @@ export const Input = ({
                 id={id}
                 type={type}
                 onChange={handleChange}
-                value={value}
+                value={value ?? ""}
                 placeholder={placeholder}
             />
         </div>

@@ -11,6 +11,7 @@ export const validateFormFields = (formFields) => {
 };
 
 export const validateFormField = (field) => {
+    console.log("ich validate");
     field.error = !field.validation(field.value);
     return field.error;
 };
