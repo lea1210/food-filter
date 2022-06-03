@@ -4,6 +4,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 1%;
+
 }
 
 .input{
@@ -13,6 +14,8 @@
     padding-right: 5%;
     background-color: #548235;
     color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .headerText{
@@ -30,4 +33,6 @@
     padding-right: 16.5%;
     background-color: darkgreen;
     color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
