@@ -8,6 +8,12 @@ export const Recipe = ({name, onClick, imgUrl, ingredients, description}) => {
             <div className={Styles.recipeDetails}>
                 <h4 className={Styles.recipeName}>{name}</h4>
             </div>
+            <div className={Styles.recipeDescription}>
+                {description}
+            </div>
+            <div className={Styles.ingredients}>
+                {ingredients}
+            </div>
         </div>
     );
 };
