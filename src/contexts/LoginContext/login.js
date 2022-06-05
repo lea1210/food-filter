@@ -3,8 +3,6 @@ const KEY_TOKEN = "jwt";
 const KEY_USER = "user";
 
 const authenticate = (username, password) => {
-    console.log("name: ", username);
-    console.log("passw: ", password);
     return fetch(AUTH_URL, {
         method: "POST",
         headers: {
@@ -17,6 +15,7 @@ const authenticate = (username, password) => {
     })
         .then((res) => {
             if (!res.ok) {
+                console.log("antwort nichnok");
                 return null;
             }
             return res.json();

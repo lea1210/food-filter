@@ -1,6 +1,5 @@
 import Styles from "./Header.module.css";
 import {UserAccountButton} from "../UserAccountButton/UserAccountButton";
-import UserInfo from "../UserInfo/UserInfo";
 import Login from "../Login/Login";
 import {useState} from "react";
 
