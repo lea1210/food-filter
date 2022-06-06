@@ -6,7 +6,7 @@ import LoginForm from "../LoginForm/LoginForm";
 
 const Login = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const {isLoginFormOpened, closeLoginForm} = useLoginForm();
+    const {isLoginFormOpened} = useLoginForm();
 
     return (
         <>

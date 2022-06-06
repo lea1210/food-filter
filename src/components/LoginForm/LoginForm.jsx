@@ -7,6 +7,9 @@ import {
     useForm,
 } from "../../contexts/FormContext/FormContext";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
+import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
+import {useState} from "react";
+import RegistrationForm from "../RegistrationForm/RegistrationForm";
 
 const FormContextWrapper = ({ children, setIsOpen}) => {
     return (
@@ -17,24 +20,25 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 };
 
 const LoginForm = ({setIsOpen}) => {
-    console.log("set is open in loginform: ", setIsOpen);
+    const [isOpenRegisterForm, setIsOpenRegisterForm] = useState(false);
+    const {closeLoginForm} = useLoginForm();
     const { validate, formFields } = useForm();
     const { isLoggedIn, login, logout } = useLogin();
 
     const submit = (event) => {
-        console.log("im submit??");
         event.preventDefault();
-        // skip submitting if validation fails
-        if (validate()) {
-            console.log("validierung war erfolgreichhh");
-            // onSubmit(formFields);
 
-            console.log("submit funktion, name: ", formFields["username"]);
+        if (validate()) {
             login(formFields["username"].value, formFields["password"].value);
 
             console.log(setIsOpen);
             setIsOpen(true);
+            //closeLoginForm();
         }
+    };
+
+    const onClickRegister = () => {
+        setIsOpenRegisterForm(true);
     };
 
     return (
@@ -62,7 +66,10 @@ const LoginForm = ({setIsOpen}) => {
             </button>
             <br/>
             <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
-            <a href className={Styles.registerLink}>registrieren</a>
+            <label className={Styles.registerLink} onClick={onClickRegister}>registrieren</label>
+            {isOpenRegisterForm && (
+                    <RegistrationForm setIsOpenRegisterForm={setIsOpenRegisterForm}/>
+            )}
         </form>
         </>
     );
