@@ -67,10 +67,10 @@ const LoginForm = ({setIsOpen}) => {
             <br/>
             <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
             <label className={Styles.registerLink} onClick={onClickRegister}>registrieren</label>
-            {isOpenRegisterForm && (
-                    <RegistrationForm setIsOpenRegisterForm={setIsOpenRegisterForm}/>
-            )}
         </form>
+            {isOpenRegisterForm && (
+                <RegistrationForm setIsOpenRegisterForm={setIsOpenRegisterForm}/>
+            )}
         </>
     );
 };
