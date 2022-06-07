@@ -6,14 +6,8 @@ export const RegistrationContext = React.createContext(undefined);
 export function RegistrationContextProvider({children}) {
     const [isRegistered, setIsRegistered] = useState(false);
 
-    /*const userData = isLoggedIn ? {
-        userName: 'foodspecialist',
-        firstName: 'Frank',
-        lastName: 'Foodi'
-    } : {}*/
-
-    const handleRegistration = (user, email, password) => {
-        registration(user,password, email).then((result) => setIsRegistered(result));
+    const handleRegistration = (user, password, email, isVegan, isVegetarian, isGlutenfree, isLaktosefree) => {
+        registration(user,email,password, isVegan, isVegetarian, isGlutenfree, isLaktosefree).then((result) => setIsRegistered(result));
     }
 
     return (

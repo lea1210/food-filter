@@ -16,6 +16,7 @@ export const Checkbox = ({
 
     const handleChange = useCallback(
         (event) => {
+            console.log("change checkbox values");
             onChange(event.target.checked);
         },
         [onChange]
