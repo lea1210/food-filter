@@ -13,6 +13,7 @@ export function LoginContextProvider({children}) {
     } : {}*/
 
     const handleLogin = (user, password) => {
+        //hier userdata zurükgegeben?
         login(user, password).then((result) => setIsLoggedIn(result));
     }
 

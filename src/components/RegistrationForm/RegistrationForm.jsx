@@ -22,6 +22,7 @@ const emailRegex = new RegExp(
 
 const RegistrationForm = ({setIsOpenRegisterForm}) => {
     const {validate, formFields} = useForm();
+    const {isRegistered} = useRegistration();
     const {registration} = useRegistration();
     const [isVegan, setIsVegan] = useState(false);
     const [isVegetarian, setIsVegetarian] = useState(false);
@@ -34,6 +35,11 @@ const RegistrationForm = ({setIsOpenRegisterForm}) => {
         if (validate()) {
             //vegan vegetarish etc noch einabuen
             registration(formFields["username"].value, formFields["password"].value, formFields["email"].value, isVegan,isVegetarian, isGlutenfree, isLactosefree);
+            if (isRegistered) {
+                setIsOpenRegisterForm(false);
+            }else{
+
+            }
 
             // setIsOpen(true);
             //closeLoginForm();

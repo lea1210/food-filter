@@ -11,12 +11,6 @@ export function LoginFormContextProvider({children}) {
         setIsLoginFormOpened(false);
     };
 
-  /*  const userData = isLoginFormOpened ? {
-        userName: 'foodspecialist',
-        firstName: 'Frank',
-        lastName: 'Foodi'
-    } : {}*/
-
     return (
         <LoginFormContext.Provider
             value={{

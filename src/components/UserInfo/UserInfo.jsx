@@ -1,14 +1,20 @@
 import React, {useContext, useState} from "react";
 import Styles from "./UserInfo.module.css";
 import {LoginContext, useLogin} from "../../contexts/LoginContext/LoginContext";
-import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
+import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
 
 const UserInfo = ({setIsOpen}) => {
-    const {isLoggedIn, userName} = useLogin();
+    const { userName, logout} = useLogin();
+    const { closeUserInfo, isUserInfoOpened} = useUserInfo();
+
+    const onClickLogout= () =>{
+        logout();
+        closeUserInfo();
+    }
 
     return (
         <>
-            {isLoggedIn&& (
+            {isUserInfoOpened&& (
 
                 <div className={Styles.userInfoBackdrop}>
                     <div className={Styles.userInfo}>
@@ -22,8 +28,9 @@ const UserInfo = ({setIsOpen}) => {
                                 <p>bla</p>
                             </div>
                             <div className={Styles.buttonBox}>
-                                <button className={Styles.saveButton} onClick={() => setIsOpen(false)}>Speichern</button>
-                                <button className={Styles.cancelButton} onClick={() => setIsOpen(false)}>Abbrechen</button>
+                                <button className={Styles.saveButton} onClick={closeUserInfo}>Speichern</button>
+                                <button className={Styles.logoutButton} onClick={onClickLogout}>Logout</button>
+                                <button className={Styles.cancelButton} onClick={closeUserInfo}>Abbrechen</button>
                             </div>
                         </div>
                     </div>

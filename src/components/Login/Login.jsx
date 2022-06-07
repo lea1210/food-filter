@@ -3,17 +3,19 @@ import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 import UserInfo from "../UserInfo/UserInfo";
 import {useState} from "react";
 import LoginForm from "../LoginForm/LoginForm";
+import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
 
 const Login = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    //const [isOpen, setIsOpen] = useState(false);
+    const {isUserInfoOpened} = useUserInfo();
     const {isLoginFormOpened} = useLoginForm();
 
     return (
         <>
             {isLoginFormOpened && (
                 <div className={Styles.loginWindow}>
-                    <LoginForm setIsOpen={setIsOpen}/>
-                    {isOpen && <UserInfo setIsOpen={setIsOpen}/>}
+                    <LoginForm/>
+                    {isUserInfoOpened && <UserInfo/>}
                 </div>
             )}
         </>
