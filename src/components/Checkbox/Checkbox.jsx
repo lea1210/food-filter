@@ -9,6 +9,7 @@ export const Checkbox = ({
                              children,
                              hint,
                              value,
+                             checked,
                              className,
                              onChange,
                          }) => {
@@ -16,8 +17,10 @@ export const Checkbox = ({
 
     const handleChange = useCallback(
         (event) => {
-            console.log("change checkbox values");
+            console.log(event.target.checked);
             onChange(event.target.checked);
+            checked = event.target.checked;
+            console.log(event.target.checked);
         },
         [onChange]
     );
@@ -44,6 +47,7 @@ export const Checkbox = ({
                     type="checkbox"
                     value={value ?? ""}
                     onChange={handleChange}
+                    checked={checked}
                 />
                 <span className={Styles.slider}></span>
             </label>

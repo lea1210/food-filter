@@ -7,7 +7,6 @@ import {
     useForm,
 } from "../../contexts/FormContext/FormContext";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
-import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 import {useState} from "react";
 import RegistrationForm from "../RegistrationForm/RegistrationForm";
 import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
@@ -22,7 +21,6 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 
 const LoginForm = () => {
     const [isOpenRegisterForm, setIsOpenRegisterForm] = useState(false);
-    const {closeLoginForm} = useLoginForm();
     const {openUserInfo} = useUserInfo();
     const { validate, formFields } = useForm();
     const { isLoggedIn, login } = useLogin();

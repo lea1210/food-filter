@@ -17,7 +17,7 @@ export const registration = (
         vegan: isVegan,
         vegetarian: isVegetarian,
         glutenfree: isGlutenfree,
-        laktosefree: isLaktosefree,
+        lactosefree: isLaktosefree,
     };
     console.log(user);
     return fetch("http://localhost:1337/api/auth/local/register", {

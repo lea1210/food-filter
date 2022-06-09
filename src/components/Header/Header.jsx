@@ -1,7 +1,6 @@
 import Styles from "./Header.module.css";
 import {UserAccountButton} from "../UserAccountButton/UserAccountButton";
 import Login from "../Login/Login";
-import {useState} from "react";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
 import UserInfo from "../UserInfo/UserInfo";
 import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
