@@ -1,0 +1,16 @@
+Input{
+    border-radius: 5px;
+    width: 220px;
+    float: right;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+    padding: 5px;
+    margin: 5px;
+    border: 0;
+}
+Input:focus{
+    border-color: #afafaf;
+}
+.error{
+    color: red;
+    font-size: 8pt;
+}
