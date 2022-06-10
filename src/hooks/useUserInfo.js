@@ -1,10 +1,13 @@
-const API_URL = "http://localhost:1337/api/users/";
+import {getToken} from "../contexts/LoginContext/login";
+
+const API_URL = "http://localhost:1337/api/users";
 const KEY_USER = "user";
 
 const updateUser = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
-    const result = await fetch(API_URL + "/" + id, {
+    return fetch(API_URL + "/" + id, {
         method: "PUT",
         headers: {
+            Authorization: `Bearer ${getToken()}`,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -16,21 +19,23 @@ const updateUser = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
     })
         .then((res) => {
             if (!res.ok) {
-                console.log("antwort nichnok");
+                console.log("antwort nicht ok");
                 return null;
             }
             return res.json();
         })
-        .then((data) => ({
-            user: data.user,
-        }));
 };
 
 export const setNewUserInfo = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
+    console.log("id: ", id);
+    console.log("vegan: ", vegan);
+    console.log("vegetarian: ", vegetarian);
+    console.log("lactosefree: ", lactosefree);
+    console.log("glutenfree: ", glutenfree);
     const userData = await updateUser(id, vegan, vegetarian, lactosefree, glutenfree);
+    console.log(userData);
     if (userData) {
-       // localStorage.setItem(KEY_TOKEN, authData.token);
-        localStorage.setItem(KEY_USER, JSON.stringify(userData.user));
+        localStorage.setItem(KEY_USER, JSON.stringify(userData));
         console.log(localStorage.getItem(KEY_USER));
         return true;
     } else {
