@@ -4,9 +4,14 @@ import { useRecipesData } from "../../hooks/useRecipesData";
 const OnClickSearch = () => {
     const ingredientList = ["Spaghetti", "Tomaten"];
     const excludedList = [];
-
-    const data = useRecipesData(ingredientList, excludedList, false, false, false, false);
+    console.log("bin in der funktion");
+    const data = useRecipesData(["Spaghetti", "Tomate"], [], false, false, false, false);
     console.log(data);
+
+    return (
+        <>
+        </>
+    );
 
 }
 export const IngredientSearch = () => {
@@ -22,3 +27,5 @@ export const IngredientSearch = () => {
         </div>
     );
 };
+
+export default IngredientSearch;
