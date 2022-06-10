@@ -13,6 +13,7 @@ export const Header = () => {
         <header className={Styles.header}>
             <UserAccountButton/>
             <h1 className={Styles.headerText}>FoodFilter</h1>
+            <img src="icons/food.png" alt="food" className={Styles.foodIcon}/>
             {isLoggedIn
                 ? isUserInfoOpened && (<UserInfo/>)
                 : <Login/>
