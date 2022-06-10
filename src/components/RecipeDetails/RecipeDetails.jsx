@@ -12,9 +12,9 @@ export const RecipeDetails = ({recipe, onClose}) => {
             <div className={Styles.recipe}>
                 <Recipe {...recipe}></Recipe>
             </div>
-            <div className={Styles.ButtonEasterEgg}>
+{/*            <div className={Styles.ButtonEasterEgg}>
                 <Button onClick={}>Click me</Button>
-            </div>
+            </div>*/}
         </>
     );
 };
