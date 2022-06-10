@@ -1,4 +1,4 @@
-.userInfoBackdrop {
+.registrationFormBackdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,13 +8,13 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.userInfo {
+.registrationForm {
     box-sizing: border-box;
     position: absolute;
     background-color: white;
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
     border-radius: 5px;
-    padding: 100px;
+    padding: 100px 160px 100px 160px;
     max-width: 800px;
     top: 30px;
     bottom: 30px;
@@ -24,22 +24,19 @@
     overflow: auto;
 }
 
-.userInfoContent {
+.registrationFormContext {
     max-width: 600px;
     margin: 0 auto;
+    float: left;
 }
 
 .headline {
     text-align: center;
     font-style: oblique;
-    margin: 15px;
-}
-
-.profileImg{
-    width: 30%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 28px;
+    margin: 10px;
+    padding: 80px 150px 50px 150px;
+    float:top;
 }
 
 button{
@@ -52,20 +49,29 @@ button{
     font-family: "Arial Nova", sans-serif;
     margin: 10px;
 }
-.saveButton{
+.registerButton{
     float: left;
 }
 .cancelButton{
     float: right;
 }
+.bottomButtons{
+    float: bottom;
+    padding: 20px;
+}
 
 .buttonBox{
-    float: bottom;
+    padding: 22px 10px 30px 20px;
+    margin: 10px;
+    float: right;
 }
 
-.preferences{
-    text-align: center;
+.fieldBox{
+    float: left;
+    padding: 30px 10px 30px 10px;
 }
-.logoutButton{
-
+.infotext{
+    padding: 30px 0 30px 0;
+    margin: 15px;
+    font-size: 14px;
 }

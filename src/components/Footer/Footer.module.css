@@ -2,11 +2,14 @@
     background-color: #548235;
     color: white;
     bottom: 0px;
-    position: absolute;
-    width: 80%;
+    position: relative;
+    width: auto;
     margin-bottom:0px ;
     padding-left:10%;
     padding-right:10%;
+    float: bottom;
+    margin-top: 50px;
+
 }
 .flex {
     display: flex;
