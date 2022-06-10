@@ -23,7 +23,7 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 const LoginForm = () => {
     const [isOpenRegisterForm, setIsOpenRegisterForm] = useState(false);
     const {closeLoginForm} = useLoginForm();
-    const {openUserInfo} = useUserInfo();
+    const {openUserInfo, isUserInfoOpened} = useUserInfo();
     const { validate, formFields } = useForm();
     const { isLoggedIn, login } = useLogin();
 
@@ -32,6 +32,8 @@ const LoginForm = () => {
 
         if (validate()) {
             login(formFields["username"].value, formFields["password"].value);
+
+            //isLoggedIn ist zu diesem zeitpunkt noch nicht true, deshalb öffnet sich das fenster nicht
             if(isLoggedIn){
                 closeLoginForm();
                 openUserInfo();

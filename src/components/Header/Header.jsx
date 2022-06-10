@@ -14,7 +14,7 @@ export const Header = () => {
             <UserAccountButton/>
             <h1 className={Styles.headerText}>FoodFilter</h1>
             {isLoggedIn
-                ? isUserInfoOpened && <UserInfo/>
+                ? isUserInfoOpened && (<UserInfo/>)
                 : <Login/>
             }
 

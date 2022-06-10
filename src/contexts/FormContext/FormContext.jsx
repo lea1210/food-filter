@@ -31,7 +31,6 @@ export function FormContextProvider({ children }) {
 
     const validate = () => {
         const { hasError, formFields: updatedFormFields } = validateFormFields(formFields);
-        console.log("versuche zu validaten");
         setFormFields({ ...updatedFormFields });
 
         return !hasError;

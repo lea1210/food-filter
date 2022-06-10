@@ -10,17 +10,17 @@ import {UserInfoContextProvider} from "./contexts/UserInfoContext/UserInfoContex
 function App() {
   return (
     <div className="wrapper">
+        <UserInfoContextProvider>
         <RegistrationContextProvider>
             <LoginFormContextProvider>
                 <LoginContextProvider>
-                    <UserInfoContextProvider>
                       <Layout>
                         <Page className={Styles.page}/>
                       </Layout>
-                    </UserInfoContextProvider>
                 </LoginContextProvider>
             </LoginFormContextProvider>
         </RegistrationContextProvider>
+        </UserInfoContextProvider>
     </div>
   );
 }

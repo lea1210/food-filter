@@ -7,8 +7,7 @@ import React, {useState} from "react";
 import {setNewUserInfo} from "../../hooks/useUserInfo";
 
 const UserInfo = () => {
-
-    const [updatedUserInfo, setUpdatedUserInfo] = useState(false);
+    const [ updatedUserInfo, setUpdatedUserInfo ] = useState(false);
     const { userName, logout} = useLogin();
     const { closeUserInfo, isUserInfoOpened} = useUserInfo();
 
@@ -29,9 +28,12 @@ const UserInfo = () => {
         closeUserInfo();
     }
 
+    const onClickCancel = () => {
+        closeUserInfo();
+    }
+
     return (
         <>
-            {isUserInfoOpened&& (
                 <div className={Styles.userInfoBackdrop}>
                     <div className={Styles.userInfo}>
                         <div className={Styles.userInfoContent}>
@@ -55,13 +57,12 @@ const UserInfo = () => {
                             <div className={Styles.buttonBox}>
                                 <button className={Styles.saveButton} onClick={onClickSave}>Speichern</button>
                                 <button className={Styles.logoutButton} onClick={onClickLogout}>Logout</button>
-                                <button className={Styles.cancelButton} onClick={closeUserInfo}>Abbrechen</button>
+                                <button className={Styles.cancelButton} onClick={onClickCancel}>Abbrechen</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            )}
         </>
     );
 };

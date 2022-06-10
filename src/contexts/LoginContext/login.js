@@ -37,9 +37,9 @@ export const getUser = () => {
 export const login = async (user, password) => {
     const authData = await authenticate(user, password);
     if (authData) {
+        console.log("hab authdata: ");
         localStorage.setItem(KEY_TOKEN, authData.token);
         localStorage.setItem(KEY_USER, JSON.stringify(authData.user));
-        console.log(localStorage.getItem(KEY_USER));
         return true;
     } else {
         return false;
