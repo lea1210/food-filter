@@ -31,13 +31,12 @@ const LoginForm = () => {
         event.preventDefault();
 
         if (validate()) {
-            login(formFields["username"].value, formFields["password"].value);
-
-            //isLoggedIn ist zu diesem zeitpunkt noch nicht true, deshalb öffnet sich das fenster nicht
-            if(isLoggedIn){
-                closeLoginForm();
-                openUserInfo();
-            }
+            login(formFields["username"].value, formFields["password"].value).then((result) => {
+                    if(result){
+                        closeLoginForm();
+                        openUserInfo();
+                    }
+                });
         }
     };
 
