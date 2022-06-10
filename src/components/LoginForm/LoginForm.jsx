@@ -10,6 +10,7 @@ import {useLogin} from "../../contexts/LoginContext/LoginContext";
 import {useState} from "react";
 import RegistrationForm from "../RegistrationForm/RegistrationForm";
 import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
+import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 
 const FormContextWrapper = ({ children, setIsOpen}) => {
     return (
@@ -21,6 +22,7 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 
 const LoginForm = () => {
     const [isOpenRegisterForm, setIsOpenRegisterForm] = useState(false);
+    const {closeLoginForm} = useLoginForm();
     const {openUserInfo} = useUserInfo();
     const { validate, formFields } = useForm();
     const { isLoggedIn, login } = useLogin();
@@ -31,6 +33,7 @@ const LoginForm = () => {
         if (validate()) {
             login(formFields["username"].value, formFields["password"].value);
             if(isLoggedIn){
+                closeLoginForm();
                 openUserInfo();
             }
         }
