@@ -39,7 +39,6 @@ export const login = async (user, password) => {
     if (authData) {
         localStorage.setItem(KEY_TOKEN, authData.token);
         localStorage.setItem(KEY_USER, JSON.stringify(authData.user));
-        console.log(localStorage.getItem(KEY_USER));
         return true;
     } else {
         return false;

@@ -19,3 +19,12 @@
     top: -7px;
     margin-left: 30px;
 }
+.foodIcon{
+    margin-top: 15px;
+    margin-left: 147px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #548235;
+}

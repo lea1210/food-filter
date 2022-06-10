@@ -4,26 +4,36 @@ import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
 import {getUser} from "../../contexts/LoginContext/login";
 import {Checkbox} from "../Checkbox/Checkbox";
 import React, {useState} from "react";
+import {setNewUserInfo} from "../../hooks/useUserInfo";
 
 const UserInfo = () => {
-    const [isVegan, setIsVegan] = useState(false);
-    const [isVegetarian, setIsVegetarian] = useState(false);
-    const [isGlutenfree, setIsGlutenfree] = useState(false);
-    const [isLactosefree, setIsLactosefree] = useState(false);
+    const [ updatedUserInfo, setUpdatedUserInfo ] = useState(false);
     const { userName, logout} = useLogin();
     const { closeUserInfo, isUserInfoOpened} = useUserInfo();
 
     const user = getUser();
 
-    const onClickLogout= () =>{
+    const [isVegan, setIsVegan] = useState(user.vegan);
+    const [isVegetarian, setIsVegetarian] = useState(user.vegetarian);
+    const [isGlutenfree, setIsGlutenfree] = useState(user.glutenfree);
+    const [isLactosefree, setIsLactosefree] = useState(user.lactosefree);
+
+    const onClickLogout = () => {
         logout();
+        closeUserInfo();
+    }
+
+    const onClickSave = () => {
+        setNewUserInfo(user.id, isVegan, isVegetarian, isLactosefree, isGlutenfree).then((result) => setUpdatedUserInfo(result));
+        closeUserInfo();
+    }
+
+    const onClickCancel = () => {
         closeUserInfo();
     }
 
     return (
         <>
-            {isUserInfoOpened&& (
-
                 <div className={Styles.userInfoBackdrop}>
                     <div className={Styles.userInfo}>
                         <div className={Styles.userInfoContent}>
@@ -31,29 +41,28 @@ const UserInfo = () => {
                             <div className={Styles.headline}>{user.username}</div>
                             <label>Deine Präferenzen: </label>
                             <div className={Styles.preferences}>
-                                <Checkbox checked={user.vegan} onChange={setIsVegan}>
+                                <Checkbox checked={isVegan} onChange={setIsVegan}>
                                     <label>vegan</label>
                                 </Checkbox>
-                                <Checkbox checked={user.vegetarian} onChange={setIsVegetarian}>
+                                <Checkbox checked={isVegetarian} onChange={setIsVegetarian}>
                                     <label>vegetarisch</label>
                                 </Checkbox>
-                                <Checkbox checked={user.lactosefree} onChange={setIsLactosefree}>
+                                <Checkbox checked={isLactosefree} onChange={setIsLactosefree}>
                                     <label>laktosefrei</label>
                                 </Checkbox>
-                                <Checkbox checked={user.glutenfree} onChange={setIsGlutenfree}>
+                                <Checkbox checked={isGlutenfree} onChange={setIsGlutenfree}>
                                     <label>glutenfrei</label>
                                 </Checkbox>
                             </div>
                             <div className={Styles.buttonBox}>
-                                <button className={Styles.saveButton} onClick={closeUserInfo}>Speichern</button>
+                                <button className={Styles.saveButton} onClick={onClickSave}>Speichern</button>
                                 <button className={Styles.logoutButton} onClick={onClickLogout}>Logout</button>
-                                <button className={Styles.cancelButton} onClick={closeUserInfo}>Abbrechen</button>
+                                <button className={Styles.cancelButton} onClick={onClickCancel}>Abbrechen</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            )}
         </>
     );
 };
