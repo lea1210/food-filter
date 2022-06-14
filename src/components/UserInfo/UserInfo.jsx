@@ -37,32 +37,38 @@ const UserInfo = () => {
                 <div className={Styles.userInfoBackdrop}>
                     <div className={Styles.userInfo}>
                         <div className={Styles.userInfoContent}>
-                            <img className={Styles.profileImg} alt="user image" src="icons/user_green.png"/>
-                            <div className={Styles.headline}>{user.username}</div>
-                            <label>Deine Präferenzen: </label>
-                            <div className={Styles.preferences}>
-                                <Checkbox checked={isVegan} onChange={setIsVegan}>
-                                    <label>vegan</label>
-                                </Checkbox>
-                                <Checkbox checked={isVegetarian} onChange={setIsVegetarian}>
-                                    <label>vegetarisch</label>
-                                </Checkbox>
-                                <Checkbox checked={isLactosefree} onChange={setIsLactosefree}>
-                                    <label>laktosefrei</label>
-                                </Checkbox>
-                                <Checkbox checked={isGlutenfree} onChange={setIsGlutenfree}>
-                                    <label>glutenfrei</label>
-                                </Checkbox>
+                            <div className={Styles.topBox}>
+                            <div className={Styles.left}>
+                                <img className={Styles.profileImg} alt="user image" src="icons/user_green.png"/>
                             </div>
-                            <div className={Styles.buttonBox}>
-                                <button className={Styles.saveButton} onClick={onClickSave}>Speichern</button>
-                                <button className={Styles.logoutButton} onClick={onClickLogout}>Logout</button>
-                                <button className={Styles.cancelButton} onClick={onClickCancel}>Abbrechen</button>
+                            <div className={Styles.right}>
+                                <label className={Styles.greeting}>Hallo, </label>
+                                <label className={Styles.headline}>{user.username}</label><br/>
+                                <label className={Styles.infotext}>Deine Präferenzen kannst du hier ganz <br/> einfach anpassen und speichern. </label>
+                                <div className={Styles.preferences}>
+                                    <Checkbox checked={isVegan} onChange={setIsVegan}>
+                                        <label>vegan</label>
+                                    </Checkbox>
+                                    <Checkbox checked={isVegetarian} onChange={setIsVegetarian}>
+                                        <label>vegetarisch</label>
+                                    </Checkbox>
+                                    <Checkbox checked={isLactosefree} onChange={setIsLactosefree}>
+                                        <label>laktosefrei</label>
+                                    </Checkbox>
+                                    <Checkbox checked={isGlutenfree} onChange={setIsGlutenfree}>
+                                        <label>glutenfrei</label>
+                                    </Checkbox>
+                                </div>
                             </div>
+                            </div>
+                                <div className={Styles.buttonBox}>
+                                    <button className={Styles.saveButton} onClick={onClickSave}>Speichern</button>
+                                    <button className={Styles.logoutButton} onClick={onClickLogout}>Logout</button>
+                                    <button className={Styles.cancelButton} onClick={onClickCancel}>Abbrechen</button>
+                                </div>
                         </div>
                     </div>
                 </div>
-
         </>
     );
 };
