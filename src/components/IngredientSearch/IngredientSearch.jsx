@@ -1,5 +1,17 @@
 import Styles from "./IngredientSearch.module.css";
 
+const onClickSearch = () => {
+
+}
+
+const onClickAdd = () => {
+
+}
+
+const onClickExclude = () => {
+
+}
+
 export const IngredientSearch = () => {
     return (
         <div className={Styles.ingredientSearch}>
@@ -8,10 +20,10 @@ export const IngredientSearch = () => {
                 <input type="text" className={Styles.centerInput}/><br/>
             </div>
             <div>
-                <button className={Styles.input}>Hinzufügen</button>
-                <button className={Styles.input}>Ausschließen</button>
+                <button className={Styles.input} onClick={onClickAdd}>Hinzufügen</button>
+                <button className={Styles.input} onClick={onClickExclude}>Ausschließen</button>
             </div>
-            <button className={Styles.search}>Suchen</button>
+            <button className={Styles.search} onClick={onClickSearch}>Suchen</button>
         </div>
     );
 };

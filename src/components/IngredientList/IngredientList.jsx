@@ -1,8 +1,8 @@
 import React from "react";
-import Style from "./IngredientTag.module.css";
-import Ingredient from "../Ingredient/ingredient";
+import Style from "./IngredientList.module.css";
+import Ingredient from "../Ingredient/Ingredient";
 
-export const IngredientTag = ({ ingredients }) => {
+export const IngredientList = ({ ingredients }) => {
     return (
         <>
             <div className={Style.ingredients}>
@@ -21,4 +21,4 @@ export const IngredientTag = ({ ingredients }) => {
 };
 
 
-export default IngredientTag;
+export default IngredientList;
