@@ -6,6 +6,8 @@ import {LoginContextProvider} from "./contexts/LoginContext/LoginContext";
 import {LoginFormContextProvider} from "./contexts/LoginFormContext/LoginFormContext";
 import {RegistrationContextProvider} from "./contexts/RegistrationContext/RegistrationContext";
 import {UserInfoContextProvider} from "./contexts/UserInfoContext/UserInfoContext";
+import {IngredientContext, IngredientContextProvider} from "./contexts/IngredientContext/IngredientContext";
+import {ExcludedContextProvider} from "./contexts/ExcludedContext/ExcludedContext";
 
 function App() {
   return (
@@ -13,11 +15,15 @@ function App() {
         <UserInfoContextProvider>
         <RegistrationContextProvider>
             <LoginFormContextProvider>
-                <LoginContextProvider>
-                      <Layout>
-                        <Page className={Styles.page}/>
-                      </Layout>
-                </LoginContextProvider>
+                <IngredientContextProvider>
+                    <ExcludedContextProvider>
+                        <LoginContextProvider>
+                              <Layout>
+                                <Page className={Styles.page}/>
+                              </Layout>
+                        </LoginContextProvider>
+                    </ExcludedContextProvider>
+            </IngredientContextProvider>
             </LoginFormContextProvider>
         </RegistrationContextProvider>
         </UserInfoContextProvider>

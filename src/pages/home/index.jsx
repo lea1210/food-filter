@@ -1,9 +1,6 @@
 import {IngredientSearch} from "../../components/IngredientSearch/IngredientSearch";
 import Styles from "./index.module.css";
-import IngredientList from "../../components/IngredientList/IngredientList";
-
-//temporary
-const ingredients = [{name: "käse"}, {name:"salami"}, {name:"nutella"}];
+import {IngredientTags} from "../../components/IngredientTags/IngredientTags";
 
 const Page = () => {
     //const [formState, setFormState] = useState({});
@@ -12,7 +9,7 @@ const Page = () => {
     return (
         <>
             <IngredientSearch className={Styles.flex}/>
-            <IngredientList ingredients={ingredients}></IngredientList>
+            <IngredientTags></IngredientTags>
         </>
         //später   <Result {...recipeData} /> einfügen
 
