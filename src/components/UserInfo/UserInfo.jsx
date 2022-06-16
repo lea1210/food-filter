@@ -39,7 +39,7 @@ const UserInfo = () => {
                         <div className={Styles.userInfoContent}>
                             <div className={Styles.topBox}>
                             <div className={Styles.left}>
-                                <img className={Styles.profileImg} alt="user image" src="icons/user_green.png"/>
+                                <img className={Styles.profileImg} alt="user image" src="icons/userinfo.svg"/>
                             </div>
                             <div className={Styles.right}>
                                 <label className={Styles.greeting}>Hallo, </label>

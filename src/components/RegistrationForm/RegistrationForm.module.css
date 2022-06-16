@@ -41,7 +41,7 @@
 
 button{
     color: white;
-    background: #548235;
+    background: #417552;
     border-radius: 5px;
     padding: 7px 20px 7px 20px;
     float: bottom;
@@ -79,6 +79,8 @@ button{
     float: left;
     margin: 0;
     padding: 0;
+    width: 450px;
+    height: 450px;
 }
 .textbox{
     float: top;

@@ -54,7 +54,7 @@ const RegistrationForm = ({setIsOpenRegisterForm}) => {
         <>
             <div className={Styles.registrationFormBackdrop}>
                 <div className={Styles.registrationForm}>
-                    <img src="icons/placeholder.png" alt="placeholder" className={Styles.image} />
+                    <img src="icons/register.svg" alt="placeholder" className={Styles.image} />
                     <div className={Styles.textbox}>
                     <label className={Styles.headline}>Willkomen bei FoodFilter</label>
                     <label className={Styles.infotext}><br/>Bitte gib auf jeden Fall deinen Usernamen, deine
