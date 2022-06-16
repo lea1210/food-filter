@@ -1,0 +1,94 @@
+.userInfoBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.userInfo {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    padding: 100px;
+    max-width: 800px;
+    top: 190px;
+    bottom: 190px;
+    left:30px;
+    right: 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.userInfoContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.headline {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profileImg{
+    width: 180px;
+    height: 330px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    color: white;
+    background: #548235;
+    border-radius: 5px;
+    padding: 7px 15px 7px 15px;
+    float: bottom;
+    border-style: none;
+    font-family: "Arial Nova", sans-serif;
+    margin: 30px 20px 10px 10px;
+}
+.saveButton{
+    float: left;
+}
+.cancelButton{
+    float: right;
+}
+
+.buttonBox{
+    margin: 20px;
+    float: left;
+}
+
+.preferences{
+    text-align: center;
+    margin: 30px;
+}
+.logoutButton{
+  float: left;
+}
+.left{
+   float: right;
+    margin-right:15px;
+
+}
+.right{
+    float: left;
+    margin-left:15px;
+    margin-top: 13px;
+}
+.greeting{
+    font-size: 20px;
+}
+
+.infotext{
+    margin-top: 30px;
+    padding: 20px 0 20px 0;
+}
+.topBox{
+    float: top;
+}

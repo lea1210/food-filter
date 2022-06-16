@@ -1,0 +1,15 @@
+.wrapper {
+
+}
+
+.page{
+    position: relative;
+    height: 100vh;
+    margin-bottom: 1000px;
+    background-color: darkgreen;
+}
+
+.body {
+
+    height: 100%;
+}
