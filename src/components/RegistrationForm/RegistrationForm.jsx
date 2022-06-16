@@ -54,7 +54,9 @@ const RegistrationForm = ({setIsOpenRegisterForm}) => {
         <>
             <div className={Styles.registrationFormBackdrop}>
                 <div className={Styles.registrationForm}>
-                    <label className={Styles.headline}>Registrieren</label>
+                    <img src="icons/register.svg" alt="placeholder" className={Styles.image} />
+                    <div className={Styles.textbox}>
+                    <label className={Styles.headline}>Willkomen bei FoodFilter</label>
                     <label className={Styles.infotext}><br/>Bitte gib auf jeden Fall deinen Usernamen, deine
                         E-Mail-Adresse und dein Passwort an. Wenn du willst, kannst du auch deine Präferenzen schon
                         speichern.</label>
@@ -109,6 +111,7 @@ const RegistrationForm = ({setIsOpenRegisterForm}) => {
                                 </button>
                             </div>
                         </form>
+                    </div>
                     </div>
                 </div>
             </div>
