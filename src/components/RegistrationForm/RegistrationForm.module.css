@@ -51,17 +51,21 @@ button{
 }
 .registerButton{
     float: left;
+    margin-top: 35px;
 }
 .cancelButton{
     float: right;
+    margin-top: 32px;
+    margin-left: 30px;
 }
 .bottomButtons{
     float: bottom;
-    padding: 20px;
+    padding: 25px;
+    margin: 10px;
 }
 
 .buttonBox{
-    padding: 22px 10px 30px 20px;
+    padding: 20px 10px 30px 20px;
     margin: 10px;
     float: right;
 }
@@ -79,12 +83,13 @@ button{
     float: left;
     margin: 0;
     padding: 0;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
 }
 .textbox{
     float: top;
+    text-align: center;
     margin-top: 100px;
     margin-left:400px;
-    padding: 0px 0px 0px 30px;
+    padding: 0px 0px 0px 20px;
 }

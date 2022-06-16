@@ -46,7 +46,9 @@ const FormField = ({
             </Input>
 
             {formField?.error && (
-                <span data-testid="error" className={Styling.error}>{errorMessage}</span>
+                <>
+                <br/><span data-testid="error" className={Styling.error}>{errorMessage}</span>
+                </>
             )}
         </div>
     );

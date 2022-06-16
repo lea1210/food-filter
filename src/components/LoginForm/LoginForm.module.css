@@ -1,6 +1,7 @@
 .registerLabel{
     float: bottom;
     font-size: 11pt;
+    margin-left: 20px;
 }
 .registerLink{
     color: #417552;
@@ -8,7 +9,7 @@
     float: bottom;
 }
 .loginButton{
-    width: 210px;
+    width: 248px;
     color: white;
     background: #417552;
     border-radius: 5px;
