@@ -5,6 +5,7 @@ import {useLogin} from "../../contexts/LoginContext/LoginContext";
 import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
 
 export const IngredientList = ({ ingredients, color }) => {
+   // const {ingredientList} = useIngredients();
 
     return (
         <>
