@@ -45,9 +45,9 @@ const UserInfo = () => {
                                 </Checkbox>
                             </div>
                             <div className={Styles.buttonBox}>
-                                <button className={Styles.saveButton} onClick={closeUserInfo}>Speichern</button>
-                                <button className={Styles.logoutButton} onClick={onClickLogout}>Logout</button>
-                                <button className={Styles.cancelButton} onClick={closeUserInfo}>Abbrechen</button>
+                                <button className={Styles.saveButton + ' ' + Styles.baseButton} onClick={closeUserInfo}>Speichern</button>
+                                <button className={Styles.logoutButton + ' ' + Styles.baseButton} onClick={onClickLogout}>Logout</button>
+                                <button className={Styles.cancelButton + ' ' + Styles.baseButton} onClick={closeUserInfo}>Abbrechen</button>
                             </div>
                         </div>
                     </div>
