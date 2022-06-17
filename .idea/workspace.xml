@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="907d7ccd-baf1-46e5-b5c7-972e3646051e" name="Changes" comment="created ingredient tag and ingredient component">
-      <change beforePath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.jsx" afterDir="false" />
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="created ingredient tag and ingredient component">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
