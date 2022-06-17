@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 // const API_URL = "http://localhost:1337/api/recipes/";
-const API_URL = "http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=Tomate&filters[vegan]=false&filters[vegetarian]=false&filters[lactosefree]=false&filters[glutenfree]=false";
+const API_URL = "http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=tomaten&filters[vegan]=false&filters[vegetarian]=false&filters[lactosefree]=false&filters[glutenfree]=false";
 
 /*
 const headers = {
@@ -38,7 +38,7 @@ export const fetchRecipes = async (filterParams) => {
     return await extractResult(result);
 };
 
-export const useRecipesData = () => {
+export const useRecipesData = (ingredients, excluded, vegan, vegetarian, lactosefree, glutenfree) => {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
