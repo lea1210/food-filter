@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master in branch" />
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master in branch">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IngredientSearch/IngredientSearch.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientSearch/IngredientSearch.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRecipesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRecipesData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +44,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="useRecipesData.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/hooks/useRecipesData.js" working-dir="$PROJECT_DIR$/src/hooks">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.useRecipesData.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -98,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655454144296</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="merged master in branch">
+      <created>1655455936056</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655455936056</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

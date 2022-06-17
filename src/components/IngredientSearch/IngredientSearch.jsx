@@ -1,14 +1,17 @@
 import Styles from "./IngredientSearch.module.css";
 import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
 import {useExcludedIngredients} from "../../contexts/ExcludedContext/ExcludedContext";
+import {useRecipesData} from "../../hooks/useRecipesData";
 import {useState} from "react";
 
 export const IngredientSearch = () => {
     const [inputValue, setInputValue] = useState("");
     const {addIngredient} = useIngredients();
     const {addExcluded} = useExcludedIngredients();
+    const { loadRecipes } = useRecipesData();
 
     const onClickSearch = () => {
+        loadRecipes();
 
     }
 

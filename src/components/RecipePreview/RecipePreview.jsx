@@ -1,8 +1,9 @@
 import React from "react";
 import {Recipe} from "../Recipe/Recipe";
 import Styles from "../Recipe/Recipe.module.css";
+import PropTypes from "prop-types";
 
-export const RecipePreview = ({recipe, onClick}) => {
+export const RecipePreview = ({recipe, onClick,imgUrl}) => {
     return (
         <>
             <div data-testid="recipe" onClick={onClick} className={Styles.recipeContainer}>
@@ -14,5 +15,10 @@ export const RecipePreview = ({recipe, onClick}) => {
         </>
     );
 };
+export const Props = {
+    name: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string,
+};
+RecipePreview.propTypes = Props;
 
 export default RecipePreview;
