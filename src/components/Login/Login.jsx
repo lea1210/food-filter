@@ -5,16 +5,18 @@ import LoginForm from "../LoginForm/LoginForm";
 import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
 
 const Login = () => {
-    const {isUserInfoOpened} = useUserInfo();
-    const {isLoginFormOpened} = useLoginForm();
+    const { isUserInfoOpened } = useUserInfo();
+    const { isLoginFormOpened } = useLoginForm();
 
     return (
         <>
             {isLoginFormOpened && (
                 <div className={Styles.loginWindow}>
                     <LoginForm/>
-                    {isUserInfoOpened && <UserInfo/>}
                 </div>
+            )}
+            { isUserInfoOpened && (
+                <UserInfo/>
             )}
         </>
     );

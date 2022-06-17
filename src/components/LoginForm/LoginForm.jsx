@@ -23,7 +23,7 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 const LoginForm = () => {
     const [isOpenRegisterForm, setIsOpenRegisterForm] = useState(false);
     const {closeLoginForm} = useLoginForm();
-    const {openUserInfo} = useUserInfo();
+    const {openUserInfo, isUserInfoOpened} = useUserInfo();
     const { validate, formFields } = useForm();
     const { isLoggedIn, login } = useLogin();
 
@@ -31,11 +31,12 @@ const LoginForm = () => {
         event.preventDefault();
 
         if (validate()) {
-            login(formFields["username"].value, formFields["password"].value);
-            if(isLoggedIn){
-                closeLoginForm();
-                openUserInfo();
-            }
+            login(formFields["username"].value, formFields["password"].value).then((result) => {
+                    if(result){
+                        closeLoginForm();
+                        openUserInfo();
+                    }
+                });
         }
     };
 

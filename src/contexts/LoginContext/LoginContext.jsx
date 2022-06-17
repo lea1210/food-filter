@@ -6,15 +6,12 @@ export const LoginContext = React.createContext(undefined);
 export function LoginContextProvider({children}) {
     const [isLoggedIn, setIsLoggedIn] = useState(!!getToken());
 
-    /*const userData = isLoggedIn ? {
-        userName: 'foodspecialist',
-        firstName: 'Frank',
-        lastName: 'Foodi'
-    } : {}*/
-
-    const handleLogin = (user, password) => {
-        //hier userdata zurükgegeben?
-        login(user, password).then((result) => setIsLoggedIn(result));
+    const handleLogin = async (user, password) => {
+        return await login(user, password)
+             .then((result) => {
+                 setIsLoggedIn(result);
+                 return result;
+             });
     }
 
     const handleLogout = () => {

@@ -16,8 +16,8 @@
     border-radius: 5px;
     padding: 100px;
     max-width: 800px;
-    top: 30px;
-    bottom: 30px;
+    top: 190px;
+    bottom: 190px;
     left:30px;
     right: 30px;
     margin: 0 auto;
@@ -30,13 +30,13 @@
 }
 
 .headline {
-    text-align: center;
-    font-style: oblique;
-    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .profileImg{
-    width: 30%;
+    width: 180px;
+    height: 330px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -46,11 +46,11 @@ button{
     color: white;
     background: #548235;
     border-radius: 5px;
-    padding: 7px 20px 7px 20px;
+    padding: 7px 15px 7px 15px;
     float: bottom;
     border-style: none;
     font-family: "Arial Nova", sans-serif;
-    margin: 10px;
+    margin: 30px 20px 10px 10px;
 }
 .saveButton{
     float: left;
@@ -60,12 +60,35 @@ button{
 }
 
 .buttonBox{
-    float: bottom;
+    margin: 20px;
+    float: left;
 }
 
 .preferences{
     text-align: center;
+    margin: 30px;
 }
 .logoutButton{
+  float: left;
+}
+.left{
+   float: right;
+    margin-right:15px;
 
+}
+.right{
+    float: left;
+    margin-left:15px;
+    margin-top: 13px;
+}
+.greeting{
+    font-size: 20px;
+}
+
+.infotext{
+    margin-top: 30px;
+    padding: 20px 0 20px 0;
+}
+.topBox{
+    float: top;
 }

@@ -1,0 +1,16 @@
+.dark{
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #417552;
+    color: white;
+    margin: 5px;
+    max-width: 150px;
+}
+.light{
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #7EC295;
+    color: white;
+    margin: 5px;
+    max-width: 150px;
+}

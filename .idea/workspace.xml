@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="907d7ccd-baf1-46e5-b5c7-972e3646051e" name="Changes" comment="created ingredient tag and ingredient component">
+      <change beforePath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientTag/IngredientTag.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Rezeptansicht" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2A3gQ3RiWIm5LD89ZPIzaAGOPrz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="907d7ccd-baf1-46e5-b5c7-972e3646051e" name="Changes" comment="" />
+      <created>1654243663089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654243663089</updated>
+      <workItem from="1654243664953" duration="9688000" />
+      <workItem from="1654254179303" duration="818000" />
+      <workItem from="1654848711870" duration="3854000" />
+    </task>
+    <task id="LOCAL-00001" summary="created RecipeView">
+      <created>1654245226454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654245226454</updated>
+    </task>
+    <task id="LOCAL-00002" summary="filled RecipeView with first content and buttons">
+      <created>1654248369628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654248369628</updated>
+    </task>
+    <task id="LOCAL-00003" summary="splitted Recipe up in Recipe Details and Recipe Preview">
+      <created>1654250730161</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654250730161</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added content and data">
+      <created>1654252168949</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654252168949</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactored code">
+      <created>1654253875569</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654253875569</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created ingredient tag and ingredient component">
+      <created>1654254779536</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654254779536</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created RecipeView" />
+    <MESSAGE value="filled RecipeView with first content and buttons" />
+    <MESSAGE value="splitted Recipe up in Recipe Details and Recipe Preview" />
+    <MESSAGE value="added content and data" />
+    <MESSAGE value="refactored code" />
+    <MESSAGE value="created ingredient tag and ingredient component" />
+    <option name="LAST_COMMIT_MESSAGE" value="created ingredient tag and ingredient component" />
+  </component>
+</project>

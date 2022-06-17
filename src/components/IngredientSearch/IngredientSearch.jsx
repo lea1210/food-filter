@@ -1,28 +1,41 @@
 import Styles from "./IngredientSearch.module.css";
-import { useRecipesData, loadRecipes } from "../../hooks/useRecipesData";
+import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
+import {useExcludedIngredients} from "../../contexts/ExcludedContext/ExcludedContext";
+import {useState} from "react";
 
 export const IngredientSearch = () => {
-    console.log("lebe noch");
+    const [inputValue, setInputValue] = useState("");
+    const {ingredientList, addIngredient} = useIngredients();
+    const {excludedList, addExcluded} = useExcludedIngredients();
 
-    const OnClickSearch = () => {
-        const ingredientList = ["Spaghetti", "Tomaten"];
-        const excludedList = [];
-        console.log("bin in der funktion");
+    const onClickSearch = () => {
 
-        //console.log(data.loadRecipes());
     }
 
-        return (
-            <div className={Styles.ingredientSearch}>
-                <h2 className={Styles.headerText}>Welche Zutaten hast du zuhause?</h2>
-                <input type="text" className={Styles.centerInput}/>
-                <div>
-                    <button className={Styles.input}>Hinzufügen</button>
-                    <button className={Styles.input}>Ausschließen</button>
-                </div>
-                <button className={Styles.search} onClick={OnClickSearch}>Suchen</button>
-            </div>
-        );
-    };
+    const onClickAdd = (e) => {
+        addIngredient(inputValue);
+        console.log(ingredientList);
+        setInputValue("");
+    }
 
-export default IngredientSearch;
+    const onClickExclude = () => {
+        addExcluded(inputValue);
+        console.log(excludedList);
+        setInputValue("");
+    }
+
+
+    return (
+        <div className={Styles.ingredientSearch}>
+            <h2 className={Styles.headerText}>Welche Zutaten hast du zuhause?</h2>
+            <div>
+                <input type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} className={Styles.centerInput}/><br/>
+            </div>
+            <div>
+                <button className={Styles.input} onClick={onClickAdd}>Hinzufügen</button>
+                <button className={Styles.input} onClick={onClickExclude}>Ausschließen</button>
+            </div>
+            <button className={Styles.search} onClick={onClickSearch}>Suchen</button>
+        </div>
+    );
+};
