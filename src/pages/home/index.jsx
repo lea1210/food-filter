@@ -17,8 +17,6 @@ const Page = () => {
             <IngredientTags></IngredientTags>
             <Result error={error} loading={loading} data={data} {...data} />
         </>
-
-
     );
 };
 
