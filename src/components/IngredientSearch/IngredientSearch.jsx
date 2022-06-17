@@ -5,8 +5,8 @@ import {useState} from "react";
 
 export const IngredientSearch = () => {
     const [inputValue, setInputValue] = useState("");
-    const {ingredientList, addIngredient} = useIngredients();
-    const {excludedList, addExcluded} = useExcludedIngredients();
+    const {addIngredient} = useIngredients();
+    const {addExcluded} = useExcludedIngredients();
 
     const onClickSearch = () => {
 
@@ -14,13 +14,11 @@ export const IngredientSearch = () => {
 
     const onClickAdd = (e) => {
         addIngredient(inputValue);
-        console.log(ingredientList);
         setInputValue("");
     }
 
     const onClickExclude = () => {
         addExcluded(inputValue);
-        console.log(excludedList);
         setInputValue("");
     }
 

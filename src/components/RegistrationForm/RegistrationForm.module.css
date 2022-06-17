@@ -39,7 +39,7 @@
     float:top;
 }
 
-.baseButton{
+button{
     color: white;
     background: #417552;
     border-radius: 5px;
