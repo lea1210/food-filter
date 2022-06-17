@@ -42,7 +42,7 @@
     margin-right: auto;
 }
 
-button{
+.baseButton{
     color: white;
     background: #548235;
     border-radius: 5px;
@@ -52,6 +52,7 @@ button{
     font-family: "Arial Nova", sans-serif;
     margin: 30px 20px 10px 10px;
 }
+
 .saveButton{
     float: left;
 }

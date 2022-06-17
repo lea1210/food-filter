@@ -6,28 +6,30 @@ import {LoginContextProvider} from "./contexts/LoginContext/LoginContext";
 import {LoginFormContextProvider} from "./contexts/LoginFormContext/LoginFormContext";
 import {RegistrationContextProvider} from "./contexts/RegistrationContext/RegistrationContext";
 import {UserInfoContextProvider} from "./contexts/UserInfoContext/UserInfoContext";
-import {IngredientContext, IngredientContextProvider} from "./contexts/IngredientContext/IngredientContext";
-import {ExcludedContextProvider} from "./contexts/ExcludedContext/ExcludedContext";
+import RegistrationFormContextWrapper from "./components/RegistrationForm/RegistrationForm";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Routes } from "react-router";
 
 function App() {
   return (
+      <BrowserRouter>
     <div className="wrapper">
         <UserInfoContextProvider>
         <RegistrationContextProvider>
             <LoginFormContextProvider>
-                <IngredientContextProvider>
-                    <ExcludedContextProvider>
-                        <LoginContextProvider>
-                              <Layout>
-                                <Page className={Styles.page}/>
-                              </Layout>
-                        </LoginContextProvider>
-                    </ExcludedContextProvider>
-            </IngredientContextProvider>
+                <LoginContextProvider>
+                      <Layout>
+                          <Routes>
+                              <Route path="/" element={<Page className={Styles.page}/>}/>
+                              <Route path="/register" element={<RegistrationFormContextWrapper/>}/>
+                          </Routes>
+                      </Layout>
+                </LoginContextProvider>
             </LoginFormContextProvider>
         </RegistrationContextProvider>
         </UserInfoContextProvider>
     </div>
+      </BrowserRouter>
   );
 }
 
