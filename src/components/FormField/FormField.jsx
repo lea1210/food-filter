@@ -33,6 +33,7 @@ const FormField = ({
     return (
         <div className={Styling.formField}>
             <Input
+
                 value={formField?.value}
                 error={formField?.error}
                 onChange={(value) => setValue(name, value)}

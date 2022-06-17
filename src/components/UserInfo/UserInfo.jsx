@@ -69,6 +69,8 @@ const UserInfo = () => {
                         </div>
                     </div>
                 </div>
+
+            )}
         </>
     );
 };
