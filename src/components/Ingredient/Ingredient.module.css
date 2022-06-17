@@ -1,0 +1,34 @@
+.dark{
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #417552;
+    color: white;
+    margin: 5px;
+    max-width: 150px;
+}
+.light{
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #7EC295;
+    color: white;
+    margin: 5px;
+    max-width: 150px;
+}
+.delete {
+    height: 5px;
+    width: 150px;
+    border-radius: 5px;
+    position: relative;
+}
+.delete:after {
+     position: absolute;
+     top: -18px;
+     right: 0;
+     content: "\d7";
+     font-size: 40px;
+     color: #fff;
+     line-height: 10px;
+     text-align: center;
+}
+
+
