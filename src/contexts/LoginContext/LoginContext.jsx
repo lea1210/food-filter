@@ -1,29 +1,31 @@
 import React, {useContext, useState} from "react";
+import {getToken, login, logout} from "./login";
 
 export const LoginContext = React.createContext(undefined);
 
 export function LoginContextProvider({children}) {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const logIn = () => {
-        setIsLoggedIn(true);
-    };
-    const logOut = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(!!getToken());
+
+    const handleLogin = async (user, password) => {
+        return await login(user, password)
+             .then((result) => {
+                 setIsLoggedIn(result);
+                 return result;
+             });
+    }
+
+    const handleLogout = () => {
+        logout();
         setIsLoggedIn(false);
     };
-
-    const userData = isLoggedIn ? {
-        userName: 'foodspecialist',
-        firstName: 'Frank',
-        lastName: 'Foodi'
-    } : {}
 
     return (
         <LoginContext.Provider
             value={{
+                login: handleLogin,
+                logout: handleLogout,
+                getToken,
                 isLoggedIn,
-                logIn,
-                logOut,
-                ...userData
             }}
         >
             {children}
