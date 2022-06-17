@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master in branch">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="created static api request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IngredientSearch/IngredientSearch.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientSearch/IngredientSearch.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useRecipesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRecipesData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
     </list>
@@ -122,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655455936056</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="created static api request">
+      <created>1655463185505</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655463185505</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +151,7 @@
     <MESSAGE value="refactored code" />
     <MESSAGE value="created ingredient tag and ingredient component" />
     <MESSAGE value="merged master in branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged master in branch" />
+    <MESSAGE value="created static api request" />
+    <option name="LAST_COMMIT_MESSAGE" value="created static api request" />
   </component>
 </project>

@@ -38,7 +38,7 @@ export const fetchRecipes = async (filterParams) => {
     return await extractResult(result);
 };
 
-export const useRecipesData = (ingredientList) => {
+export const useRecipesData = () => {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
@@ -55,8 +55,6 @@ export const useRecipesData = (ingredientList) => {
     console.log("komme bis hier")
     const loadRecipes = () => {
         console.log("load");
-        setError(undefined);
-        setLoading(true);
         const filterParams = [];
         fetchRecipes(filterParams)
             .then((recipes) => {
@@ -74,6 +72,5 @@ export const useRecipesData = (ingredientList) => {
     //     loadRecipes(filterParams);
     // }, [filterParams]);
     console.log("Data im use: ", data);
-    console.log("loading: ", loading);
     return {data, error, loading, loadRecipes};
 };
