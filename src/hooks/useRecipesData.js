@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 // const API_URL = "http://localhost:1337/api/recipes/";
-const API_URL = "http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=Tomate&filters[vegan]=false&filters[vegetarian]=false&filters[lactosefree]=false&filters[glutenfree]=false";
+const API_URL = "http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=tomate&filters[vegan]=false&filters[vegetarian]=false&filters[lactosefree]=false&filters[glutenfree]=false";
 
 /*
 const headers = {
@@ -38,7 +38,7 @@ export const fetchRecipes = async (filterParams) => {
     return await extractResult(result);
 };
 
-export const useRecipesData = () => {
+export const useRecipesData = (ingredientList) => {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
@@ -55,6 +55,8 @@ export const useRecipesData = () => {
     console.log("komme bis hier")
     const loadRecipes = () => {
         console.log("load");
+        setError(undefined);
+        setLoading(true);
         const filterParams = [];
         fetchRecipes(filterParams)
             .then((recipes) => {
@@ -72,5 +74,6 @@ export const useRecipesData = () => {
     //     loadRecipes(filterParams);
     // }, [filterParams]);
     console.log("Data im use: ", data);
+    console.log("loading: ", loading);
     return {data, error, loading, loadRecipes};
 };

@@ -4,11 +4,11 @@ import {useExcludedIngredients} from "../../contexts/ExcludedContext/ExcludedCon
 import {useRecipesData} from "../../hooks/useRecipesData";
 import {useState} from "react";
 
-export const IngredientSearch = () => {
+export const IngredientSearch = ({loadRecipes}) => {
     const [inputValue, setInputValue] = useState("");
     const {addIngredient} = useIngredients();
     const {addExcluded} = useExcludedIngredients();
-    const { loadRecipes } = useRecipesData();
+   // const { loadRecipes } = useRecipesData();
 
     const onClickSearch = () => {
         loadRecipes();
