@@ -11,6 +11,8 @@ import {useState} from "react";
 import RegistrationForm from "../RegistrationForm/RegistrationForm";
 import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
 import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
+import {Link} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 
 const FormContextWrapper = ({ children, setIsOpen}) => {
     return (
@@ -21,7 +23,6 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 };
 
 const LoginForm = () => {
-    const [isOpenRegisterForm, setIsOpenRegisterForm] = useState(false);
     const {closeLoginForm} = useLoginForm();
     const {openUserInfo, isUserInfoOpened} = useUserInfo();
     const { validate, formFields } = useForm();
@@ -40,9 +41,6 @@ const LoginForm = () => {
         }
     };
 
-    const onClickRegister = () => {
-        setIsOpenRegisterForm(true);
-    };
 
     return (
         <>
@@ -69,11 +67,9 @@ const LoginForm = () => {
             </button>
             <br/>
             <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
-            <label className={Styles.registerLink} onClick={onClickRegister}>registrieren</label>
+            <Link className={Styles.registerLink} to="/register">registrieren</Link>
         </form>
-            {isOpenRegisterForm && (
-                <RegistrationForm setIsOpenRegisterForm={setIsOpenRegisterForm}/>
-            )}
+
         </>
     );
 };
