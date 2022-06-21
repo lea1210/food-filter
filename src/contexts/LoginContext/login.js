@@ -47,4 +47,5 @@ export const login = async (user, password) => {
 
 export const logout = () => {
     localStorage.removeItem(KEY_TOKEN);
+    localStorage.removeItem(KEY_USER);
 };
