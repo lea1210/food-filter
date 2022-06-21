@@ -1,29 +1,27 @@
 import Styles from "./Preferences.module.css";
 import {Checkbox} from "../Checkbox/Checkbox";
-import React from "@types/react";
 import {usePreferences} from "../../contexts/PreferencesContext/PreferencesContext";
+import React from "react";
 
 export const Preferences = () => {
-    const {changePreferences} = usePreferences();
-
-    const handleOnChange = (name, value) => {
-        changePreferences(name, value);
-    }
+    const {handleChangeVegan, handleChangeVegetarian, handleChangeLactosefree, handleChangeGlutenfree} = usePreferences();
 
     return (
         <>
-            <Checkbox name={"vegan"} onChange={changePreferences(name, value)}>
-                <label>vegan</label>
-            </Checkbox>
-            <Checkbox name={"vegetarian"} onChange={changePreferences(name, value)}>
-                <label>vegetarisch</label>
-            </Checkbox>
-            <Checkbox name={"lactosefree"} onChange={changePreferences(name, value)}>
-                <label>laktosefrei</label>
-            </Checkbox>
-            <Checkbox name={"glutenfree"} onChange={changePreferences(name, value)}>
-                <label>glutenfrei</label>
-            </Checkbox>
+            <div className={Styles.checkboxes}>
+                <Checkbox onChange={handleChangeVegan}>
+                    <label>vegan</label>
+                </Checkbox>
+                <Checkbox onChange={handleChangeVegetarian}>
+                    <label>vegetarisch</label>
+                </Checkbox>
+                <Checkbox onChange={handleChangeLactosefree}>
+                    <label>laktosefrei</label>
+                </Checkbox>
+                <Checkbox onChange={handleChangeGlutenfree}>
+                    <label>glutenfrei</label>
+                </Checkbox>
+            </div>
         </>
     );
 };
