@@ -29,7 +29,10 @@ const updateUser = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
 export const setNewUserInfo = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
     const userData = await updateUser(id, vegan, vegetarian, lactosefree, glutenfree);
     if (userData) {
+        console.log("vorher: ", localStorage.getItem(KEY_USER));
+        localStorage.removeItem(KEY_USER);
         localStorage.setItem(KEY_USER, JSON.stringify(userData));
+        console.log("nachher: ", localStorage.getItem(KEY_USER));
         return true;
     } else {
         return false;

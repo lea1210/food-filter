@@ -4,24 +4,26 @@ import {usePreferences} from "../../contexts/PreferencesContext/PreferencesConte
 import React, {useEffect} from "react";
 import {getUser} from "../../contexts/LoginContext/login";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
+import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
 
 export const Preferences = () => {
     const user = getUser();
     const { isLoggedIn } = useLogin();
-    const {handleChangeVegan, handleChangeVegetarian, handleChangeLactosefree, handleChangeGlutenfree} = usePreferences();
+    const { isUpdated , setIsUpdated} = useUserInfo();
+    const {handleChangeVegan, handleChangeVegetarian, handleChangeLactosefree, handleChangeGlutenfree, isVegan, isVegetarian, isGlutenfree, isLactosefree} = usePreferences();
 
     useEffect(() => {
-        console.log("im useeffect", isLoggedIn);
+        console.log("loggedIn: ", isLoggedIn, "isUpdated: ", isUpdated);
         if (isLoggedIn) {
-            console.log("im login");
             handleChangeVegan(user.vegan);
             handleChangeVegetarian(user.vegetarian);
             handleChangeLactosefree(user.lactosefree);
             handleChangeGlutenfree(user.glutenfree);
         }
-    }, [isLoggedIn, user]);
+        setIsUpdated(!isUpdated);
+    }, [isLoggedIn, isUpdated]);
 
-    if(user) {
+  /*  if(user) {
         return (
             <>
                 <div className={Styles.checkboxes}>
@@ -40,21 +42,21 @@ export const Preferences = () => {
                 </div>
             </>
         );
-    }
+    }*/
 
         return (
             <>
                 <div className={Styles.checkboxes}>
-                    <Checkbox onChange={handleChangeVegan}>
+                    <Checkbox checked={isVegan} onChange={handleChangeVegan}>
                         <label>vegan</label>
                     </Checkbox>
-                    <Checkbox onChange={handleChangeVegetarian}>
+                    <Checkbox checked={isVegetarian} onChange={handleChangeVegetarian}>
                         <label>vegetarisch</label>
                     </Checkbox>
-                    <Checkbox onChange={handleChangeLactosefree}>
+                    <Checkbox checked={isLactosefree} onChange={handleChangeLactosefree}>
                         <label>laktosefrei</label>
                     </Checkbox>
-                    <Checkbox onChange={handleChangeGlutenfree}>
+                    <Checkbox checked={isGlutenfree} onChange={handleChangeGlutenfree}>
                         <label>glutenfrei</label>
                     </Checkbox>
                 </div>

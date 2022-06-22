@@ -1,10 +1,13 @@
 import React, {useContext, useState} from "react";
-import {getToken, login, logout} from "./login";
+import {getToken, getUser,login, logout} from "./login";
+import {usePreferences} from "../PreferencesContext/PreferencesContext";
 
 export const LoginContext = React.createContext(undefined);
 
 export function LoginContextProvider({children}) {
     const [isLoggedIn, setIsLoggedIn] = useState(!!getToken());
+    const [user, setUser] = useState(undefined);
+    const { handleChangeVegan, handleChangeVegetarian, handleChangeGlutenfree, handleChangeLactosefree} = usePreferences();
 
     const handleLogin = async (user, password) => {
         return await login(user, password)
@@ -17,6 +20,10 @@ export function LoginContextProvider({children}) {
     const handleLogout = () => {
         logout();
         setIsLoggedIn(false);
+        handleChangeVegan(false);
+        handleChangeVegetarian(false);
+        handleChangeGlutenfree(false);
+        handleChangeLactosefree(false);
     };
 
     return (
@@ -25,6 +32,7 @@ export function LoginContextProvider({children}) {
                 login: handleLogin,
                 logout: handleLogout,
                 getToken,
+                getUser,
                 isLoggedIn,
             }}
         >
