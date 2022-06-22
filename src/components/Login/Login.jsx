@@ -2,10 +2,10 @@ import Styles from "../Login/Login.module.css";
 import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 import UserInfo from "../UserInfo/UserInfo";
 import LoginForm from "../LoginForm/LoginForm";
-import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
+import {useUser} from "../../contexts/UserInfoContext/UserInfoContext";
 
 const Login = () => {
-    const { isUserInfoOpened } = useUserInfo();
+    const { isUserInfoOpened } = useUser();
     const { isLoginFormOpened } = useLoginForm();
 
     return (

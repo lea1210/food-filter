@@ -1,11 +1,11 @@
 import Styles from "./UserAccountButton.module.css";
 import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
-import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
+import {useUser} from "../../contexts/UserInfoContext/UserInfoContext";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
 
 export const UserAccountButton = () => {
     const {openLoginForm, closeLoginForm, isLoginFormOpened} = useLoginForm();
-    const {openUserInfo} = useUserInfo();
+    const {openUserInfo} = useUser();
     const {isLoggedIn} = useLogin();
 
     const onClick = () => {

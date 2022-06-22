@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 const AUTH_URL = "http://localhost:1337/api/auth/local";
 const KEY_TOKEN = "jwt";
 const KEY_USER = "user";
@@ -47,4 +49,5 @@ export const login = async (user, password) => {
 
 export const logout = () => {
     localStorage.removeItem(KEY_TOKEN);
+    localStorage.removeItem(KEY_USER);
 };

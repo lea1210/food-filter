@@ -1,6 +1,6 @@
 import Styles from "./UserInfo.module.css";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
-import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
+import {useUser} from "../../contexts/UserInfoContext/UserInfoContext";
 import {getUser} from "../../contexts/LoginContext/login";
 import {Checkbox} from "../Checkbox/Checkbox";
 import React, {useState} from "react";
@@ -8,8 +8,9 @@ import {setNewUserInfo} from "../../hooks/useUserInfo";
 
 const UserInfo = () => {
     const [ updatedUserInfo, setUpdatedUserInfo ] = useState(false);
-    const { userName, logout} = useLogin();
-    const { closeUserInfo, isUserInfoOpened} = useUserInfo();
+    const { logout} = useLogin();
+    const { setIsUpdated, isUpdated } = useUser();
+    const { closeUserInfo, isUserInfoOpened} = useUser();
 
     const user = getUser();
 
@@ -24,7 +25,11 @@ const UserInfo = () => {
     }
 
     const onClickSave = () => {
-        setNewUserInfo(user.id, isVegan, isVegetarian, isLactosefree, isGlutenfree).then((result) => setUpdatedUserInfo(result));
+        setIsUpdated(false);
+        setNewUserInfo(user.id, isVegan, isVegetarian, isLactosefree, isGlutenfree).then((result) => {
+            setUpdatedUserInfo(result);
+            setIsUpdated(true);
+        });
         closeUserInfo();
     }
 

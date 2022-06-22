@@ -4,6 +4,7 @@ export const UserInfoContext = React.createContext(undefined);
 
 export function UserInfoContextProvider({children}) {
     const [isUserInfoOpened, setIsUserInfoOpened] = useState(false);
+    const [isUpdated, setIsUpdated] = useState(false);
 
     const openUserInfo = () => {
         setIsUserInfoOpened(true);
@@ -17,8 +18,9 @@ export function UserInfoContextProvider({children}) {
             value={{
                 isUserInfoOpened,
                 openUserInfo,
-                closeUserInfo
-                // hier auch noch userinfos??
+                closeUserInfo,
+                setIsUpdated,
+                isUpdated,
             }}
         >
             {children}
@@ -26,4 +28,4 @@ export function UserInfoContextProvider({children}) {
     );
 }
 
-export const useUserInfo = () => useContext(UserInfoContext);
+export const useUser = () => useContext(UserInfoContext);
