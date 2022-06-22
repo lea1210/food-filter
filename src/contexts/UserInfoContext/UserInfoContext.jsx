@@ -28,4 +28,4 @@ export function UserInfoContextProvider({children}) {
     );
 }
 
-export const useUserInfo = () => useContext(UserInfoContext);
+export const useUser = () => useContext(UserInfoContext);

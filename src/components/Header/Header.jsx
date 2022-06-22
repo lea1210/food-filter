@@ -3,10 +3,10 @@ import {UserAccountButton} from "../UserAccountButton/UserAccountButton";
 import Login from "../Login/Login";
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
 import UserInfo from "../UserInfo/UserInfo";
-import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
+import {useUser} from "../../contexts/UserInfoContext/UserInfoContext";
 
 export const Header = () => {
-    const {isUserInfoOpened} = useUserInfo();
+    const {isUserInfoOpened} = useUser();
     const {isLoggedIn} = useLogin();
 
     return (

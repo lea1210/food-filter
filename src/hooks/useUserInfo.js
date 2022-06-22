@@ -1,4 +1,5 @@
 import {getToken} from "../contexts/LoginContext/login";
+import {useUser, useUserInfo} from "../contexts/UserInfoContext/UserInfoContext";
 
 const API_URL = "http://localhost:1337/api/users";
 const KEY_USER = "user";
@@ -29,10 +30,8 @@ const updateUser = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
 export const setNewUserInfo = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
     const userData = await updateUser(id, vegan, vegetarian, lactosefree, glutenfree);
     if (userData) {
-        console.log("vorher: ", localStorage.getItem(KEY_USER));
         localStorage.removeItem(KEY_USER);
         localStorage.setItem(KEY_USER, JSON.stringify(userData));
-        console.log("nachher: ", localStorage.getItem(KEY_USER));
         return true;
     } else {
         return false;

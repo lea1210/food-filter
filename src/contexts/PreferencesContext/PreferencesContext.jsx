@@ -12,7 +12,6 @@ export function PreferencesContextProvider({children}) {
     const [isGlutenfree, setIsGlutenfree] = useState(false);
     const [isLactosefree, setIsLactosefree] = useState(false);
 
-
     return (
         <PreferencesContext.Provider
             value={{
