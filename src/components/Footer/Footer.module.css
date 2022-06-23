@@ -9,6 +9,7 @@
     padding-right:10%;
     float: bottom;
     margin-top: 50px;
+    z-index: 1;
 
 }
 .flex {

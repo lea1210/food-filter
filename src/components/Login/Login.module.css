@@ -1,4 +1,14 @@
+@keyframes slideIn {
+    0% {
+        transform: translateY(1000px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .loginWindow{
+    transition: transform 500ms;
     border-radius: 5px;
     float: right;
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
