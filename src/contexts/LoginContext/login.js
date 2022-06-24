@@ -17,7 +17,7 @@ const authenticate = (username, password) => {
     })
         .then((res) => {
             if (!res.ok) {
-                console.log("antwort nichnok");
+                console.log("antwort nicht ok");
                 return null;
             }
             return res.json();
@@ -38,11 +38,14 @@ export const getUser = () => {
 
 export const login = async (user, password) => {
     const authData = await authenticate(user, password);
+    console.log("authdata: ", authData);
     if (authData) {
+        console.log("habe ne auth");
         localStorage.setItem(KEY_TOKEN, authData.token);
         localStorage.setItem(KEY_USER, JSON.stringify(authData.user));
         return true;
     } else {
+        console.log("hab keinen user error");
         return false;
     }
 };
