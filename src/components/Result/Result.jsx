@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {useState} from "react";
 import {RecipeDetails} from "../RecipeDetails/RecipeDetails";
-import {Recipe} from "../Recipe/Recipe";
+import recipe, {Recipe} from "../Recipe/Recipe";
 import {RecipePreview} from "../RecipePreview/RecipePreview";
 
 export const Result = ({loading, data, error}) => {
@@ -33,9 +33,9 @@ export const Result = ({loading, data, error}) => {
             <>
                 {data.map((recipe) => (
                     <RecipePreview
-                        key={recipe.name}
+                        key={recipe.id}
                         name={recipe.name}
-                        imgUrl={recipe.imgUrl}
+                        imgUrl={recipe.image}
                         onClick={() => setSelectedRecipe(recipe)}
                     />
                 ))

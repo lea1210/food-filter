@@ -3,7 +3,7 @@ import Styles from "../RecipeDetails/RecipeDetails.module.css";
 import {Recipe} from "../Recipe/Recipe";
 import {Button} from "../Button/Button";
 
-export const RecipeDetails = ({recipe, onClose}) => {
+export const RecipeDetails = ({recipe, onClose, id }) => {
     return (
         <>
             <div className={Styles.Button}>

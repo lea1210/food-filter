@@ -6,6 +6,7 @@
 }
 
 .recipeName{
+    color: black;
 
 }
 
@@ -15,3 +16,6 @@
     flex-direction: column;
 }
 
+.recipeDescription{
+    color: black;
+}

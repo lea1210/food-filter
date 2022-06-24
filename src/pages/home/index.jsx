@@ -15,7 +15,7 @@ const Page = () => {
         <>
             <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
             <IngredientTags></IngredientTags>
-            <Result error={error} loading={loading} data={data} {...data} />
+            <Result error={error} loading={loading} data={data} />
         </>
     );
 };
