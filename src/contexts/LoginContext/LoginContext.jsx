@@ -7,12 +7,14 @@ export const LoginContext = React.createContext(undefined);
 export function LoginContextProvider({children}) {
     const [isLoggedIn, setIsLoggedIn] = useState(!!getToken());
     const [user, setUser] = useState(undefined);
+    const [isLogginIn,setIsLogginIn] = useState(false);
     const { handleChangeVegan, handleChangeVegetarian, handleChangeGlutenfree, handleChangeLactosefree} = usePreferences();
 
     const handleLogin = async (user, password) => {
         return await login(user, password)
              .then((result) => {
                  setIsLoggedIn(result);
+                 setIsLogginIn(false);
                  return result;
              });
     }
@@ -33,7 +35,6 @@ export function LoginContextProvider({children}) {
                 logout: handleLogout,
                 getToken,
                 getUser,
-                isLoggedIn,
             }}
         >
             {children}
