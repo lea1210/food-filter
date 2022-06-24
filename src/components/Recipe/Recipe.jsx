@@ -1,14 +1,15 @@
 import Styles from "../Recipe/Recipe.module.css";
 import PropTypes from "prop-types";
+import React from "react";
 
 export const Recipe = ({name, onClick, image, ingredientlist, description, preperation, id, vegan, vegetarian, lactosefree, glutenfree}) => {
     return (
         <div data-testid="recipe" onClick={onClick}>
-            <div className={Styles.img}>
-                <img src={image}/>
-            </div>
             <div className={Styles.recipeDetails}>
                 <h4 className={Styles.recipeName}>{name}</h4>
+            </div>
+            <div>
+                <img src={image} className={Styles.img}/>
             </div>
             <div className={Styles.recipeDescription}>
                 {description}
