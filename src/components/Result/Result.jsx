@@ -19,6 +19,7 @@ export const Result = ({loading, data, error}) => {
         );
     } else if (data.length < 1) {
         console.log(data.length);
+        console.log("Data im Error");
         console.log(data);
         return (
             <>
@@ -29,33 +30,34 @@ export const Result = ({loading, data, error}) => {
             </>
         );
     }
-        return (
-            <>
-                {data.map((recipe) => (
+    return (
+        <>
+            {data.map((recipe) =>
+                (
                     <RecipePreview
                         key={recipe.id}
                         name={recipe.name}
-                        imgUrl={recipe.image}
+                        image={recipe.image}
                         onClick={() => setSelectedRecipe(recipe)}
                     />
                 ))
-                }
+            }
 
-                {selectedRecipe && <RecipeDetails recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)}/>}
-            </>
-        );
-    }
+            {selectedRecipe && <RecipeDetails recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)}/>}
+        </>
+    );
+}
 
 
-    Result.propTypes = {
-        loading: PropTypes.bool,
-        data: PropTypes.array,
-        error: PropTypes.string,
-    };
+Result.propTypes = {
+    loading: PropTypes.bool,
+    data: PropTypes.array,
+    error: PropTypes.string,
+};
 
-    Result.defaultProps = {
-        loading: true,
-        data: [],
-        error: undefined,
-    };
+Result.defaultProps = {
+    loading: true,
+    data: [],
+    error: undefined,
+};
 

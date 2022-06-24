@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="we can see some recipes">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="delted props and default Recipe&#10;tried to fix view problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRecipesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRecipesData.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +63,7 @@
       <workItem from="1654254179303" duration="818000" />
       <workItem from="1654848711870" duration="3854000" />
       <workItem from="1655821907765" duration="2623000" />
-      <workItem from="1656058011434" duration="1267000" />
+      <workItem from="1656058011434" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="created RecipeView">
       <created>1654245226454</created>
@@ -140,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656058040717</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="delted props and default Recipe&#10;tried to fix view problem">
+      <created>1656059342097</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1656059342097</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +169,7 @@
     <MESSAGE value="merged master in branch" />
     <MESSAGE value="created static api request" />
     <MESSAGE value="we can see some recipes" />
-    <option name="LAST_COMMIT_MESSAGE" value="we can see some recipes" />
+    <MESSAGE value="delted props and default Recipe&#10;tried to fix view problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="delted props and default Recipe&#10;tried to fix view problem" />
   </component>
 </project>

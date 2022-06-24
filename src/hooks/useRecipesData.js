@@ -59,7 +59,7 @@ export const useRecipesData = () => {
         fetchRecipes(filterParams)
             .then((recipes) => {
                 setData(recipes.data)
-                console.log("",recipes.data);
+                console.log("", recipes.data);
             })
             .catch((e) => setError(e))
             .finally(() => {
