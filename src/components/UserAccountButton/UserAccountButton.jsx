@@ -6,7 +6,7 @@ import {useLogin} from "../../contexts/LoginContext/LoginContext";
 export const UserAccountButton = () => {
     const {openLoginForm, closeLoginForm, isLoginFormOpened} = useLoginForm();
     const {openUserInfo} = useUser();
-    const {isLoggedIn} = useLogin();
+    const {isLoggedIn, resetError} = useLogin();
 
     const onClick = () => {
         if(isLoggedIn){
@@ -14,6 +14,7 @@ export const UserAccountButton = () => {
         }else{
             if (isLoginFormOpened){
                 closeLoginForm();
+                resetError();
             } else{
                 openLoginForm();
             }
