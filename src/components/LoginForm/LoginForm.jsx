@@ -63,7 +63,7 @@ const LoginForm = () => {
                 required
             />
             {
-                loginError && <label>Username oder Passwort falsch!</label>
+                loginError && <label className={Styles.errorMessage}>Username oder Passwort falsch!</label>
             }
             <button className={Styles.loginButton} type="submit">
                 Login
@@ -72,7 +72,6 @@ const LoginForm = () => {
             <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
             <Link className={Styles.registerLink} to="/register">registrieren</Link>
         </form>
-
         </>
     );
 };

@@ -11,6 +11,7 @@ export function LoginContextProvider({children}) {
     const { handleChangeVegan, handleChangeVegetarian, handleChangeGlutenfree, handleChangeLactosefree} = usePreferences();
 
     const handleLogin = async (user, password) => {
+        resetError();
         return await login(user, password)
              .then((result) => {
                  setIsLoggedIn(result);
