@@ -1,10 +1,12 @@
 import Styles from "../Recipe/Recipe.module.css";
 import PropTypes from "prop-types";
 
-export const Recipe = ({name, onClick, image, ingredients, description, preparation, id}) => {
+export const Recipe = ({name, onClick, image, ingredientlist, description, preperation, id, vegan, vegetarian, lactosefree, glutenfree}) => {
     return (
         <div data-testid="recipe" onClick={onClick}>
-            <div style={{backgroundImage: `url(${image})`}} className={Styles.img}/>
+            <div className={Styles.img}>
+                <img src={image}/>
+            </div>
             <div className={Styles.recipeDetails}>
                 <h4 className={Styles.recipeName}>{name}</h4>
             </div>
@@ -12,11 +14,19 @@ export const Recipe = ({name, onClick, image, ingredients, description, preparat
                 {description}
             </div>
             <div className={Styles.preparation}>
-                {preparation}
+                {preperation}
             </div>
             <div className={Styles.ingredients}>
-                {ingredients}
+                {ingredientlist}
             </div>
+            {/*<div className={Styles.preferences}>*/}
+            {/*    <li>*/}
+            {/*        <ul>Vegan: {vegan}</ul>*/}
+            {/*        <ul>Vegetarisch: {vegetarian}</ul>*/}
+            {/*        <ul>Laktosefrei: {lactosefree}</ul>*/}
+            {/*        <ul>Glutenfrei: {glutenfree}</ul>*/}
+            {/*    </li>*/}
+            {/*</div>*/}
         </div>
     );
 };

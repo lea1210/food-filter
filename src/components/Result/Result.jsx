@@ -18,9 +18,7 @@ export const Result = ({loading, data, error}) => {
             </div>
         );
     } else if (data.length < 1) {
-        console.log(data.length);
-        console.log("Data im Error");
-        console.log(data);
+
         return (
             <>
                 <h3>Leider konnten wir keine Rezepte finden!</h3>

@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 // const API_URL = "http://localhost:1337/api/recipes/";
-const API_URL = "http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=tomate&filters[vegan]=false&filters[vegetarian]=false&filters[lactosefree]=false&filters[glutenfree]=false";
+const API_URL = "http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=tomate&filters[vegan]=false&filters[vegetarian]=false&filters[lactosefree]=false&filters[glutenfree]=false&populate=*";
 
 /*
 const headers = {
