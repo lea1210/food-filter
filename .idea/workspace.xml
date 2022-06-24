@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="reformat code">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed view problem &#10;we can see the right recipe names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +66,7 @@
       <workItem from="1654254179303" duration="818000" />
       <workItem from="1654848711870" duration="3854000" />
       <workItem from="1655821907765" duration="2623000" />
-      <workItem from="1656058011434" duration="2100000" />
+      <workItem from="1656058011434" duration="2874000" />
     </task>
     <task id="LOCAL-00001" summary="created RecipeView">
       <created>1654245226454</created>
@@ -148,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656059747988</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed view problem &#10;we can see the right recipe names">
+      <created>1656060176634</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656060176634</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +188,7 @@
     <MESSAGE value="we can see some recipes" />
     <MESSAGE value="delted props and default Recipe&#10;tried to fix view problem" />
     <MESSAGE value="reformat code" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformat code" />
+    <MESSAGE value="fixed view problem &#10;we can see the right recipe names" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed view problem &#10;we can see the right recipe names" />
   </component>
 </project>

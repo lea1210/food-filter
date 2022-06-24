@@ -38,6 +38,7 @@ export const Result = ({loading, data, error}) => {
                         key={recipe.id}
                         name={recipe.attributes.name}
                         image={recipe.attributes.image}
+                        description={recipe.attributes.description}
                         onClick={() => setSelectedRecipe(recipe)}
                     />
                 ))

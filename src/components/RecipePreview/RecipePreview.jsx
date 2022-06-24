@@ -11,7 +11,7 @@ export const RecipePreview = ({name, onClick, description, image, id}) => {
                     <h4 className={Styles.recipeName}>{name}</h4>
                     <div style={{backgroundImage: `url(${image})`}} className={Styles.img}/>
                     <div style={Styles.recipeDescription}>
-                        {description}
+                        <p>{description}</p>
                     </div>
                 </Recipe>
             </div>

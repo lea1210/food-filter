@@ -4,13 +4,14 @@ import {Recipe} from "../Recipe/Recipe";
 import {Button} from "../Button/Button";
 
 export const RecipeDetails = ({recipe, onClose, id }) => {
+    console.log(recipe);
     return (
         <>
             <div className={Styles.Button}>
                 <Button onClick={onClose}>Abbrechen</Button>
             </div>
             <div className={Styles.recipe}>
-                <Recipe {...recipe}></Recipe>
+                <Recipe {...recipe.attributes}></Recipe>
             </div>
 {/*            <div className={Styles.ButtonEasterEgg}>
                 <Button onClick={}>Click me</Button>
