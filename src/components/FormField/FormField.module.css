@@ -11,7 +11,7 @@ Input:focus{
     border-color: #afafaf;
 }
 .error{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 25px;
     color: #C24844;
     font-size: 8pt;
     text-align: center;

@@ -17,15 +17,20 @@ const authenticate = (username, password) => {
     })
         .then((res) => {
             if (!res.ok) {
-                console.log("antwort nichnok");
-                return null;
+                console.log("antwort nicht ok");
+                return undefined;
             }
             return res.json();
         })
-        .then((data) => ({
-            token: data.jwt,
-            user: data.user,
-        }));
+        .then((data) => {
+            if(data){
+                return {
+                    token: data.jwt,
+                    user: data.user,
+                }
+            }
+        }
+        );
 };
 
 export const getToken = () => {

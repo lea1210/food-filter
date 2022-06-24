@@ -27,7 +27,7 @@ const LoginForm = () => {
     const {openUserInfo, isUserInfoOpened} = useUser();
     const { validate, formFields } = useForm();
     const [isLogginIn,setIsLogginIn] = useState(false);
-    const { isLoggedIn, login} = useLogin();
+    const { isLoggedIn, login, loginError } = useLogin();
 
     const submit = (event) => {
         event.preventDefault();
@@ -65,6 +65,9 @@ const LoginForm = () => {
                 type="password"
                 required
             />
+            {
+                loginError && <label className={Styles.errorMessage}>Username oder Passwort falsch!</label>
+            }
             <button className={Styles.loginButton} type="submit">
                 Login
             </button>
