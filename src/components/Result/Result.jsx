@@ -36,8 +36,8 @@ export const Result = ({loading, data, error}) => {
                 (
                     <RecipePreview
                         key={recipe.id}
-                        name={recipe.name}
-                        image={recipe.image}
+                        name={recipe.attributes.name}
+                        image={recipe.attributes.image}
                         onClick={() => setSelectedRecipe(recipe)}
                     />
                 ))
