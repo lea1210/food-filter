@@ -26,14 +26,17 @@ const LoginForm = () => {
     const {closeLoginForm} = useLoginForm();
     const {openUserInfo, isUserInfoOpened} = useUser();
     const { validate, formFields } = useForm();
+    const [isLogginIn,setIsLogginIn] = useState(false);
     const { isLoggedIn, login, loginError } = useLogin();
 
     const submit = (event) => {
         event.preventDefault();
 
         if (validate()) {
+            setIsLogginIn(true);
             login(formFields["username"].value, formFields["password"].value).then((result) => {
                     if(result){
+                        setIsLogginIn(false);
                         closeLoginForm();
                         openUserInfo();
                     }
@@ -69,9 +72,15 @@ const LoginForm = () => {
                 Login
             </button>
             <br/>
+            {isLogginIn &&
+                <img className={Styles.loading} src="gifs/loading.gif" alt="Loading"  width="30" />
+
+            }
+            <br/>
             <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
             <Link className={Styles.registerLink} to="/register">registrieren</Link>
         </form>
+
         </>
     );
 };

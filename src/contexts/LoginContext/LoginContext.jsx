@@ -6,6 +6,7 @@ export const LoginContext = React.createContext(undefined);
 
 export function LoginContextProvider({children}) {
     const [isLoggedIn, setIsLoggedIn] = useState(!!getToken());
+    const [isLogginIn,setIsLogginIn] = useState(false);
     const [loginError, setLoginError] = useState(false);
   //  const [user, setUser] = useState(undefined);
     const { handleChangeVegan, handleChangeVegetarian, handleChangeGlutenfree, handleChangeLactosefree} = usePreferences();
@@ -15,6 +16,7 @@ export function LoginContextProvider({children}) {
         return await login(user, password)
              .then((result) => {
                  setIsLoggedIn(result);
+                 setIsLogginIn(false);
                  setLoginError(!result);
                  return result;
              });
