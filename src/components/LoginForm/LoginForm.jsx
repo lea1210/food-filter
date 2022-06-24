@@ -9,7 +9,7 @@ import {
 import {useLogin} from "../../contexts/LoginContext/LoginContext";
 import {useState} from "react";
 import RegistrationForm from "../RegistrationForm/RegistrationForm";
-import {useUserInfo} from "../../contexts/UserInfoContext/UserInfoContext";
+import {useUser} from "../../contexts/UserInfoContext/UserInfoContext";
 import {useLoginForm} from "../../contexts/LoginFormContext/LoginFormContext";
 import {Link} from "react-router-dom";
 import {Navigate} from "react-router-dom";
@@ -24,16 +24,19 @@ const FormContextWrapper = ({ children, setIsOpen}) => {
 
 const LoginForm = () => {
     const {closeLoginForm} = useLoginForm();
-    const {openUserInfo, isUserInfoOpened} = useUserInfo();
+    const {openUserInfo, isUserInfoOpened} = useUser();
     const { validate, formFields } = useForm();
-    const { isLoggedIn, login } = useLogin();
+    const [isLogginIn,setIsLogginIn] = useState(false);
+    const { isLoggedIn, login, loginError } = useLogin();
 
     const submit = (event) => {
         event.preventDefault();
 
         if (validate()) {
+            setIsLogginIn(true);
             login(formFields["username"].value, formFields["password"].value).then((result) => {
                     if(result){
+                        setIsLogginIn(false);
                         closeLoginForm();
                         openUserInfo();
                     }
@@ -62,9 +65,17 @@ const LoginForm = () => {
                 type="password"
                 required
             />
+            {
+                loginError && <label className={Styles.errorMessage}>Username oder Passwort falsch!</label>
+            }
             <button className={Styles.loginButton} type="submit">
                 Login
             </button>
+            <br/>
+            {isLogginIn &&
+                <img className={Styles.loading} src="gifs/loading.gif" alt="Loading"  width="30" />
+
+            }
             <br/>
             <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
             <Link className={Styles.registerLink} to="/register">registrieren</Link>

@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 const AUTH_URL = "http://localhost:1337/api/auth/local";
 const KEY_TOKEN = "jwt";
 const KEY_USER = "user";
@@ -15,15 +17,20 @@ const authenticate = (username, password) => {
     })
         .then((res) => {
             if (!res.ok) {
-                console.log("antwort nichnok");
-                return null;
+                console.log("antwort nicht ok");
+                return undefined;
             }
             return res.json();
         })
-        .then((data) => ({
-            token: data.jwt,
-            user: data.user,
-        }));
+        .then((data) => {
+            if(data){
+                return {
+                    token: data.jwt,
+                    user: data.user,
+                }
+            }
+        }
+        );
 };
 
 export const getToken = () => {
@@ -47,4 +54,5 @@ export const login = async (user, password) => {
 
 export const logout = () => {
     localStorage.removeItem(KEY_TOKEN);
+    localStorage.removeItem(KEY_USER);
 };
