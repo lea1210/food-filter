@@ -4,6 +4,7 @@ import {useExcludedIngredients} from "../contexts/ExcludedContext/ExcludedContex
 import {usePreferences} from "../contexts/PreferencesContext/PreferencesContext";
 
 const API_URL = "http://localhost:1337/api/recipes/";
+//?pagination[page]=1&pagination[pageSize]=100
 
 async function extractResult(result) {
     if (result.ok) return await result.json();
@@ -11,23 +12,31 @@ async function extractResult(result) {
 }
 
 function determineFilterParams(ingredientList, excludedList, vegan, vegetarian, lactosefree, glutenfree) {
+    //http://localhost:1337/api/recipes?filters[$and][0][ingredients][name]=tomate&filters[$and][1][ingredients][name]=zwiebel
     let ingredientParams = "";
     let excludedParams = "";
     let filterParams;
+    let ingredientCounter = 0;
 
     ingredientList.map((ingredient) => {
-        ingredientParams += "?filters[ingredients][name][$eq]=" + ingredient.name.toLowerCase() + "&";
+        if (ingredientCounter === 0){
+            ingredientParams += "?";
+        }else{
+            ingredientParams += "&";
+        }
+        ingredientParams += "filters[$and][" + ingredientCounter + "][ingredients][name]=" + ingredient.name.toLowerCase();
+        ingredientCounter += 1;
     });
     excludedList.map((excludedIngr) => {
         console.log("ich exclude" + excludedIngr.name);
-        excludedParams += "?filters[ingredients][name][$ne]=" + excludedIngr.name.toLowerCase() + "&";
+        excludedParams += "?filters[ingredients][name][$neq]=" + excludedIngr.name.toLowerCase() + "&";
     });
     filterParams =  ingredientParams + excludedParams.slice(0,-1);
     if(vegan) filterParams += "&filters[vegan]=true";
     if(vegetarian) filterParams += "&filters[vegetarian]=true";
     if(glutenfree) filterParams += "&filters[glutenfree]=true";
     if(lactosefree) filterParams += "&filters[lactosefree]=true";
-    return filterParams+"&populate=*";
+    return filterParams+"&pagination[page]=1&pagination[pageSize]=100&populate=*";
 }
 
 export const fetchRecipes = async (filterParams) => {
