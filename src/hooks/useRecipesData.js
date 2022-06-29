@@ -1,61 +1,90 @@
-import { useEffect, useState } from "react";
+import {useState} from "react";
+import {useIngredients} from "../contexts/IngredientContext/IngredientContext";
+import {useExcludedIngredients} from "../contexts/ExcludedContext/ExcludedContext";
+import {usePreferences} from "../contexts/PreferencesContext/PreferencesContext";
 
 const API_URL = "http://localhost:1337/api/recipes/";
-
-/*
-const headers = {
-  Authorization: `bearer ${API_KEY}`,
-  "Content-Type": "application/json",
-};
- */
 
 async function extractResult(result) {
     if (result.ok) return await result.json();
     else throw new Error(`something went wrong: ${JSON.stringify(result)}`);
 }
 
-function determineFilterParams(ingredients, excluded, vegan, vegetarian, lactosefree, glutenfree){
+function determineFilterParams(ingredientList, excludedList, vegan, vegetarian, lactosefree, glutenfree) {
+    //http://localhost:1337/api/recipes?filters[$and][0][ingredients][name]=tomate&filters[$and][1][ingredients][name]=zwiebel
     let ingredientParams = "";
     let excludedParams = "";
+    let filterParams;
+    let ingredientCounter = 0;
 
-    //zB http://localhost:1337/api/recipes?filters[ingredients][name][$eq]=Tomaten&filters[vegan]=false
-    ingredients.forEach(ingredient => {
-        ingredientParams += "?filters[ingredients][name][$eq]=" + ingredient +"&";
+    ingredientList.map((ingredient) => {
+        if (ingredientCounter === 0) {
+            ingredientParams += "?";
+        } else {
+            ingredientParams += "&";
+        }
+        ingredientParams += "filters[$and][" + ingredientCounter + "][ingredients][name]=" + ingredient.name.toLowerCase();
+        ingredientCounter += 1;
     });
-    excluded.forEach(excludedIngr => {
-        excludedParams += "?filters[ingredients][name][$ne]=" + excludedIngr + "&";
-    });
-    return ingredientParams + excludedParams + "filters[vegan]=" + vegan +"&filters[vegetarian]=" + vegetarian + "&filters[lactosefree]=" + lactosefree + "&filters[glutenfree]=" + glutenfree;
 
+    filterParams = ingredientParams + excludedParams.slice(0, -1);
+    if (vegan) filterParams += "&filters[vegan]=true";
+    if (vegetarian) filterParams += "&filters[vegetarian]=true";
+    if (glutenfree) filterParams += "&filters[glutenfree]=true";
+    if (lactosefree) filterParams += "&filters[lactosefree]=true";
+    return filterParams + "&pagination[page]=1&pagination[pageSize]=100&populate=*";
+}
+
+function removeExcludedRecipes(recipes, excludedList) {
+    return recipes.filter(function (recipe) {
+        for (let i = 0; i < recipe.attributes.ingredients.data.length; i++) {
+            for (let j = 0; j < excludedList.length; j++) {
+                if (excludedList[j].name === recipe.attributes.ingredients.data[i].attributes.name) {
+                    return false
+                }
+            }
+        }
+        return true;
+    });
 }
 
 export const fetchRecipes = async (filterParams) => {
+    console.log(API_URL + filterParams);
     const result = await fetch(API_URL + filterParams);
-
     return await extractResult(result);
 };
 
-export const useRecipesData = (ingredients, excluded, vegan, vegetarian, lactosefree, glutenfree) => {
+export const useRecipesData = () => {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
+    const {ingredientList} = useIngredients();
+    const {excludedList} = useExcludedIngredients();
+    const {isVegan, isVegetarian, isGlutenfree, isLactosefree} = usePreferences();
 
-        setError(undefined);
-        setLoading(true);
-        const filterParams = determineFilterParams(ingredients, excluded, vegan, vegetarian, lactosefree, glutenfree);
+    //setError(undefined);
+    //setLoading(true);
 
-        const loadRecipes = (filterParams) => {
-            fetchRecipes(filterParams)
-                .then((recipes) => setData(recipes.data))
-                .catch((e) => setError(e))
-                .finally(() => {
-                    setLoading(false);
-                });
-        };
+    // useMemo verwenden damit getriggert wird wenn parameter sich ändern
+    // return für hook
 
-    useEffect(() => {
-        loadRecipes(filterParams);
-    },[filterParams]);
 
-    return { data, error, loading };
+    const loadRecipes = () => {
+        const filterParams = determineFilterParams(ingredientList, excludedList, isVegan, isVegetarian, isLactosefree, isGlutenfree);
+        fetchRecipes(filterParams)
+            .then((recipes) => {
+                const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);
+                setData(finaleRecipes);
+            })
+            .catch((e) => setError(e))
+            .finally(() => {
+                setLoading(false);
+            });
+    };
+
+    // useEffect(() => {
+    //     console.log("effect");
+    //     loadRecipes(filterParams);
+    // }, [filterParams]);
+    return {data, error, loading, loadRecipes};
 };

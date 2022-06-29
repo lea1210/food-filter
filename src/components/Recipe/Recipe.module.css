@@ -1,9 +1,33 @@
 .img{
-
+    margin-top: 7px;
+    margin-left: 20px;
+    height: 250px;
+    width: 300px;
+    border-radius: 5%;
+    border: none;
+    background-color: #417552;
 }
 .recipeDetails{
+    color: black;
 
 }
 .recipeName{
+    color: black;
+}
+
+.recipeDescription{
+    color: black;
+}
+
+.ingredients{
+    color: black;
+
+}
+
+.preparation{
+    color: black;
+}
+
+.preferences{
 
 }

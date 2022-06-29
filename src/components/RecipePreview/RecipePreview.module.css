@@ -1,0 +1,24 @@
+.img{
+    margin-top: 7px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #417552;
+}
+
+.recipeName{
+    color: black;
+
+}
+
+.recipeContainer{
+    align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipeDescription{
+    color: black;
+}

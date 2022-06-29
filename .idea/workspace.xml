@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="893691df-ec6c-43a2-961d-6db146170311" name="Changes" comment="created ingredient tag and ingredient component" />
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -35,13 +45,24 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "http.proxy",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="useRecipesData.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/hooks/useRecipesData.js" working-dir="$PROJECT_DIR$/src/hooks">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.useRecipesData.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="907d7ccd-baf1-46e5-b5c7-972e3646051e" name="Changes" comment="" />
+      <changelist id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="changed url" />
       <created>1654243663089</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -49,6 +70,8 @@
       <workItem from="1654243664953" duration="9688000" />
       <workItem from="1654254179303" duration="818000" />
       <workItem from="1654848711870" duration="3854000" />
+      <workItem from="1655821907765" duration="2623000" />
+      <workItem from="1656058011434" duration="6174000" />
     </task>
     <task id="LOCAL-00001" summary="created RecipeView">
       <created>1654245226454</created>
@@ -92,14 +115,77 @@
       <option name="project" value="LOCAL" />
       <updated>1654254779536</updated>
     </task>
-    <task id="LOCAL-00007" summary="added login loading animation">
-      <created>1656063451782</created>
+    <task id="LOCAL-00007" summary="merged master in branch">
+      <created>1655454144296</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1656063451782</updated>
+      <updated>1655454144296</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="merged master in branch">
+      <created>1655455936056</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655455936056</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created static api request">
+      <created>1655463185505</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655463185505</updated>
+    </task>
+    <task id="LOCAL-00010" summary="we can see some recipes">
+      <created>1656058040717</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656058040717</updated>
+    </task>
+    <task id="LOCAL-00011" summary="delted props and default Recipe&#10;tried to fix view problem">
+      <created>1656059342097</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1656059342097</updated>
+    </task>
+    <task id="LOCAL-00012" summary="reformat code">
+      <created>1656059747988</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656059747988</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed view problem &#10;we can see the right recipe names">
+      <created>1656060176634</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656060176634</updated>
+    </task>
+    <task id="LOCAL-00014" summary="we can see the recipe description">
+      <created>1656060918216</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656060918216</updated>
+    </task>
+    <task id="LOCAL-00015" summary="merged master">
+      <created>1656064671799</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656064671799</updated>
+    </task>
+    <task id="LOCAL-00016" summary="merged master">
+      <created>1656064719684</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656064719684</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +210,14 @@
     <MESSAGE value="refactored code" />
     <MESSAGE value="created ingredient tag and ingredient component" />
     <MESSAGE value="added login loading animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login loading animation" />
+    <MESSAGE value="merged master in branch" />
+    <MESSAGE value="created static api request" />
+    <MESSAGE value="we can see some recipes" />
+    <MESSAGE value="delted props and default Recipe&#10;tried to fix view problem" />
+    <MESSAGE value="reformat code" />
+    <MESSAGE value="fixed view problem &#10;we can see the right recipe names" />
+    <MESSAGE value="we can see the recipe description" />
+    <MESSAGE value="merged master" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged master" />
   </component>
 </project>

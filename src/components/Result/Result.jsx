@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import {useState} from "react";
 import {RecipeDetails} from "../RecipeDetails/RecipeDetails";
-import {Recipe} from "../Recipe/Recipe";
+import recipe, {Recipe} from "../Recipe/Recipe";
+import {RecipePreview} from "../RecipePreview/RecipePreview";
 
-export const Result = ({ loading, data, error }) => {
+export const Result = ({loading, data, error}) => {
     const [selectedRecipe, setSelectedRecipe] = useState(null)
 
     if (loading) {
@@ -17,6 +18,7 @@ export const Result = ({ loading, data, error }) => {
             </div>
         );
     } else if (data.length < 1) {
+
         return (
             <>
                 <h3>Leider konnten wir keine Rezepte finden!</h3>
@@ -26,21 +28,25 @@ export const Result = ({ loading, data, error }) => {
             </>
         );
     }
-
     return (
         <>
-            {data.map((recipe) => (
-                <Recipe
-                    key={recipe.name}
-                    name={recipe.name}
-                    onClick={() => setSelectedRecipe(recipe)}
-                />
-            ))}
+            {data.map((recipe) =>
+                (
+                    <RecipePreview
+                        key={recipe.id}
+                        name={recipe.attributes.name}
+                        image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
+                        description={recipe.attributes.description}
+                        onClick={() => setSelectedRecipe(recipe)}
+                    />
+                ))
+            }
 
-            {selectedRecipe && <RecipeDetails recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)} />}
+            {selectedRecipe && <RecipeDetails recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)}/>}
         </>
     );
-};
+}
+
 
 Result.propTypes = {
     loading: PropTypes.bool,
@@ -53,3 +59,4 @@ Result.defaultProps = {
     data: [],
     error: undefined,
 };
+

@@ -2,19 +2,23 @@ import {IngredientSearch} from "../../components/IngredientSearch/IngredientSear
 import Styles from "./index.module.css";
 import {IngredientTags} from "../../components/IngredientTags/IngredientTags";
 import {Preferences} from "../../components/Preferences/Preferences";
+import {useRecipesData} from "../../hooks/useRecipesData";
+import {Result} from "../../components/Result/Result";
+import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
 
 const Page = () => {
     //const [formState, setFormState] = useState({});
+    const {ingredientList} = useIngredients();
 
-    // const recipeData = useRecipesData();
+    const {loading, error, data, loadRecipes} = useRecipesData(ingredientList);
+    console.log("Data: ",data);
     return (
         <>
-            <IngredientSearch className={Styles.flex}/>
+            <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
             <IngredientTags></IngredientTags>
+            <Result error={error} loading={loading} data={data} />
             <Preferences></Preferences>
         </>
-        //später   <Result {...recipeData} /> einfügen
-
     );
 };
 
