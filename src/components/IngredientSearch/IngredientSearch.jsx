@@ -3,6 +3,7 @@ import {useIngredients} from "../../contexts/IngredientContext/IngredientContext
 import {useExcludedIngredients} from "../../contexts/ExcludedContext/ExcludedContext";
 import {useRecipesData} from "../../hooks/useRecipesData";
 import {useState} from "react";
+import {IngredientSuggestion} from "../IngredientSuggestion/IngredientSuggestion";
 
 export const IngredientSearch = ({loadRecipes}) => {
     const [inputValue, setInputValue] = useState("");
@@ -31,6 +32,7 @@ export const IngredientSearch = ({loadRecipes}) => {
             <h2 className={Styles.headerText}>Welche Zutaten hast du zuhause?</h2>
             <div>
                 <input type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} className={Styles.centerInput}/><br/>
+                <IngredientSuggestion currentValue={inputValue}/>
             </div>
             <div>
                 <button className={Styles.input} onClick={onClickAdd}>Hinzufügen</button>

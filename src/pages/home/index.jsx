@@ -7,11 +7,10 @@ import {Result} from "../../components/Result/Result";
 import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
 
 const Page = () => {
-    //const [formState, setFormState] = useState({});
     const {ingredientList} = useIngredients();
 
     const {loading, error, data, loadRecipes} = useRecipesData(ingredientList);
-    console.log("Data: ",data);
+
     return (
         <>
             <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
