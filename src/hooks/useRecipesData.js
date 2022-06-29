@@ -1,7 +1,8 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useIngredients} from "../contexts/IngredientContext/IngredientContext";
 import {useExcludedIngredients} from "../contexts/ExcludedContext/ExcludedContext";
 import {usePreferences} from "../contexts/PreferencesContext/PreferencesContext";
+import ingredient from "../components/Ingredient/Ingredient";
 
 const API_URL = "http://localhost:1337/api/recipes/";
 //?pagination[page]=1&pagination[pageSize]=100
@@ -27,10 +28,10 @@ function determineFilterParams(ingredientList, excludedList, vegan, vegetarian, 
         ingredientParams += "filters[$and][" + ingredientCounter + "][ingredients][name]=" + ingredient.name.toLowerCase();
         ingredientCounter += 1;
     });
-    excludedList.map((excludedIngr) => {
+ /*   excludedList.map((excludedIngr) => {
         console.log("ich exclude" + excludedIngr.name);
         excludedParams += "?filters[ingredients][name][$neq]=" + excludedIngr.name.toLowerCase() + "&";
-    });
+    });*/
     filterParams =  ingredientParams + excludedParams.slice(0,-1);
     if(vegan) filterParams += "&filters[vegan]=true";
     if(vegetarian) filterParams += "&filters[vegetarian]=true";
@@ -38,6 +39,39 @@ function determineFilterParams(ingredientList, excludedList, vegan, vegetarian, 
     if(lactosefree) filterParams += "&filters[lactosefree]=true";
     return filterParams+"&pagination[page]=1&pagination[pageSize]=100&populate=*";
 }
+function removeExcludedRecipes (recipes, excludedList){
+    return recipes.filter(function (recipe){
+        console.log(recipe);
+        console.log(excludedList);
+        for (let i = 0; i < recipe.attributes.ingredients.data.length; i++) {
+            console.log(recipe.attributes.ingredients.data[i].attributes.name);
+            for (let j = 0; j < excludedList.length; j++) {
+                console.log("aus data: ", recipe.attributes.ingredients.data[i].attributes.name);
+                console.log("aus excludedlist: ", excludedList[j]);
+                if(excludedList[j].name === recipe.attributes.ingredients.data[i].attributes.name){
+                    return false
+                }
+            }
+        }
+        return true;
+    });
+}
+
+/*function excludeRecipe(recipe){
+    console.log(recipe);
+    console.log(excludedList);
+    for (let i = 0; i < recipe.attributes.ingredients.data.length; i++) {
+        console.log(recipe.attributes.ingredients.data[i].attributes.name);
+        for (let j = 0; j < excludedList.length; j++) {
+            console.log("aus data: ", recipe.attributes.ingredients.data[i].attributes.name);
+            console.log("aus excludedlist: ", excludedList[j]);
+            if(excludedList[j] === recipe.attributes.ingredients.data[i].attributes.name){
+                return false
+            }
+        }
+    }
+    return true;
+}*/
 
 export const fetchRecipes = async (filterParams) => {
     console.log(API_URL + filterParams);
@@ -64,7 +98,10 @@ export const useRecipesData = () => {
         const filterParams = determineFilterParams(ingredientList, excludedList, isVegan, isVegetarian, isLactosefree, isGlutenfree);
         fetchRecipes(filterParams)
             .then((recipes) => {
-                setData(recipes.data)
+                console.log("recipes vor exclude: ", recipes.data);
+                const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);
+                console.log("recipes danach: ", finaleRecipes);
+                setData(finaleRecipes);
             })
             .catch((e) => setError(e))
             .finally(() => {
