@@ -28,12 +28,6 @@ export const Recipe = ({
                         {description}
                     </div>
                 </div>
-                <div className={Styles.preparation}>
-                    {preperation}
-                </div>
-                <div className={Styles.ingredients}>
-                    {ingredientlist}
-                </div>
             </div>
             {/*<div className={Styles.preferences}>*/}
             {/*    <li>*/}

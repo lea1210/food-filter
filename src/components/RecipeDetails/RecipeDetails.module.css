@@ -4,6 +4,7 @@
 
 .img{
 
+
 }
 
 .Button{
@@ -36,8 +37,14 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.recipeContext{
+    max-width: 600px;
+    margin: 0 auto;
+    float: left;
+}
+
 .recipeForm {
-    z-index: 2;
+    z-index: 3;
     transition: transform 500ms;
     box-sizing: border-box;
     position: absolute;
