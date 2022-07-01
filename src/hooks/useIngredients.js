@@ -12,25 +12,26 @@ export const fetchIngredients = async (currentValue) => {
     return await extractResult(result);
 };
 
-export const useIngredients = () => {
+export const useIngredients = (currentValue) => {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
 
-    const loadIngredients = () => {
-       fetchIngredients(currentValue)
-            .then((ingredients) => {
-                setData(ingredients.data);
-            })
-            .catch((e) => setError(e))
-            .finally(() => {
-                setLoading(false);
-            });
-    };
 
     useEffect(() => {
-       loadIngredients(currentValue);
-       }, [currentValue]);
+            if(currentValue !== undefined && currentValue.length>2) {
+                fetchIngredients(currentValue)
+                    .then((ingredients) => {
+                        setData(ingredients.data);
+                    })
+                    .catch((e) => setError(e))
+                    .finally(() => {
+                        setLoading(false);
+                    });
+            }
+
+    }, [currentValue]);
+
 
     return {data, error, loading};
 };
