@@ -1,10 +1,15 @@
 import Styles from "./IngredientSuggestion.module.css";
-import {useIngredients} from "../../hooks/useIngredients";
+import {useSearchValue} from "../../contexts/SearchValueContext/SearchValueContext";
 
-export const IngredientSuggestion = ({data}) => {
+export const IngredientSuggestion = ({ingredients}) => {
+    const {setSearchValue} = useSearchValue();
 
-    console.log(data);
-    if (data === undefined || data.length < 1) {
+     const onClickSuggestion = (name) => {
+         console.log(name);
+         setSearchValue(name);
+     }
+
+    if (ingredients === undefined || ingredients.length < 1) {
         return(
             <>
             </>
@@ -13,9 +18,9 @@ export const IngredientSuggestion = ({data}) => {
         return (
             <>
                 <div>
-                    {data.map((i) =>
+                    {ingredients.map((ingredient) =>
                         (
-                            <div>{i.attributes.name}</div>
+                            <div className={Styles.suggestion} key={ingredient.attributes.name} onClick={() => setSearchValue(ingredient.attributes.name)}>{ingredient.attributes.name}</div>
                         ))
                     }
                 </div>

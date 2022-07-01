@@ -1,29 +1,33 @@
 import Styles from "./IngredientSearch.module.css";
-import {useIngredients} from "../../hooks/useIngredients";
+import {useIngredientsData} from "../../hooks/useIngredients";
 import {useExcludedIngredients} from "../../contexts/ExcludedContext/ExcludedContext";
 import {useRecipesData} from "../../hooks/useRecipesData";
 import {useState} from "react";
 import {IngredientSuggestion} from "../IngredientSuggestion/IngredientSuggestion";
+import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
+import {useSearchValue} from "../../contexts/SearchValueContext/SearchValueContext";
 
 export const IngredientSearch = ({loadRecipes}) => {
+    const{searchValue, setSearchValue} = useSearchValue();
     const [inputValue, setInputValue] = useState("");
     const {addIngredient} = useIngredients();
     const {addExcluded} = useExcludedIngredients();
    // const { loadRecipes } = useRecipesData();
-    const {data} = useIngredients(inputValue);
+    const {data} = useIngredientsData(searchValue);
 
     const onClickSearch = () => {
         loadRecipes();
-
     }
 
     const onClickAdd = (e) => {
-        addIngredient(inputValue);
+        addIngredient(searchValue);
+        setSearchValue("");
         setInputValue("");
     }
 
     const onClickExclude = () => {
-        addExcluded(inputValue);
+        addExcluded(searchValue);
+        setSearchValue("");
         setInputValue("");
     }
 
@@ -31,8 +35,8 @@ export const IngredientSearch = ({loadRecipes}) => {
         <div className={Styles.ingredientSearch}>
             <h2 className={Styles.headerText}>Welche Zutaten hast du zuhause?</h2>
             <div>
-                <input type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} className={Styles.centerInput}/><br/>
-                <IngredientSuggestion data={data}/>
+                <input type="text" onChange={e => setSearchValue(e.target.value)} value={searchValue} className={Styles.centerInput}/><br/>
+                <IngredientSuggestion ingredients={data}/>
             </div>
             <div>
                 <button className={Styles.input} onClick={onClickAdd}>Hinzufügen</button>

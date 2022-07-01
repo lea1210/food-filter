@@ -12,7 +12,7 @@ export const fetchIngredients = async (currentValue) => {
     return await extractResult(result);
 };
 
-export const useIngredients = (currentValue) => {
+export const useIngredientsData = (currentValue) => {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
