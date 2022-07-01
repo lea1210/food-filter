@@ -10,10 +10,6 @@ export const Recipe = ({
                            description,
                            preperation,
                            id,
-                           vegan,
-                           vegetarian,
-                           lactosefree,
-                           glutenfree
                        }) => {
     return (
         <div data-testid="recipe" className={`${Styles.recipeContainer} ${onClick ? Styles.clickable : ''}`}
@@ -35,14 +31,6 @@ export const Recipe = ({
                     {ingredientlist}
                 </div>
             </div>
-            {/*<div className={Styles.preferences}>*/}
-            {/*    <li>*/}
-            {/*        <ul>Vegan: {vegan}</ul>*/}
-            {/*        <ul>Vegetarisch: {vegetarian}</ul>*/}
-            {/*        <ul>Laktosefrei: {lactosefree}</ul>*/}
-            {/*        <ul>Glutenfrei: {glutenfree}</ul>*/}
-            {/*    </li>*/}
-            {/*</div>*/}
         </div>
     );
 };

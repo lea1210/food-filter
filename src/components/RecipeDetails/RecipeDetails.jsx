@@ -2,11 +2,10 @@ import React from "react";
 import Styles from "../RecipeDetails/RecipeDetails.module.css";
 import {Recipe} from "../Recipe/Recipe";
 import {Button} from "../Button/Button";
+import {RecipeInfo} from "../RecipeInfo/RecipeInfo";
 
 export const RecipeDetails = ({image, recipe, onClose, id}) => {
-    console.log(recipe);
-    console.log("Zutaten:" + recipe.attributes.ingredientlist)
-    console.log("image = " + image);
+    console.log("vegan:" + recipe.attributes.vegan);
     return (
         <>
             <div className={Styles.recipeFormBackdrop}>
@@ -16,7 +15,18 @@ export const RecipeDetails = ({image, recipe, onClose, id}) => {
                     </div>
                     <div className={Styles.recipeContext}>
                         <div className={Styles.textContainer}>
-                            <Recipe name={recipe.attributes.name} image={"http://localhost:1337" +image} description={recipe.attributes.description}></Recipe>
+                            <Recipe name={recipe.attributes.name} image={"http://localhost:1337" + image}
+                                    description={recipe.attributes.description}></Recipe>
+                            <div className={Styles.preferences}>
+                                <label>vegan:</label>
+                                <RecipeInfo bool={recipe.attributes.vegan}></RecipeInfo>
+                                <label>vegetarisch:</label>
+                                <RecipeInfo bool={recipe.attributes.vegetarian}></RecipeInfo>
+                                <label>laktosefrei:</label>
+                                <RecipeInfo bool={recipe.attributes.lactosefree}></RecipeInfo>
+                                <label>glutenfrei:</label>
+                                <RecipeInfo bool={recipe.attributes.glutenfree}></RecipeInfo>
+                            </div>
                             <div className={Styles.ingredients}>
                                 <h3 className={Styles.headlines}>Zutaten:</h3>
                                 <div>{recipe.attributes.ingredientlist}</div>
@@ -25,12 +35,7 @@ export const RecipeDetails = ({image, recipe, onClose, id}) => {
                                 <h3 className={Styles.headlines}>Zubereitung:</h3>
                                 <div>{recipe.attributes.preperation}</div>
                             </div>
-
                         </div>
-
-                        {/*            <div className={Styles.ButtonEasterEgg}>
-                <Button onClick={}>Click me</Button>
-            </div>*/}
                     </div>
                 </div>
             </div>
