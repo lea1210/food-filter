@@ -39,6 +39,8 @@ const LoginForm = () => {
                         setIsLogginIn(false);
                         closeLoginForm();
                         openUserInfo();
+                    }else{
+                        setIsLogginIn(false);
                     }
                 });
         }
@@ -66,9 +68,9 @@ const LoginForm = () => {
                 required
             />
             {
-                loginError && <label className={Styles.errorMessage}>Username oder Passwort falsch!</label>
+                loginError && <label for="LoginButton" className={Styles.errorMessage}>Username oder Passwort falsch!</label>
             }
-            <button className={Styles.loginButton} type="submit">
+            <button id="LoginButton" className={Styles.loginButton} type="submit">
                 Login
             </button>
             <br/>
