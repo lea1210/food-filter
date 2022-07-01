@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="solved problem with images" />
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +65,7 @@
       <workItem from="1654848711870" duration="3854000" />
       <workItem from="1655821907765" duration="2623000" />
       <workItem from="1656058011434" duration="6174000" />
+      <workItem from="1656663462531" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="created RecipeView">
       <created>1654245226454</created>
@@ -185,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656068414847</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="solved problem with images">
+      <created>1656663610749</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656663610749</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,8 +225,8 @@
     <MESSAGE value="reformat code" />
     <MESSAGE value="fixed view problem &#10;we can see the right recipe names" />
     <MESSAGE value="we can see the recipe description" />
-    <MESSAGE value="merged master" />
     <MESSAGE value="solved problem with images" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved problem with images" />
+    <MESSAGE value="merged master" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged master" />
   </component>
 </project>
