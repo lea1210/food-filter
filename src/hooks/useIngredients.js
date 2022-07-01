@@ -23,7 +23,7 @@ export const useIngredientsData = (currentValue) => {
                 if(currentValue.length>2) {
                     fetchIngredients(currentValue)
                         .then((ingredients) => {
-                            if(currentValue.toLowerCase() === ingredients.data[0].attributes.name){
+                            if(currentValue.toLowerCase() === ingredients.data[0].attributes.name && ingredients.data.length ===1){
                                 setData(undefined);
                             }else{
                                 setData(ingredients.data);

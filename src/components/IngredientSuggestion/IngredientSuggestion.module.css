@@ -1,10 +1,12 @@
 .suggestion{
     border-radius: 5px;
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+    box-shadow: 5px 5px 15px 0 rgba(117, 117, 117, 0.38);
     padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 50%;
+    margin: 10px auto;
+    width: 49%;
     text-align: left;
+
+}
+.suggestion:hover{
+    background-color: #ececec;
 }
