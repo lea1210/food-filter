@@ -16,7 +16,6 @@ export const RecipeInfo = ({bool}) => {
             </div>
         );
     }
-
 }
 
 export default RecipeInfo;
