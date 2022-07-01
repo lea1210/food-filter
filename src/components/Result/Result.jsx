@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import {useState} from "react";
 import {RecipeDetails} from "../RecipeDetails/RecipeDetails";
-import recipe, {Recipe} from "../Recipe/Recipe";
 import {RecipePreview} from "../RecipePreview/RecipePreview";
 
 export const Result = ({loading, data, error}) => {
