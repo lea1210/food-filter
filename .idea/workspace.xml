@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged Rezeptansicht in master">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="styled recipe and recipe preview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656663610749</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="styled recipe and recipe preview">
+      <created>1656667107536</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656667107536</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +238,7 @@
     <MESSAGE value="we can see the recipe description" />
     <MESSAGE value="solved problem with images" />
     <MESSAGE value="merged master" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged master" />
+    <MESSAGE value="styled recipe and recipe preview" />
+    <option name="LAST_COMMIT_MESSAGE" value="styled recipe and recipe preview" />
   </component>
 </project>
