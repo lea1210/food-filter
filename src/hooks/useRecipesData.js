@@ -3,7 +3,7 @@ import {useIngredients} from "../contexts/IngredientContext/IngredientContext";
 import {useExcludedIngredients} from "../contexts/ExcludedContext/ExcludedContext";
 import {usePreferences} from "../contexts/PreferencesContext/PreferencesContext";
 
-const API_URL = "http://localhost:1337/api/recipes/";
+const API_URL = "http://localhost:1337/api/recipes";
 
 async function extractResult(result) {
     if (result.ok) return await result.json();
@@ -32,7 +32,9 @@ function determineFilterParams(ingredientList, excludedList, vegan, vegetarian, 
     if (vegetarian) filterParams += "&filters[vegetarian]=true";
     if (glutenfree) filterParams += "&filters[glutenfree]=true";
     if (lactosefree) filterParams += "&filters[lactosefree]=true";
-    return filterParams + "&pagination[page]=1&pagination[pageSize]=100&populate=*";
+
+    filterParams==="" ? filterParams="?": filterParams+="&";
+    return filterParams + "pagination[page]=1&pagination[pageSize]=100&populate=*";
 }
 
 function removeExcludedRecipes(recipes, excludedList) {
@@ -49,7 +51,6 @@ function removeExcludedRecipes(recipes, excludedList) {
 }
 
 export const fetchRecipes = async (filterParams) => {
-    console.log(API_URL + filterParams);
     const result = await fetch(API_URL + filterParams);
     return await extractResult(result);
 };
@@ -71,15 +72,18 @@ export const useRecipesData = () => {
 
     const loadRecipes = () => {
         const filterParams = determineFilterParams(ingredientList, excludedList, isVegan, isVegetarian, isLactosefree, isGlutenfree);
-        fetchRecipes(filterParams)
-            .then((recipes) => {
-                const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);
-                setData(finaleRecipes);
-            })
-            .catch((e) => setError(e))
-            .finally(() => {
-                setLoading(false);
-            });
+        console.log(filterParams);
+        if(filterParams !== undefined) {
+            fetchRecipes(filterParams)
+                .then((recipes) => {
+                    const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);
+                    setData(finaleRecipes);
+                })
+                .catch((e) => setError(e))
+                .finally(() => {
+                    setLoading(false);
+                });
+        }
     };
 
     // useEffect(() => {

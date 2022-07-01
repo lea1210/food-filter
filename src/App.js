@@ -12,6 +12,7 @@ import {Routes} from "react-router";
 import {IngredientContext, IngredientContextProvider} from "./contexts/IngredientContext/IngredientContext";
 import {ExcludedContextProvider} from "./contexts/ExcludedContext/ExcludedContext";
 import {PreferencesContextProvider} from "./contexts/PreferencesContext/PreferencesContext";
+import {SearchValueContextProvider} from "./contexts/SearchValueContext/SearchValueContext";
 
 function App() {
     return (
@@ -20,20 +21,23 @@ function App() {
                 <UserInfoContextProvider>
                     <RegistrationContextProvider>
                         <LoginFormContextProvider>
-                            <PreferencesContextProvider>
-                                <IngredientContextProvider>
-                                    <ExcludedContextProvider>
-                                        <LoginContextProvider>
-                                            <Layout>
-                                                <Routes>
-                                                    <Route path="/" element={<Page className={Styles.page}/>}/>
-                                                    <Route path="/register" element={<RegistrationFormContextWrapper/>}/>
-                                                </Routes>
-                                            </Layout>
-                                        </LoginContextProvider>
-                                    </ExcludedContextProvider>
-                                </IngredientContextProvider>
-                            </PreferencesContextProvider>
+                            <SearchValueContextProvider>
+                                <PreferencesContextProvider>
+                                    <IngredientContextProvider>
+                                        <ExcludedContextProvider>
+                                            <LoginContextProvider>
+                                                <Layout>
+                                                    <Routes>
+                                                        <Route path="/" element={<Page className={Styles.page}/>}/>
+                                                        <Route path="/register"
+                                                               element={<RegistrationFormContextWrapper/>}/>
+                                                    </Routes>
+                                                </Layout>
+                                            </LoginContextProvider>
+                                        </ExcludedContextProvider>
+                                    </IngredientContextProvider>
+                                </PreferencesContextProvider>
+                            </SearchValueContextProvider>
                         </LoginFormContextProvider>
                     </RegistrationContextProvider>
                 </UserInfoContextProvider>

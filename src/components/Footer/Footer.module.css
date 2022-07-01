@@ -3,13 +3,13 @@
     color: white;
     bottom: 0px;
     position: relative;
-    width: auto;
+    width: 100%;
     margin-bottom:0px ;
     padding-left:10%;
     padding-right:10%;
-    float: bottom;
-    margin-top: 50px;
     z-index: 1;
+    float: bottom;
+
 
 }
 .flex {

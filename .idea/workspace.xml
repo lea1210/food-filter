@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="styled recipe details&#10;checkboxes still visible">
-      <change afterPath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.modules.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +65,7 @@
       <workItem from="1654848711870" duration="3854000" />
       <workItem from="1655821907765" duration="2623000" />
       <workItem from="1656058011434" duration="6174000" />
-      <workItem from="1656663462531" duration="329000" />
+      <workItem from="1656663462531" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="created RecipeView">
       <created>1654245226454</created>
@@ -267,5 +260,7 @@
     <MESSAGE value="recipe image is visibel in recipe details" />
     <MESSAGE value="styled recipe details&#10;checkboxes still visible" />
     <option name="LAST_COMMIT_MESSAGE" value="styled recipe details&#10;checkboxes still visible" />
+    <MESSAGE value="merged Rezeptansicht in master" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged Rezeptansicht in master" />
   </component>
 </project>

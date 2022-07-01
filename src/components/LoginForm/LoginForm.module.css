@@ -23,8 +23,8 @@
 }
 .errorMessage{
     position: absolute;
-    top: 225px;
-    margin-left: 70px;
+    margin-top: 4%;
+    margin-left: 60px;
     color: #C24844;
     font-size: 9pt;
     text-align: center;

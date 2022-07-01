@@ -1,5 +1,19 @@
 .content {
  margin-left: 10%;
  margin-right: 10%;
- height: 100vh;
+ margin-bottom: 2%;
+ position: relative;
+ min-height: calc(100vh - 70px - 310px);
+ padding-bottom: 0;
+}
+
+@media only screen and (max-height: 800px){
+ .content{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 0;
+ }
 }
