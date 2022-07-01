@@ -1,22 +1,60 @@
 .img{
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: 2%;
     margin-top: 7px;
-    margin-left: 20px;
     height: 250px;
     width: 300px;
     border-radius: 5%;
     border: none;
     background-color: #417552;
 }
-.recipeDetails{
+
+.textContainer{
+    text-align: left;
+    border: #417552;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    left: 160px;
+    margin-bottom: 10%;
+    display: compact;
+    margin-top: 2%;
+
+}
+
+.recipeContainer{
+    display: flex;
+    padding: 1px;
+    align-items: stretch;
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+.recipeDetails {
     color: black;
 
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    box-shadow: 1px 1px 3px #417552;
+}
+
 .recipeName{
     color: black;
+    text-align: left;
+    font-size: 20px;
 }
 
 .recipeDescription{
     color: black;
+    color: black;
+    text-align: left;
 }
 
 .ingredients{
