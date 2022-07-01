@@ -9,10 +9,9 @@ import {useSearchValue} from "../../contexts/SearchValueContext/SearchValueConte
 
 export const IngredientSearch = ({loadRecipes}) => {
     const{searchValue, setSearchValue} = useSearchValue();
-    const [inputValue, setInputValue] = useState("");
+   // const [inputValue, setInputValue] = useState("");
     const {addIngredient} = useIngredients();
     const {addExcluded} = useExcludedIngredients();
-   // const { loadRecipes } = useRecipesData();
     const {data} = useIngredientsData(searchValue);
 
     const onClickSearch = () => {
@@ -22,13 +21,11 @@ export const IngredientSearch = ({loadRecipes}) => {
     const onClickAdd = (e) => {
         addIngredient(searchValue);
         setSearchValue("");
-        setInputValue("");
     }
 
     const onClickExclude = () => {
         addExcluded(searchValue);
         setSearchValue("");
-        setInputValue("");
     }
 
     return (

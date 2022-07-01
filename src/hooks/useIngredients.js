@@ -19,15 +19,23 @@ export const useIngredientsData = (currentValue) => {
 
 
     useEffect(() => {
-            if(currentValue !== undefined && currentValue.length>2) {
-                fetchIngredients(currentValue)
-                    .then((ingredients) => {
-                        setData(ingredients.data);
-                    })
-                    .catch((e) => setError(e))
-                    .finally(() => {
-                        setLoading(false);
-                    });
+            if(currentValue !== undefined) {
+                if(currentValue.length>2) {
+                    fetchIngredients(currentValue)
+                        .then((ingredients) => {
+                            if(currentValue.toLowerCase() === ingredients.data[0].attributes.name){
+                                setData(undefined);
+                            }else{
+                                setData(ingredients.data);
+                            }
+                        })
+                        .catch((e) => setError(e))
+                        .finally(() => {
+                            setLoading(false);
+                        });
+                }else{
+                    setData(undefined);
+                }
             }
 
     }, [currentValue]);
