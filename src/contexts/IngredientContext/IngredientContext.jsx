@@ -6,7 +6,7 @@ export function IngredientContextProvider({children}) {
     const [ingredientList, setIngredientList] = useState([]);
 
     const addIngredient = (newIngredient) => {
-        if(newIngredient !== "") {
+        if (newIngredient !== "") {
             const newList = [...ingredientList];
             newList.push({name: newIngredient, id: newIngredient});
             setIngredientList(newList);
@@ -15,8 +15,8 @@ export function IngredientContextProvider({children}) {
 
     const deleteIngredient = (name) => {
         const newList = [...ingredientList];
-        for( let i = 0; i < newList.length; i++){
-            if ( newList[i].name === name) {
+        for (let i = 0; i < newList.length; i++) {
+            if (newList[i].name === name) {
                 newList.splice(i, 1);
             }
         }

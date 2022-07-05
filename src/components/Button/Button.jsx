@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Style from "./Button.module.css";
 
-export const Button = ({ testID, type, className, onClick, children }) => {
+export const Button = ({testID, type, className, onClick, children}) => {
     return (
         <button data-testid={testID} type={type} className={`${Style.button} ${className}`} onClick={onClick}>
             {children}

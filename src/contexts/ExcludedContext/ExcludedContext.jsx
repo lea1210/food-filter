@@ -6,9 +6,9 @@ export function ExcludedContextProvider({children}) {
     const [excludedList, setExcludedList] = useState([]);
 
     const addExcluded = (newExcluded) => {
-        if(newExcluded !== ""){
+        if (newExcluded !== "") {
             const newList = [...excludedList];
-            newList.push({name: newExcluded, id:newExcluded});
+            newList.push({name: newExcluded, id: newExcluded});
             setExcludedList(newList);
         }
 
@@ -16,8 +16,8 @@ export function ExcludedContextProvider({children}) {
 
     const deleteExcluded = (name) => {
         const newList = [...excludedList];
-        for( let i = 0; i < newList.length; i++){
-            if ( newList[i].name === name) {
+        for (let i = 0; i < newList.length; i++) {
+            if (newList[i].name === name) {
                 newList.splice(i, 1);
             }
         }

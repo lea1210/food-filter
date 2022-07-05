@@ -1,14 +1,16 @@
-.registerLabel{
+.registerLabel {
     float: bottom;
     font-size: 11pt;
     margin-left: 20px;
 }
-.registerLink{
+
+.registerLink {
     color: #417552;
     font-size: 11pt;
     float: bottom;
 }
-.loginButton{
+
+.loginButton {
     width: 248px;
     color: white;
     background: #417552;
@@ -18,10 +20,11 @@
     font-family: "Arial Nova", sans-serif;
 }
 
-.loading{
+.loading {
     padding-left: 45%;
 }
-.errorMessage{
+
+.errorMessage {
     position: absolute;
     margin-top: 4%;
     margin-left: 60px;

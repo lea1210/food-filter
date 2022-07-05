@@ -8,7 +8,7 @@ async function extractResult(result) {
 }
 
 export const fetchIngredients = async (currentValue) => {
-    const result = await fetch(API_URL + "?filters[name][$contains]="+currentValue);
+    const result = await fetch(API_URL + "?filters[name][$contains]=" + currentValue);
     return await extractResult(result);
 };
 
@@ -19,24 +19,24 @@ export const useIngredientsData = (currentValue) => {
 
 
     useEffect(() => {
-            if(currentValue !== undefined) {
-                if(currentValue.length>2) {
-                    fetchIngredients(currentValue)
-                        .then((ingredients) => {
-                            if(currentValue.toLowerCase() === ingredients.data[0].attributes.name && ingredients.data.length ===1){
-                                setData(undefined);
-                            }else{
-                                setData(ingredients.data);
-                            }
-                        })
-                        .catch((e) => setError(e))
-                        .finally(() => {
-                            setLoading(false);
-                        });
-                }else{
-                    setData(undefined);
-                }
+        if (currentValue !== undefined) {
+            if (currentValue.length > 2) {
+                fetchIngredients(currentValue)
+                    .then((ingredients) => {
+                        if (currentValue.toLowerCase() === ingredients.data[0].attributes.name && ingredients.data.length === 1) {
+                            setData(undefined);
+                        } else {
+                            setData(ingredients.data);
+                        }
+                    })
+                    .catch((e) => setError(e))
+                    .finally(() => {
+                        setLoading(false);
+                    });
+            } else {
+                setData(undefined);
             }
+        }
 
     }, [currentValue]);
 

@@ -33,7 +33,7 @@ function determineFilterParams(ingredientList, excludedList, vegan, vegetarian, 
     if (glutenfree) filterParams += "&filters[glutenfree]=true";
     if (lactosefree) filterParams += "&filters[lactosefree]=true";
 
-    filterParams==="" ? filterParams="?": filterParams+="&";
+    filterParams === "" ? filterParams = "?" : filterParams += "&";
     return filterParams + "pagination[page]=1&pagination[pageSize]=100&populate=*";
 }
 
@@ -73,7 +73,7 @@ export const useRecipesData = () => {
     const loadRecipes = () => {
         const filterParams = determineFilterParams(ingredientList, excludedList, isVegan, isVegetarian, isLactosefree, isGlutenfree);
         console.log(filterParams);
-        if(filterParams !== undefined) {
+        if (filterParams !== undefined) {
             fetchRecipes(filterParams)
                 .then((recipes) => {
                     const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);

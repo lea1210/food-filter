@@ -17,7 +17,6 @@ export function LoginFormContextProvider({children}) {
                 isLoginFormOpened,
                 openLoginForm,
                 closeLoginForm
-               // ...userData
             }}
         >
             {children}
