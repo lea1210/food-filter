@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="pushed recipe previews behind header and preferences">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656672628710</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="pushed recipe previews behind header and preferences">
+      <created>1657268728537</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1657268728538</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +270,7 @@
     <MESSAGE value="recipe image is visibel in recipe details" />
     <MESSAGE value="styled recipe details&#10;checkboxes still visible" />
     <MESSAGE value="merged Rezeptansicht in master" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged Rezeptansicht in master" />
+    <MESSAGE value="pushed recipe previews behind header and preferences" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushed recipe previews behind header and preferences" />
   </component>
 </project>
