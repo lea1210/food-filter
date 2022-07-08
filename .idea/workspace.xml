@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="styled recipe preview">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +33,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\becci\\WebstormProjects\\FoodFilter\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\becci\\WebstormProjects\\FoodFilter\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="useRecipesData.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/hooks/useRecipesData.js" working-dir="$PROJECT_DIR$/src/hooks">
       <method v="2" />
@@ -250,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657269488515</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fixed error">
+      <created>1657274492912</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1657274492912</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +295,8 @@
     <MESSAGE value="merged Rezeptansicht in master" />
     <MESSAGE value="pushed recipe previews behind header and preferences" />
     <MESSAGE value="styled recipe preview" />
-    <option name="LAST_COMMIT_MESSAGE" value="styled recipe preview" />
+    <MESSAGE value="fixed error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
