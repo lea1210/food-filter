@@ -17,77 +17,71 @@
     margin-left: 2%;
     margin-right: 10%;
     margin-bottom: 2%;
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.preferences{
-    position: absolute;
-    top: 150px;
-    right: 20%;
-    z-index: 3;
-    text-align: left;
-}
+
+
+.preferences {
+  text-align: left;
+  margin-right: 160px;
+  margin-top: 2%;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
 
 .label{
     text-align: left;
 }
 
-.preparation{
-
+.preparation {
 }
 
-.ingredients{
-
+.ingredients {
 }
 
-.textContainer{
-    text-align: left;
-    border: #417552;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    left: 180px;
-    right: 40px;
-    margin-bottom: 10%;
-    margin-top: 2%;
-
-}
+.textContainer {
+  text-align: left;
+  border: #417552;
+  border-radius: 1px;
+  flex-direction: column;
+  left: 160px;
+  margin-left: auto;
+  margin-bottom: 2%;
+  display: compact;
+  margin-top: 2%;
 
 .headlines{
     font-size: 14px;
     right: 10%;
-}
-.Button{
-    position: absolute;
-    right: 2%;
-    top: 2%;
 
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(1000px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.Button {
+  position: absolute;
+  right: 2%;
+  top: 2%;
 }
 
 .recipeFormBackdrop {
-    z-index: 3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .recipeContext{
     max-width: 600px;
     margin: 0 auto;
     float: left;
-
-}
 
 .recipeForm {
     z-index: 3;

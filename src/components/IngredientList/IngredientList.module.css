@@ -1,16 +1,13 @@
-.headline{
-    margin-top: 0;
+.headline {
+  margin-top: 0;
 }
 
-.ingredientList{
-    display: flex;
-    flex-direction: column;
-
+.ingredientList {
+  display: flex;
+  flex-direction: column;
 }
 
-.ingredients{
-    display: flex;
-    flex-direction: column;
-    align: left;
-
+.ingredients {
+  display: flex;
+  flex-direction: column;
 }

@@ -37,7 +37,7 @@
     max-width: 800px;
     top: 190px;
     bottom: 190px;
-    left:30px;
+    left: 30px;
     right: 30px;
     margin: 0 auto;
     overflow: auto;
@@ -53,7 +53,7 @@
     font-weight: bold;
 }
 
-.profileImg{
+.profileImg {
     width: 180px;
     height: 330px;
     display: block;
@@ -61,7 +61,7 @@
     margin-right: auto;
 }
 
-button{
+button {
     color: white;
     background: #417552;
     border-radius: 5px;
@@ -72,43 +72,49 @@ button{
     margin: 30px 20px 10px 10px;
 }
 
-.saveButton{
+.saveButton {
     float: left;
 }
-.cancelButton{
+
+.cancelButton {
     float: right;
 }
 
-.buttonBox{
+.buttonBox {
     margin: 20px;
     float: left;
 }
 
-.preferences{
+.preferences {
     text-align: center;
     margin: 30px;
 }
-.logoutButton{
-  float: left;
+
+.logoutButton {
+    float: left;
 }
-.left{
-   float: right;
-    margin-right:15px;
+
+.left {
+    float: right;
+    margin-right: 15px;
 
 }
-.right{
+
+.right {
     float: left;
-    margin-left:15px;
+    margin-left: 15px;
     margin-top: 13px;
 }
-.greeting{
+
+.greeting {
     font-size: 20px;
 }
 
-.infotext{
+.infotext {
     margin-top: 30px;
     padding: 20px 0 20px 0;
 }
-.topBox{
+
+.topBox {
     float: top;
 }
