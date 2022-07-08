@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed missing {">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="code style changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IngredientSuggestion/IngredientSuggestion.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientSuggestion/IngredientSuggestion.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +262,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657272034902</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="code style changes">
+      <created>1657272517816</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1657272517816</updated>
+    </task>
+    <task id="LOCAL-00029" summary="code style changes">
+      <created>1657272550468</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1657272550468</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +294,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created RecipeView" />
     <MESSAGE value="filled RecipeView with first content and buttons" />
     <MESSAGE value="splitted Recipe up in Recipe Details and Recipe Preview" />
     <MESSAGE value="added content and data" />
@@ -306,7 +318,8 @@
     <MESSAGE value="styled recipe preview" />
     <MESSAGE value="tried to style recipe details" />
     <MESSAGE value="fixed missing {" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed missing {" />
+    <MESSAGE value="code style changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="code style changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

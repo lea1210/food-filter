@@ -40,5 +40,5 @@ IngredientSuggestion.defaultProps = {
 };
 
 IngredientSuggestion.propTypes = {
-  ingredients: PropTypes.object
+  ingredients: PropTypes.array
 };
