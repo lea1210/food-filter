@@ -24,5 +24,5 @@ IngredientList.defaultProps = {
 };
 
 IngredientList.propTypes = {
-  ingredients: PropTypes.object
+  ingredients: PropTypes.array
 };
