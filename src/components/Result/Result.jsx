@@ -37,13 +37,16 @@ export const Result = ({loading, data, error}) => {
                         name={recipe.attributes.name}
                         image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
                         description={recipe.attributes.description}
-                        onClick={() => { setSelectedRecipe(recipe);
-                            setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url)}}
+                        onClick={() => {
+                            setSelectedRecipe(recipe);
+                            setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url)
+                        }}
                     />
                 ))
             }
 
-            {selectedRecipe &&  <RecipeDetails recipe={selectedRecipe} image={selectedRecipeImage} onClose={() => setSelectedRecipe(null) && setSelectedRecipeImage(null)}/>}
+            {selectedRecipe && <RecipeDetails recipe={selectedRecipe} image={selectedRecipeImage}
+                                              onClose={() => setSelectedRecipe(null) && setSelectedRecipeImage(null)}/>}
         </>
     );
 }

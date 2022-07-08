@@ -12,6 +12,11 @@
       <change beforePath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.modules.css" beforeDir="false" />
     </list>
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merge">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
