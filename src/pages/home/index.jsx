@@ -14,9 +14,9 @@ const Page = () => {
     return (
         <>
             <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
-            <IngredientTags></IngredientTags>
+            <Preferences className={Styles.rightPart}></Preferences>
+            <IngredientTags className={Styles.leftPart}></IngredientTags>
             <Result error={error} loading={loading} data={data} />
-            <Preferences></Preferences>
         </>
     );
 };

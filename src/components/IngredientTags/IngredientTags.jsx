@@ -13,7 +13,7 @@ export const IngredientTags = () => {
                 {ingredientList.length > 0 && <label className={Styles.headline}>Das hab ich</label>}
               <IngredientList ingredients={ingredientList} color={"dark"}></IngredientList>
             </div>
-            <div className={Styles.secondBox}>
+            <div className={Styles.lowerBox}>
                 {excludedList.length > 0  && <label className={Styles.headline}>Das mag ich nicht</label>}
                 <IngredientList ingredients={excludedList} color={"light"}></IngredientList>
             </div>

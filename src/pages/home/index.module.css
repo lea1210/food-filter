@@ -9,3 +9,22 @@
     flex: 1 1 30%;
 }
 
+.searchParameters{
+    display: inline;
+}
+
+.leftPart{
+     width: 30%;
+     float: left;
+    margin-right: 2%;
+ }
+
+.rightPart{
+    width: 30%;
+    float: right;
+}
+
+.results{
+    width: 100%;
+}
+

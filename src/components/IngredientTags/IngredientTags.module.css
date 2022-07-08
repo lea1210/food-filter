@@ -3,4 +3,13 @@
 }
 .upperBox{
     margin-bottom: 40px;
+    width: 80%;
+    float: left;
+}
+
+.lowerBox{
+    margin-bottom: 40px;
+    width: 80%;
+    float: left;
+
 }

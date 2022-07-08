@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import {useState} from "react";
 import {RecipeDetails} from "../RecipeDetails/RecipeDetails";
 import {RecipePreview} from "../RecipePreview/RecipePreview";
+import Styles from "./Result.module.css";
 
 export const Result = ({loading, data, error}) => {
     const [selectedRecipe, setSelectedRecipe] = useState(null)
@@ -21,10 +22,12 @@ export const Result = ({loading, data, error}) => {
 
         return (
             <>
-                <h3>Leider konnten wir keine Rezepte finden!</h3>
-                <p>
-                    Versuch es doch nochmal mit ein paar anderen Zutaten.
-                </p>
+                <div className={Styles.noResults}>
+                    <h3>Leider konnten wir keine Rezepte finden!</h3>
+                    <p>
+                        Versuch es doch nochmal mit ein paar anderen Zutaten.
+                    </p>
+                </div>
             </>
         );
     }
