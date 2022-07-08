@@ -7,14 +7,17 @@ export const RecipePreview = ({name, onClick, description, image, id}) => {
 
     return (
         <>
-            <div data-testid="recipe" onClick={onClick} className={Styles.recipeContainer}>
+            <div data-testid="recipe" className={`${Styles.recipeContainer} ${onClick ? Styles.clickable : ''}`}
+                 onClick={onClick}>
                 <Recipe name={name} description={description} image={image}>
-                    <h4 className={Styles.recipeName}>{name}</h4>
                     <div>
-                        <img src={image } className={Styles.img}/>
+                        <img src={image} className={Styles.img}/>
                     </div>
-                    <div className={Styles.recipeDescription}>
-                        {description}
+                    <div className={Styles.textContainer}>
+                        <h4 className={Styles.recipeName}>{name}</h4>
+                        <div className={Styles.recipeDescription}>
+                            {description}
+                        </div>
                     </div>
                 </Recipe>
             </div>

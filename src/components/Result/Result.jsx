@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import {useState} from "react";
 import {RecipeDetails} from "../RecipeDetails/RecipeDetails";
-import recipe, {Recipe} from "../Recipe/Recipe";
 import {RecipePreview} from "../RecipePreview/RecipePreview";
 
 export const Result = ({loading, data, error}) => {
     const [selectedRecipe, setSelectedRecipe] = useState(null)
+    const [selectedRecipeImage, setSelectedRecipeImage] = useState(null)
 
     if (loading) {
         //später ladeanimation
@@ -37,12 +37,16 @@ export const Result = ({loading, data, error}) => {
                         name={recipe.attributes.name}
                         image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
                         description={recipe.attributes.description}
-                        onClick={() => setSelectedRecipe(recipe)}
+                        onClick={() => {
+                            setSelectedRecipe(recipe);
+                            setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url)
+                        }}
                     />
                 ))
             }
 
-            {selectedRecipe && <RecipeDetails recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)}/>}
+            {selectedRecipe && <RecipeDetails recipe={selectedRecipe} image={selectedRecipeImage}
+                                              onClose={() => setSelectedRecipe(null) && setSelectedRecipeImage(null)}/>}
         </>
     );
 }
