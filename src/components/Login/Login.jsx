@@ -5,8 +5,8 @@ import LoginForm from "../LoginForm/LoginForm";
 import {useUser} from "../../contexts/UserInfoContext/UserInfoContext";
 
 const Login = () => {
-    const { isUserInfoOpened } = useUser();
-    const { isLoginFormOpened } = useLoginForm();
+    const {isUserInfoOpened} = useUser();
+    const {isLoginFormOpened} = useLoginForm();
 
     return (
         <>
@@ -15,7 +15,7 @@ const Login = () => {
                     <LoginForm/>
                 </div>
             )}
-            { isUserInfoOpened && (
+            {isUserInfoOpened && (
                 <UserInfo/>
             )}
         </>

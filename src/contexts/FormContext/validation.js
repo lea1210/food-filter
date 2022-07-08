@@ -7,7 +7,7 @@ export const validateFormFields = (formFields) => {
             hasError = true;
         }
     });
-    return { hasError, formFields };
+    return {hasError, formFields};
 };
 
 export const validateFormField = (field) => {

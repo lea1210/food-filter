@@ -1,4 +1,4 @@
-.userAccountBtn{
+.userAccountBtn {
     margin-top: 7px;
     margin-right: 20px;
     height: 50px;
@@ -7,11 +7,12 @@
     border: none;
     background-color: #417552;
 }
-.userAccount{
+
+.userAccount {
     float: right;
 }
 
-.userAccountIcon{
+.userAccountIcon {
     height: 50px;
     width: 50px;
 }
