@@ -1,24 +1,30 @@
-import PropTypes from "prop-types";
-import Style from "./Button.module.css";
+import PropTypes from 'prop-types';
+import Style from './Button.module.css';
 
-export const Button = ({testID, type, className, onClick, children}) => {
-    return (
-        <button data-testid={testID} type={type} className={`${Style.button} ${className}`} onClick={onClick}>
-            {children}
-        </button>
-    );
+export const Button = ({ testID, type, className, onClick, children }) => {
+  return (
+    <button
+      data-testid={testID}
+      type={type}
+      className={`${Style.button} ${className}`}
+      onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 Button.defaultProps = {
-    type: undefined,
-    className: undefined,
-    onClick: () => null,
-    children: undefined,
+  type: undefined,
+  className: undefined,
+  onClick: () => null,
+  children: undefined,
+  testID: ''
 };
 
 Button.propTypes = {
-    type: PropTypes.string,
-    className: PropTypes.string,
-    onClick: PropTypes.func,
-    children: PropTypes.string,
+  type: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  children: PropTypes.string,
+  testID: PropTypes.string
 };

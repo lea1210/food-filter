@@ -1,39 +1,38 @@
 .centerInput {
-    width: 50%;
-    border-radius: 20px;
-    margin: 2% 25% 2% 25%;
-    padding-bottom: 5px;
-    padding-top: 5px;
-
+  width: 50%;
+  border-radius: 20px;
+  margin: 2% 25% 2% 25%;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .input {
-    border-radius: 20px;
-    margin: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #7EC295;
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  border-radius: 20px;
+  margin: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #7ec295;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .headerText {
-    margin-top: 100px;
-    text-align: center;
+  margin-top: 100px;
+  text-align: center;
 }
 
 .ingredientSearch {
-    text-align: center;
+  text-align: center;
 }
 
 .search {
-    border-radius: 20px;
-    margin: 10px;
-    padding-left: 16.5%;
-    padding-right: 16.5%;
-    background-color: #417552;
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  border-radius: 20px;
+  margin: 10px;
+  padding-left: 16.5%;
+  padding-right: 16.5%;
+  background-color: #417552;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

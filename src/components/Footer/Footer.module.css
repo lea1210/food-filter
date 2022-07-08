@@ -1,32 +1,31 @@
-.footer, .footer a {
-    background-color:  #417552;
-    color: white;
-    bottom: 0px;
-    position: relative;
-    width: 100%;
-    margin-bottom:0px ;
-    padding-left:10%;
-    padding-right:10%;
-    z-index: 1;
-    float: bottom;
-
-
+.footer,
+.footer a {
+  background-color: #417552;
+  color: white;
+  bottom: 0px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 1;
+  float: bottom;
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 .elementLeft {
-    flex: 1 1 50%;
+  flex: 1 1 50%;
 
-    float: left;
+  float: left;
 }
 
-.footerTitle{
-    float: left;
-    margin-left: 20%;
+.footerTitle {
+  float: left;
+  margin-left: 20%;
 }
 
 .elementRight {
-    flex: 1 1 50%;
-    float: right;
+  flex: 1 1 50%;
+  float: right;
 }
