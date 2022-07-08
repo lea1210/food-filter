@@ -16,7 +16,7 @@ import { SearchValueContextProvider } from './contexts/SearchValueContext/Search
 function App() {
   return (
     <BrowserRouter>
-      <div className="wrapper">
+      <div className={Styles.wrapper}>
         <UserInfoContextProvider>
           <RegistrationContextProvider>
             <LoginFormContextProvider>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { RecipeDetails } from '../RecipeDetails/RecipeDetails';
 import { RecipePreview } from '../RecipePreview/RecipePreview';
 
-export const Result = ({ loading, data, error }) => {
+export const Result = ({ loading, data, error, firstSearch }) => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [selectedRecipeImage, setSelectedRecipeImage] = useState(null);
 
@@ -16,7 +16,7 @@ export const Result = ({ loading, data, error }) => {
         <p>{`${error}`}</p>
       </div>
     );
-  } else if (data.length < 1) {
+  } else if (data.length < 1 && firstSearch === true) {
     return (
       <>
         <h3>Leider konnten wir keine Rezepte finden!</h3>
@@ -53,11 +53,13 @@ export const Result = ({ loading, data, error }) => {
 Result.propTypes = {
   loading: PropTypes.bool,
   data: PropTypes.array,
-  error: PropTypes.string
+  error: PropTypes.string,
+  firstSearch: PropTypes.bool
 };
 
 Result.defaultProps = {
   loading: true,
   data: [],
-  error: undefined
+  error: undefined,
+  firstSearch: false
 };

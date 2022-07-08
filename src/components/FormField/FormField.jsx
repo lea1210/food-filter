@@ -52,7 +52,7 @@ const FormField = ({ initialValue, required, label, type, name, errorMessage, pa
 export default FormField;
 
 FormField.defaultProps = {
-  initialValue: ' ',
+  initialValue: '',
   required: false,
   label: ' ',
   type: 'input',

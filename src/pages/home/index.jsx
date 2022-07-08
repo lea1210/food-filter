@@ -9,13 +9,13 @@ import { useIngredients } from '../../contexts/IngredientContext/IngredientConte
 const Page = () => {
   const { ingredientList } = useIngredients();
 
-  const { loading, error, data, loadRecipes } = useRecipesData(ingredientList);
+  const { loading, error, data, loadRecipes, firstSearch } = useRecipesData(ingredientList);
 
   return (
     <>
       <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex} />
       <IngredientTags></IngredientTags>
-      <Result error={error} loading={loading} data={data} />
+      <Result error={error} loading={loading} data={data} firstSearch={firstSearch} />
       <Preferences></Preferences>
     </>
   );

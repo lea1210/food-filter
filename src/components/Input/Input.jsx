@@ -30,16 +30,6 @@ export const Input = ({ name, value, error, hint, type, placeholder, className, 
   );
 };
 
-Input.defaultProps = {
-  error: false,
-  hint: undefined,
-  type: 'text',
-  className: undefined,
-  placeholder: undefined,
-  value: 'text',
-  name: ' '
-};
-
 Input.propTypes = {
   hint: PropTypes.string,
   type: PropTypes.string,
