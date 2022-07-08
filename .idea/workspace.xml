@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master" />
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merged master">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipePreview/RecipePreview.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -259,7 +263,6 @@
     <MESSAGE value="Recipe Details appears on click as extra window" />
     <MESSAGE value="recipe image is visibel in recipe details" />
     <MESSAGE value="styled recipe details&#10;checkboxes still visible" />
-    <option name="LAST_COMMIT_MESSAGE" value="styled recipe details&#10;checkboxes still visible" />
     <MESSAGE value="merged Rezeptansicht in master" />
     <option name="LAST_COMMIT_MESSAGE" value="merged Rezeptansicht in master" />
   </component>
