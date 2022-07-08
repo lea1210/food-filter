@@ -80,7 +80,7 @@ const RegistrationForm = ({}) => {
                                     name="password"
                                     label="Passwort*"
                                     type="password"
-                                    required
+                                    required={true}
                                 />
                             </div>
                             <div className={Styles.buttonBox}>

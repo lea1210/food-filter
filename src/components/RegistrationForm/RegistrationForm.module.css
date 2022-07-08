@@ -25,13 +25,15 @@
     background-color: white;
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
     border-radius: 5px;
-    padding: 70px 90px 70px 90px;
+    padding: 3% 5% 3% 5%;
     max-width: 1100px;
-    top: 130px;
-    bottom: 130px;
-    left:30px;
-    right: 30px;
-    margin: 0 auto;
+    top: 10%;
+    bottom: 10%;
+    left:0;
+    right: 0;
+    margin: auto;
+
+    /*margin: 0 auto;*/
     overflow: auto;
 }
 
