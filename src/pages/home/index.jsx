@@ -13,10 +13,10 @@ const Page = () => {
 
     return (
         <>
-            <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
-            <IngredientTags></IngredientTags>
-            <Result error={error} loading={loading} data={data} />
-            <Preferences></Preferences>
+                <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
+                <IngredientTags></IngredientTags>
+                <Result error={error} loading={loading} data={data}/>
+                <Preferences></Preferences>
         </>
     );
 };

@@ -2,6 +2,7 @@
     text-align: left;
     display: flex;
 
+
 }
 .preferences{
     text-align: left;
@@ -69,6 +70,7 @@
     max-width: 600px;
     margin: 0 auto;
     float: left;
+
 }
 
 .recipeForm {
@@ -87,4 +89,5 @@
     right: 30px;
     margin: 0 auto;
     overflow: auto;
+
 }
