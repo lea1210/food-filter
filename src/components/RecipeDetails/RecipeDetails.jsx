@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "../RecipeDetails/RecipeDetails.module.css";
 import {Recipe} from "../Recipe/Recipe";
 import {Button} from "../Button/Button";
-import {RecipeInfo} from "../RecipeInfo/RecipeInfo";
+import {Checkbox} from "../Checkbox/Checkbox";
 
 export const RecipeDetails = ({image, recipe, onClose, id}) => {
     console.log("vegan:" + recipe.attributes.vegan);
@@ -15,17 +15,19 @@ export const RecipeDetails = ({image, recipe, onClose, id}) => {
                     </div>
                     <div className={Styles.recipeContext}>
                         <div className={Styles.textContainer}>
-                            <Recipe name={recipe.attributes.name} image={"http://localhost:1337" + image}
-                                    description={recipe.attributes.description}></Recipe>
+                            <div className={Styles.Container}>
+                                <Recipe name={recipe.attributes.name} image={"http://localhost:1337" + image}
+                                        description={recipe.attributes.description}></Recipe>
+                            </div>
                             <div className={Styles.preferences}>
-                                <label>vegan:</label>
-                                <RecipeInfo bool={recipe.attributes.vegan}></RecipeInfo>
-                                <label>vegetarisch:</label>
-                                <RecipeInfo bool={recipe.attributes.vegetarian}></RecipeInfo>
-                                <label>laktosefrei:</label>
-                                <RecipeInfo bool={recipe.attributes.lactosefree}></RecipeInfo>
-                                <label>glutenfrei:</label>
-                                <RecipeInfo bool={recipe.attributes.glutenfree}></RecipeInfo>
+                                <Checkbox name="vegan" checked={recipe.attributes.vegan}></Checkbox>
+                                <label className={Styles.label}>vegan</label>
+                                <Checkbox name="vegetarisch" checked={recipe.attributes.vegetarian}></Checkbox>
+                                <label className={Styles.label}>vegetarisch</label>
+                                <Checkbox name="laktosefrei" checked={recipe.attributes.lactosefree}></Checkbox>
+                                <label className={Styles.label}>laktosefrei</label>
+                                <Checkbox name="glutenfrei" checked={recipe.attributes.glutenfree}></Checkbox>
+                                <label className={Styles.label}>glutenfrei</label>
                             </div>
                             <div className={Styles.ingredients}>
                                 <h3 className={Styles.headlines}>Zutaten:</h3>
