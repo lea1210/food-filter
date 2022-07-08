@@ -6,7 +6,7 @@
 
 }
 
-.Container{
+.Container {
     z-index: 3;
     display: flex;
     padding: 1px;
@@ -17,6 +17,7 @@
     margin-left: 2%;
     margin-right: 10%;
     margin-bottom: 2%;
+}
 
 @keyframes slideIn {
   0% {
@@ -29,12 +30,14 @@
 
 
 .preferences {
-  text-align: left;
-  margin-right: 160px;
-  margin-top: 2%;
-  border-radius: 1px;
-  display: flex;
-  flex-direction: column;
+    text-align: left;
+    margin-right: 160px;
+    margin-top: 2%;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+
+}
 
 .label{
     text-align: left;
@@ -47,19 +50,21 @@
 }
 
 .textContainer {
-  text-align: left;
-  border: #417552;
-  border-radius: 1px;
-  flex-direction: column;
-  left: 160px;
-  margin-left: auto;
-  margin-bottom: 2%;
-  display: compact;
-  margin-top: 2%;
+    text-align: left;
+    border: #417552;
+    border-radius: 1px;
+    flex-direction: column;
+    left: 160px;
+    margin-left: auto;
+    margin-bottom: 2%;
+    display: compact;
+    margin-top: 2%;
+}
 
-.headlines{
+.headlines {
     font-size: 14px;
     right: 10%;
+}
 
 .Button {
   position: absolute;
@@ -78,10 +83,11 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.recipeContext{
+.recipeContext {
     max-width: 600px;
     margin: 0 auto;
     float: left;
+}
 
 .recipeForm {
     z-index: 3;
