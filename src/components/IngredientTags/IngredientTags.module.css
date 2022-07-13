@@ -1,7 +1,15 @@
 .headline {
   font-weight: bold;
 }
+.upperBox{
+    margin-bottom: 40px;
+    width: 80%;
+    float: left;
+}
 
-.upperBox {
-  margin-bottom: 40px;
+.lowerBox{
+    margin-bottom: 40px;
+    width: 80%;
+    float: left;
+
 }

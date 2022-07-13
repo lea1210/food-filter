@@ -27,17 +27,14 @@
 }
 
 .clickable:hover {
-  box-shadow: 1px 1px 3px #417552;
+    box-shadow: 1px 1px 3px #417552;
 }
 
 .recipeContainer{
-    z-index: 1;
-    align: center;
     display: flex;
     flex-direction: column;
     border: 1px;
-    background-color: white;
-    margin-bottom: 2%;
+    width: 100%;
 }
 
 .recipeDescription {

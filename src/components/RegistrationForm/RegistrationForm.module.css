@@ -18,21 +18,23 @@
 }
 
 .registrationForm {
-  z-index: 2;
-  transition: transform 500ms;
-  box-sizing: border-box;
-  position: absolute;
-  background-color: white;
-  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
-  border-radius: 5px;
-  padding: 70px 90px 70px 90px;
-  max-width: 1100px;
-  top: 130px;
-  bottom: 130px;
-  left: 30px;
-  right: 30px;
-  margin: 0 auto;
-  overflow: auto;
+    z-index: 2;
+    transition: transform 500ms;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    padding: 3% 5% 3% 5%;
+    max-width: 1100px;
+    top: 10%;
+    bottom: 10%;
+    left:0;
+    right: 0;
+    margin: auto;
+
+    /*margin: 0 auto;*/
+    overflow: auto;
 }
 
 .registrationFormContext {
@@ -71,42 +73,38 @@ button {
   margin-top: 32px;
   margin-left: 30px;
 }
-
-.bottomButtons {
-  float: bottom;
-  padding: 25px;
-  margin: 10px;
+.bottomButtons{
+    float: bottom;
+    padding: 25px;
+    margin: 10px;
 }
 
-.buttonBox {
-  padding: 20px 10px 30px 20px;
-  margin: 10px;
-  float: right;
+.buttonBox{
+    padding: 20px 10px 30px 20px;
+    margin: 10px;
+    float: right;
 }
 
-.fieldBox {
-  float: left;
-  padding: 30px 10px 30px 10px;
+.fieldBox{
+    float: left;
+    padding: 30px 10px 30px 10px;
 }
-
-.infotext {
-  padding: 30px 0 30px 0;
-  margin: 15px;
-  font-size: 14px;
+.infotext{
+    padding: 30px 0 30px 0;
+    margin: 15px;
+    font-size: 14px;
 }
-
 .image {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 400px;
-  height: 400px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 400px;
 }
-
-.textbox {
-  float: top;
-  text-align: center;
-  margin-top: 100px;
-  margin-left: 400px;
-  padding: 0 0 0 20px;
+.textbox{
+    float: top;
+    text-align: center;
+    margin-top: 100px;
+    margin-left:400px;
+    padding: 0px 0px 0px 20px;
 }
