@@ -1,4 +1,5 @@
 .img{
+    z-index: 1;
     margin-top: 7px;
     margin-left: 20px;
     height: 50px;
@@ -8,40 +9,40 @@
     background-color: #417552;
 }
 
-.textContainer{
-    text-align: center;
-    border: #417552;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-
+.textContainer {
+  text-align: center;
+  border: #417552;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
 }
 
-.recipeName{
-    color: black;
-    text-align: center;
-
+.recipeName {
+  color: black;
+  text-align: center;
 }
 
 .clickable {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .clickable:hover {
-    box-shadow: 1px 1px 3px #417552;
+  box-shadow: 1px 1px 3px #417552;
 }
 
 .recipeContainer{
+    z-index: 1;
+    align: center;
     display: flex;
     flex-direction: column;
     border: 1px;
-    width: 100%;
+    background-color: white;
+    margin-bottom: 2%;
 }
 
-.recipeDescription{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-
+.recipeDescription {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }

@@ -1,20 +1,21 @@
-.loginWindow{
-    border-radius: 5px;
-    float: right;
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
-    padding: 20px;
-    margin-top: 80px;
-    background-color: white;
+.loginWindow {
+  border-radius: 5px;
+  float: right;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+  padding: 20px;
+  margin-top: 80px;
+  background-color: white;
 }
 
-.input{
-    border-radius: 5px;
-    float: right;
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
-    padding: 5px;
-    margin: 5px;
-    border: 0;
+.input {
+  border-radius: 5px;
+  float: right;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+  padding: 5px;
+  margin: 5px;
+  border: 0;
 }
-.input:focus{
-    border-color: #afafaf;
+
+.input:focus {
+  border-color: #afafaf;
 }

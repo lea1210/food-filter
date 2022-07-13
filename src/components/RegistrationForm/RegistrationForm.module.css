@@ -1,109 +1,112 @@
 @keyframes slideIn {
-    0% {
-        transform: translateY(1000px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .registrationFormBackdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .registrationForm {
-    z-index: 2;
-    transition: transform 500ms;
-    box-sizing: border-box;
-    position: absolute;
-    background-color: white;
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
-    border-radius: 5px;
-    padding: 3% 5% 3% 5%;
-    max-width: 1100px;
-    top: 10%;
-    bottom: 10%;
-    left:0;
-    right: 0;
-    margin: auto;
-
-    /*margin: 0 auto;*/
-    overflow: auto;
+  z-index: 2;
+  transition: transform 500ms;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+  border-radius: 5px;
+  padding: 70px 90px 70px 90px;
+  max-width: 1100px;
+  top: 130px;
+  bottom: 130px;
+  left: 30px;
+  right: 30px;
+  margin: 0 auto;
+  overflow: auto;
 }
 
 .registrationFormContext {
-    max-width: 600px;
-    margin: 0 auto;
-    float: left;
+  max-width: 600px;
+  margin: 0 auto;
+  float: left;
 }
 
 .headline {
-    text-align: right;
-    font-weight: bold;
-    font-size: 28px;
-    margin: 10px;
-    padding: 40px 40px 50px 40px;
-    float:top;
+  text-align: right;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 10px;
+  padding: 40px 40px 50px 40px;
+  float: top;
 }
 
-button{
-    color: white;
-    background: #417552;
-    border-radius: 5px;
-    padding: 7px 20px 7px 20px;
-    float: bottom;
-    border-style: none;
-    font-family: "Arial Nova", sans-serif;
-    margin: 10px;
+button {
+  color: white;
+  background: #417552;
+  border-radius: 5px;
+  padding: 7px 20px 7px 20px;
+  float: bottom;
+  border-style: none;
+  font-family: 'Arial Nova', sans-serif;
+  margin: 10px;
 }
 
-.registerButton{
-    float: left;
-    margin-top: 35px;
-}
-.cancelButton{
-    float: right;
-    margin-top: 32px;
-    margin-left: 30px;
-}
-.bottomButtons{
-    float: bottom;
-    padding: 25px;
-    margin: 10px;
+.registerButton {
+  float: left;
+  margin-top: 35px;
 }
 
-.buttonBox{
-    padding: 20px 10px 30px 20px;
-    margin: 10px;
-    float: right;
+.cancelButton {
+  float: right;
+  margin-top: 32px;
+  margin-left: 30px;
 }
 
-.fieldBox{
-    float: left;
-    padding: 30px 10px 30px 10px;
+.bottomButtons {
+  float: bottom;
+  padding: 25px;
+  margin: 10px;
 }
-.infotext{
-    padding: 30px 0 30px 0;
-    margin: 15px;
-    font-size: 14px;
+
+.buttonBox {
+  padding: 20px 10px 30px 20px;
+  margin: 10px;
+  float: right;
 }
+
+.fieldBox {
+  float: left;
+  padding: 30px 10px 30px 10px;
+}
+
+.infotext {
+  padding: 30px 0 30px 0;
+  margin: 15px;
+  font-size: 14px;
+}
+
 .image {
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 400px;
-    height: 400px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 400px;
 }
-.textbox{
-    float: top;
-    text-align: center;
-    margin-top: 100px;
-    margin-left:400px;
-    padding: 0px 0px 0px 20px;
+
+.textbox {
+  float: top;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 400px;
+  padding: 0 0 0 20px;
 }
