@@ -1,8 +1,7 @@
 import "@testing-library/jest-dom";
 import React from "react";
-import {fireEvent, render, screen} from "@testing-library/react";
-import RegistrationForm from "./RegistrationForm";
-import {act} from "react-dom/test-utils";
+import { fireEvent, render, screen } from '@testing-library/react';
+import RegistrationForm from './RegistrationForm';
 
 
 describe("Registration", () =>{

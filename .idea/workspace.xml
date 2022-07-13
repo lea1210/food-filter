@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed error">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" afterDir="false" />
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed css for search parameters">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistrationForm/RegistrationForm.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationForm/RegistrationForm.test.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
