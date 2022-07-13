@@ -1,6 +1,5 @@
-.checkboxes {
-  position: absolute;
-  top: 320px;
-  right: 10%;
-  z-index: 1;
+.checkboxes{
+    float: right;
+    z-index: 1;
+    width: 20%;
 }
