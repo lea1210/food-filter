@@ -1,11 +1,11 @@
-import {useIngredients} from "../../contexts/IngredientContext/IngredientContext";
-import {useExcludedIngredients} from "../../contexts/ExcludedContext/ExcludedContext";
-import IngredientList from "../IngredientList/IngredientList";
-import Styles from "./IngredientTags.module.css";
+import { useIngredients } from '../../contexts/IngredientContext/IngredientContext';
+import { useExcludedIngredients } from '../../contexts/ExcludedContext/ExcludedContext';
+import IngredientList from '../IngredientList/IngredientList';
+import Styles from './IngredientTags.module.css';
 
 export const IngredientTags = () => {
-    const {ingredientList} = useIngredients();
-    const {excludedList} = useExcludedIngredients();
+  const { ingredientList } = useIngredients();
+  const { excludedList } = useExcludedIngredients();
 
     return(
         <>

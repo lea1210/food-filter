@@ -1,4 +1,5 @@
 .img{
+    z-index: 1;
     margin-top: 7px;
     margin-left: 20px;
     height: 50px;
@@ -8,23 +9,21 @@
     background-color: #417552;
 }
 
-.textContainer{
-    text-align: center;
-    border: #417552;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-
+.textContainer {
+  text-align: center;
+  border: #417552;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
 }
 
-.recipeName{
-    color: black;
-    text-align: center;
-
+.recipeName {
+  color: black;
+  text-align: center;
 }
 
 .clickable {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .clickable:hover {
@@ -38,10 +37,9 @@
     width: 100%;
 }
 
-.recipeDescription{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-
+.recipeDescription {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }

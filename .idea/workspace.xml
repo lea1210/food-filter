@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="merge">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeInfo/RecipeInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result/Result.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe/Recipe.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetails/RecipeDetails.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\becci\\WebstormProjects\\FoodFilter\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -225,7 +226,35 @@
       <option name="project" value="LOCAL" />
       <updated>1656672628710</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="pushed recipe previews behind header and preferences">
+      <created>1657268728537</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1657268728538</updated>
+    </task>
+    <task id="LOCAL-00024" summary="styled recipe preview">
+      <created>1657269002360</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1657269002360</updated>
+    </task>
+    <task id="LOCAL-00025" summary="styled recipe preview">
+      <created>1657269488515</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1657269488515</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fixed error">
+      <created>1657274492912</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1657274492912</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +293,13 @@
     <MESSAGE value="recipe image is visibel in recipe details" />
     <MESSAGE value="styled recipe details&#10;checkboxes still visible" />
     <MESSAGE value="merged Rezeptansicht in master" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged Rezeptansicht in master" />
+    <MESSAGE value="pushed recipe previews behind header and preferences" />
+    <MESSAGE value="styled recipe preview" />
+    <MESSAGE value="fixed error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -12,20 +12,20 @@
 
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 .elementLeft {
-    flex: 1 1 50%;
+  flex: 1 1 50%;
 
-    float: left;
+  float: left;
 }
 
-.footerTitle{
-    float: left;
-    margin-left: 20%;
+.footerTitle {
+  float: left;
+  margin-left: 20%;
 }
 
 .elementRight {
-    flex: 1 1 50%;
-    float: right;
+  flex: 1 1 50%;
+  float: right;
 }
