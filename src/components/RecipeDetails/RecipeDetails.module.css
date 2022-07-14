@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 @keyframes slideIn {
   0% {
     transform: translateY(1000px);
@@ -10,6 +12,8 @@
 .recipe {
   text-align: left;
   display: flex;
+  font-family: var(--primary-font);
+  font-weight: 400;
 }
 .preferences {
   text-align: left;
@@ -17,18 +21,21 @@
   margin-top: 2%;
   border-radius: 1px;
   display: flex;
+  font-family: var(--primary-font);
   flex-direction: column;
 }
 
 .preparation {
+  font-family: var(--primary-font);
 }
 
 .ingredients {
+  font-family: var(--primary-font);
 }
 
 .textContainer {
   text-align: left;
-  border: #417552;
+  border: var(--primary-color);
   border-radius: 1px;
   flex-direction: column;
   left: 160px;

@@ -1,32 +1,50 @@
 @keyframes slideIn {
-    0% {
-        transform: translateY(1000px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideOut {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(1000px);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
 }
 
 .userInfoBackdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .userInfo {
+  animation: slideIn 500ms;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+  border-radius: 5px;
+  padding: 100px;
+  max-width: 800px;
+  top: 190px;
+  bottom: 190px;
+  left: 30px;
+  right: 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+@media only screen and (max-height: 800px) {
+  .userInfo {
     animation: slideIn 500ms;
     box-sizing: border-box;
     position: absolute;
@@ -35,86 +53,88 @@
     border-radius: 5px;
     padding: 100px;
     max-width: 800px;
-    top: 190px;
-    bottom: 190px;
+    top: 100px;
+    bottom: 100px;
     left: 30px;
     right: 30px;
     margin: 0 auto;
     overflow: auto;
+  }
 }
 
 .userInfoContent {
-    max-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .headline {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .profileImg {
-    width: 180px;
-    height: 330px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 180px;
+  height: 330px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
-    color: white;
-    background: #417552;
-    border-radius: 5px;
-    padding: 7px 15px 7px 15px;
-    float: bottom;
-    border-style: none;
-    font-family: "Arial Nova", sans-serif;
-    margin: 30px 20px 10px 10px;
+  color: white;
+  background: var(--primary-color);
+  border-radius: 5px;
+  padding: 7px 15px 7px 15px;
+  float: bottom;
+  border-style: none;
+  font-family: var(--primary-font);
+  margin: 30px 20px 10px 10px;
 }
 
 .saveButton {
-    float: left;
+  float: left;
 }
 
 .cancelButton {
-    float: right;
+  float: right;
 }
 
 .buttonBox {
-    margin: 20px;
-    float: left;
+  margin: 20px;
+  float: left;
 }
 
 .preferences {
-    text-align: center;
-    margin: 30px;
+  text-align: center;
+  margin: 30px;
 }
 
 .logoutButton {
-    float: left;
+  float: left;
 }
 
 .left {
-    float: right;
-    margin-right: 15px;
-
+  float: right;
+  margin-right: 15px;
 }
 
 .right {
-    float: left;
-    margin-left: 15px;
-    margin-top: 13px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 13px;
 }
 
 .greeting {
-    font-size: 20px;
+  font-size: 20px;
+  font-family: var(--primary-font);
 }
 
 .infotext {
-    margin-top: 30px;
-    padding: 20px 0 20px 0;
+  margin-top: 30px;
+  padding: 20px 0 20px 0;
+  font-family: var(--primary-font);
 }
 
 .topBox {
-    float: top;
+  float: top;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');
+
 .suggestion {
   border-radius: 5px;
   box-shadow: 5px 5px 15px 0 rgba(117, 117, 117, 0.38);
@@ -5,6 +7,9 @@
   margin: 10px auto;
   width: 49%;
   text-align: left;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .suggestion:hover {

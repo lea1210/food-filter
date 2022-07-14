@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');
+
 .switch {
   position: relative;
   display: inline-block;
@@ -53,4 +55,7 @@ input:checked + .slider:before {
 
 .label {
   padding: 15px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 16px;
 }

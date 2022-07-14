@@ -35,6 +35,26 @@
   overflow: auto;
 }
 
+@media only screen and (max-height: 800px) {
+  .registrationForm {
+    z-index: 2;
+    transition: transform 500ms;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    padding: 70px 90px 70px 90px;
+    max-width: 1100px;
+    top: 100px;
+    bottom: 100px;
+    left: 30px;
+    right: 30px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+}
+
 .registrationFormContext {
   max-width: 600px;
   margin: 0 auto;
@@ -52,12 +72,12 @@
 
 button {
   color: white;
-  background: #417552;
+  background: var(--primary-color);
   border-radius: 5px;
   padding: 7px 20px 7px 20px;
   float: bottom;
   border-style: none;
-  font-family: 'Arial Nova', sans-serif;
+  font-family: var(--primary-font);
   margin: 10px;
 }
 

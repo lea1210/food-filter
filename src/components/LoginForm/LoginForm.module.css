@@ -2,22 +2,24 @@
   float: bottom;
   font-size: 11pt;
   margin-left: 20px;
+  font-family: var(--primary-font);
 }
 
 .registerLink {
-  color: #417552;
+  color: var(--primary-color);
   font-size: 11pt;
   float: bottom;
+  font-family: var(--primary-font);
 }
 
 .loginButton {
   width: 248px;
   color: white;
-  background: #417552;
-  border-radius: 5px;
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
   padding: 5px 35px 5px 35px;
   border-style: none;
-  font-family: 'Arial Nova', sans-serif;
+  font-family: var(--primary-font);
 }
 
 .loading {
@@ -28,7 +30,7 @@
   position: absolute;
   margin-top: 4%;
   margin-left: 60px;
-  color: #c24844;
+  color: var(--error-red);
   font-size: 9pt;
   text-align: center;
   float: right;

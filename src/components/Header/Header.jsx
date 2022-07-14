@@ -9,11 +9,13 @@ export const Header = () => {
   const { isUserInfoOpened } = useUser();
   const { isLoggedIn } = useLogin();
 
+  //<img src="icons/groceries.png" alt="food" className={Styles.foodIcon} />
+
   return (
     <header className={Styles.header}>
       <UserAccountButton />
       <h1 className={Styles.headerText}>FoodFilter</h1>
-      <img src="icons/food.png" alt="food" className={Styles.foodIcon} />
+      <img src="icons/groceries.png" alt="food" className={Styles.foodIcon} />
       {isLoggedIn ? isUserInfoOpened && <UserInfo /> : <Login />}
     </header>
   );
