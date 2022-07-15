@@ -57,26 +57,29 @@
 }
 
 .recipeName {
-  color: black;
+  font-family: var(--primary-font);
+  color: var(--font-color);
   text-align: left;
   font-size: 20px;
 }
 
 .recipeDescription {
-  color: black;
-  text-align: left;
   font-family: var(--primary-font);
+  color: var(--font-color);
+  text-align: left;
 }
 
 .ingredients {
-  color: black;
   font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .preparation {
-  color: black;
   font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .preferences {
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }

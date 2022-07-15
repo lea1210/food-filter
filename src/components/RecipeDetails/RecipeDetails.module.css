@@ -14,6 +14,7 @@
   display: flex;
   font-family: var(--primary-font);
   font-weight: 400;
+  color: var(--font-color);
 }
 .preferences {
   text-align: left;
@@ -23,14 +24,17 @@
   display: flex;
   font-family: var(--primary-font);
   flex-direction: column;
+  color: var(--font-color);
 }
 
 .preparation {
   font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .ingredients {
   font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .textContainer {
@@ -47,6 +51,8 @@
 
 .headlines {
   font-size: 14px;
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }
 .Button {
   position: absolute;

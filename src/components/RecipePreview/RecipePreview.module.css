@@ -15,10 +15,11 @@
   display: flex;
   flex-direction: column;
   font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .recipeName {
-  color: black;
+  color: var(--font-color);
   text-align: center;
   font-family: var(--primary-font);
 }
@@ -39,9 +40,9 @@
 }
 
 .recipeDescription {
-  color: black;
   display: flex;
   flex-direction: column;
   text-align: right;
   font-family: var(--primary-font);
+  color: var(--font-color);
 }

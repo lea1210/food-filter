@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 .headline {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--primary-font);
   font-weight: 400;
+  color: var(--font-color);
 }
 
 .upperBox {

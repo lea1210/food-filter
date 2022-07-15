@@ -1,0 +1,11 @@
+.headline {
+  font-family: var(--primary-font);
+  font-size: 22px;
+  margin: 10px 30% 5px 30%;
+}
+
+.description {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  margin: 10px 30% 5px 30%;
+}
