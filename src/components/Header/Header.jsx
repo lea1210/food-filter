@@ -9,8 +9,6 @@ export const Header = () => {
   const { isUserInfoOpened } = useUser();
   const { isLoggedIn } = useLogin();
 
-  //<img src="icons/groceries.png" alt="food" className={Styles.foodIcon} />
-
   return (
     <header className={Styles.header}>
       <UserAccountButton />
