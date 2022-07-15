@@ -9,3 +9,9 @@
   font-size: 14px;
   margin: 10px 30% 5px 30%;
 }
+
+.noResults{
+    width: 100%;
+    float: left;
+    margin-bottom:5% ;
+}

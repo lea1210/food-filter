@@ -95,22 +95,21 @@ button {
   top: 85%;
   background-color: var(--secondary-color);
 }
-
-.bottomButtons {
-  float: bottom;
-  padding: 25px;
-  margin: 10px;
+.bottomButtons{
+    float: bottom;
+    padding: 25px;
+    margin: 10px;
 }
 
-.buttonBox {
-  padding: 20px 10px 30px 20px;
-  margin: 10px;
-  float: right;
+.buttonBox{
+    padding: 20px 10px 30px 20px;
+    margin: 10px;
+    float: right;
 }
 
-.fieldBox {
-  float: left;
-  padding: 30px 10px 30px 10px;
+.fieldBox{
+    float: left;
+    padding: 30px 10px 30px 10px;
 }
 
 .infotext {
