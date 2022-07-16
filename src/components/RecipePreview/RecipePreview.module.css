@@ -39,6 +39,8 @@
   border: 1px;
   width: 100%;
   background-color: white;
+  border-radius: var(--border-radius);
+  margin: 10px;
 }
 
 .recipeDescription {

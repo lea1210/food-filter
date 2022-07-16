@@ -1,17 +1,19 @@
 .headline {
   font-family: var(--primary-font);
+  color: var(--font-color);
   font-size: 22px;
-  margin: 10px 30% 5px 30%;
+  margin: 0 30% 5px 30%;
+  text-align: center;
 }
 
 .description {
   font-family: var(--primary-font);
   font-size: 14px;
-  margin: 10px 30% 5px 30%;
+  color: var(--font-color);
+  margin: 0 30% 5px 30%;
+  text-align: center;
 }
 
-.noResults{
-    width: 100%;
-    float: left;
-    margin-bottom:5% ;
+.noResults {
+  width: 100%;
 }
