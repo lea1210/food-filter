@@ -1,6 +1,6 @@
 .checkboxes {
   float: right;
   z-index: 1;
-  width: 20%;
   font-family: var(--primary-font);
+  margin: 20px 10px 10px 10px;
 }
