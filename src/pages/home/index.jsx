@@ -9,16 +9,16 @@ import { useIngredients } from '../../contexts/IngredientContext/IngredientConte
 const Page = () => {
   const { ingredientList } = useIngredients();
 
-  const { loading, error, data, loadRecipes, firstSearch } = useRecipesData(ingredientList);
+  const { loading, error, data, loadRecipes } = useRecipesData(ingredientList);
 
-    return (
-        <>
-            <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex}/>
-            <Preferences className={Styles.rightPart}></Preferences>
-            <IngredientTags className={Styles.leftPart}></IngredientTags>
-            <Result error={error} loading={loading} data={data} />
-        </>
-    );
+  return (
+    <>
+      <IngredientSearch loadRecipes={loadRecipes} className={Styles.flex} />
+      <Preferences className={Styles.rightPart}></Preferences>
+      <IngredientTags className={Styles.leftPart}></IngredientTags>
+      <Result error={error} loading={loading} data={data} />
+    </>
+  );
 };
 
 export default Page;
