@@ -15,8 +15,8 @@ import { SearchValueContextProvider } from './contexts/SearchValueContext/Search
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className={Styles.wrapper}>
+    <div className={Styles.wrapper}>
+      <BrowserRouter>
         <UserInfoContextProvider>
           <RegistrationContextProvider>
             <LoginFormContextProvider>
@@ -39,8 +39,8 @@ function App() {
             </LoginFormContextProvider>
           </RegistrationContextProvider>
         </UserInfoContextProvider>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 

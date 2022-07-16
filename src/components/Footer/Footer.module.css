@@ -1,15 +1,16 @@
-.footer, .footer a {
-    background-color:  #417552;
-    color: white;
-    bottom: 0px;
-    position: relative;
-    width: 90%;
-    margin-bottom:0px ;
-    padding-left: 10%;
-    z-index: 1;
-    float: bottom;
-
-
+.footer,
+.footer a {
+  background-color: #417552;
+  color: white;
+  bottom: 0px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 1;
+  float: bottom;
+  font-family: var(--primary-font);
 }
 .flex {
   display: flex;

@@ -1,15 +1,18 @@
 Input {
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   width: 250px;
   float: right;
   box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
   padding: 5px;
   margin: 5px;
   border: 0;
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 Input:focus {
-  border-color: #afafaf;
+  border: 2px solid var(--secondary-color);
+  outline: none;
 }
 
 .error {
@@ -18,4 +21,5 @@ Input:focus {
   font-size: 8pt;
   text-align: center;
   float: left;
+  font-family: var(--primary-font);
 }

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');
+
 .loginWindow {
   border-radius: 5px;
   float: right;
   box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
-  padding: 20px;
+  padding: 15px;
   margin-top: 80px;
   background-color: white;
 }
@@ -13,9 +15,12 @@
   box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
   padding: 5px;
   margin: 5px;
-  border: 0;
+  font-family: var(--primary-font);
+  font-weight: 400;
 }
 
 .input:focus {
   border-color: #afafaf;
+  border: 2px solid var(--secondary-color);
+  outline: none;
 }
