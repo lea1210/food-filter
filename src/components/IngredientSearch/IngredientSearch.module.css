@@ -1,25 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+@font-face {
+  font-family: 'Ginchiest';
+  src: local('Ginchiest'), url(../../../public/fonts/Ginchiest.ttf) format('truetype');
+}
+
 .centerInput {
   width: 50%;
-  border-radius: 20px;
-  margin: 2% 25% 2% 25%;
+  border-radius: var(--border-radius);
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 2%;
   padding-bottom: 5px;
   padding-top: 5px;
+  font-family: var(--primary-font);
+  font-weight: 400;
 }
 
 .input {
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   margin: 10px;
-  padding-left: 5%;
-  padding-right: 5%;
   background-color: #7ec295;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 5%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
+  font-family: var(--primary-font);
+  font-weight: 400;
+}
+
+.centerInput:focus {
+  border: 2px solid var(--secondary-color);
+  outline: none;
 }
 
 .headerText {
-  margin-top: 100px;
+  margin-top: 160px;
   text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: var(--font-color);
+  font-size: 28px;
 }
 
 .ingredientSearch {
@@ -27,12 +47,46 @@
 }
 
 .search {
-  border-radius: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
+  font-family: var(--primary-font);
+  font-weight: 400;
   margin: 10px;
-  padding-left: 16.5%;
-  padding-right: 16.5%;
   background-color: #417552;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 10%;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.search:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #417552;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.search:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #30543b;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.search:hover {
+  color: #fff;
+}
+.search:hover::before {
+  width: 100%;
 }

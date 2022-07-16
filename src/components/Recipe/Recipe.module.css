@@ -18,6 +18,8 @@
 
 .headlinesClicked {
   font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: 600;
 }
 
 .textContainer{
@@ -30,7 +32,8 @@
     right: 40px;
     margin-bottom: 10%;
     margin-top: 2%;
-
+  font-family: var(--primary-font);
+  font-weight: 400;
 }
 
 .recipeContainer {
@@ -70,23 +73,29 @@
 }
 
 .recipeName {
-  color: black;
+  font-family: var(--primary-font);
+  color: var(--font-color);
   text-align: left;
   font-size: 20px;
 }
 
 .recipeDescription {
-  color: black;
+  font-family: var(--primary-font);
+  color: var(--font-color);
   text-align: left;
 }
 
 .ingredients {
-  color: black;
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .preparation {
-  color: black;
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
 .preferences {
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }

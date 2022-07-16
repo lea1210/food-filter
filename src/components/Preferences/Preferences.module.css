@@ -2,4 +2,5 @@
     float: right;
     z-index: 1;
     width: 20%;
+    font-family: var(--primary-font);
 }
