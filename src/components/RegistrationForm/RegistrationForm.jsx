@@ -42,79 +42,87 @@ const RegistrationForm = () => {
     }
   };
 
-    return (
-        <>
-            <div className={Styles.registrationFormBackdrop}>
-                <div className={Styles.registrationForm}>
-                    <img src="icons/register.svg" alt="placeholder" className={Styles.image} />
-                    <div className={Styles.textbox}>
-                    <label className={Styles.headline}>Willkomen bei FoodFilter</label>
-                    <label className={Styles.infotext}><br/>Bitte gib auf jeden Fall deinen Usernamen, deine
-                        E-Mail-Adresse und dein Passwort an. Wenn du willst, kannst du auch deine Präferenzen schon
-                        speichern.</label>
-                    <div className={Styles.registrationFormContext}>
-                        <form onSubmit={submit}>
-                            <div className={Styles.fieldBox}>
-                                <FormField
-                                    pattern={/.{2,42}/}
-                                    errorMessage="Bitte gib einen einzigartigen Usernamen an."
-                                    name="username"
-                                    label="Username*"
-                                    type="text"
-                                    required
-                                />
-                                <FormField
-                                    pattern={emailRegex}
-                                    errorMessage="Bitte gib deine E-Mail-Adresse an."
-                                    name="email"
-                                    label="E-Mail*"
-                                    type="text"
-                                    required
-                                />
-                                <FormField
-                                    pattern={/.{6,42}/}
-                                    errorMessage="Dein Passwort muss mindestens 6 Zeichen lang sein."
-                                    name="password"
-                                    label="Passwort*"
-                                    type="password"
-                                    required={true}
-                                />
-                            </div>
-                            <div className={Styles.buttonBox}>
-                                <Checkbox onChange={setIsVegan}>
-                                    <label>vegan</label>
-                                </Checkbox>
-                                <Checkbox onChange={setIsVegetarian}>
-                                    <label>vegetarisch</label>
-                                </Checkbox>
-                                <Checkbox onChange={setIsLactosefree}>
-                                    <label>laktosefrei</label>
-                                </Checkbox>
-                                <Checkbox onChange={setIsGlutenfree}>
-                                    <label>glutenfrei</label>
-                                </Checkbox>
-                            </div>
-                            <div className={Styles.bottomButtons}>
-                                <button className={Styles.registerButton + ' ' + Styles.baseButton} type="submit">
-                                    Registrieren
-                                </button>
-                                <Link to="/">
-                                    <button className={Styles.cancelButton + ' ' + Styles.baseButton}>
-                                        Abbrechen
-                                    </button>
-                                </Link>
-
-
-                            </div>
-                        </form>
-                    </div>
-                    </div>
+  return (
+    <>
+      <div className={Styles.registrationFormBackdrop}>
+        <div className={Styles.registrationForm}>
+          <img src="icons/register.svg" alt="placeholder" className={Styles.image} />
+          <div className={Styles.textbox}>
+            <label className={Styles.headline}>Willkomen bei FoodFilter</label>
+            <label className={Styles.infotext}>
+              <br />
+              Bitte gib auf jeden Fall deinen Usernamen, deine E-Mail-Adresse und dein Passwort an.
+              Wenn du willst, kannst du auch deine Präferenzen schon speichern.
+            </label>
+            <div className={Styles.registrationFormContext}>
+              <form onSubmit={submit}>
+                <div className={Styles.fieldBox}>
+                  <FormField
+                    pattern={/.{2,42}/}
+                    errorMessage="Bitte gib einen einzigartigen Usernamen an."
+                    name="username"
+                    label="Username*"
+                    type="text"
+                    required
+                  />
+                  <FormField
+                    pattern={emailRegex}
+                    errorMessage="Bitte gib deine E-Mail-Adresse an."
+                    name="email"
+                    label="E-Mail*"
+                    type="text"
+                    required
+                  />
+                  <FormField
+                    pattern={/.{6,42}/}
+                    errorMessage="Dein Passwort muss mindestens 6 Zeichen lang sein."
+                    name="password"
+                    label="Passwort*"
+                    type="password"
+                    required={true}
+                  />
                 </div>
+                <div className={Styles.buttonBox}>
+                  <Checkbox onChange={setIsVegan}>
+                    <label>vegan</label>
+                  </Checkbox>
+                  <Checkbox onChange={setIsVegetarian}>
+                    <label>vegetarisch</label>
+                  </Checkbox>
+                  <Checkbox onChange={setIsLactosefree}>
+                    <label>laktosefrei</label>
+                  </Checkbox>
+                  <Checkbox onChange={setIsGlutenfree}>
+                    <label>glutenfrei</label>
+                  </Checkbox>
+                </div>
+                <div className={Styles.bottomButtons}>
+                  <button className={Styles.registerButton + ' ' + Styles.baseButton} type="submit">
+                    Registrieren
+                  </button>
+                  <Link to="/">
+                    <button className={Styles.cancelButton + ' ' + Styles.baseButton}>
+                      Abbrechen
+                    </button>
+                  </Link>
+                </div>
+              </form>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
+RegistrationFormContextWrapper.propTypes = {
+  children: PropTypes.array,
+  setIsOpenRegisterForm: PropTypes.bool
+};
+
+RegistrationFormContextWrapper.defaultProps = {
+  setIsOpenRegisterForm: false,
+  children: undefined
+};
 
 export default RegistrationFormContextWrapper;
-

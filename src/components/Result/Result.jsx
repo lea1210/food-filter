@@ -1,51 +1,47 @@
-import PropTypes from "prop-types";
-import {useState} from "react";
-import {RecipeDetails} from "../RecipeDetails/RecipeDetails";
-import {RecipePreview} from "../RecipePreview/RecipePreview";
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import { RecipeDetails } from '../RecipeDetails/RecipeDetails';
+import { RecipePreview } from '../RecipePreview/RecipePreview';
+import Styles from './Result.module.css';
 
-export const Result = ({ loading, data, error, firstSearch }) => {
+export const Result = ({ loading, data, error }) => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [selectedRecipeImage, setSelectedRecipeImage] = useState(null);
 
-    if (loading) {
-        //später ladeanimation
-        return <h1>Loading...</h1>;
-    } else if (!loading && error) {
-        return (
-            <div>
-                <h1>Da ist wohl etwas schiefgelaufen...!</h1>
-                <p>{`${error}`}</p>
-            </div>
-        );
-    } else if (data.length < 1) {
-
-        return (
-            <>
-                <div className={Styles.noResults}>
-                    <h3>Leider konnten wir keine Rezepte finden!</h3>
-                    <p>
-                        Versuch es doch nochmal mit ein paar anderen Zutaten.
-                    </p>
-                </div>
-            </>
-        );
-    }
+  if (loading) {
+    //später ladeanimation
+    return <h1>Loading...</h1>;
+  } else if (!loading && error) {
     return (
-        <>
-            {data.map((recipe) =>
-                (
-                    <RecipePreview
-                        key={recipe.id}
-                        name={recipe.attributes.name}
-                        image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
-                        description={recipe.attributes.description}
-                        onClick={() => {
-                            setSelectedRecipe(recipe);
-                            setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url)
-                        }}
-                    />
-                ))
-            }
+      <div>
+        <h1>Da ist wohl etwas schiefgelaufen...!</h1>
+        <p>{`${error}`}</p>
+      </div>
+    );
+  } else if (data.length < 1) {
+    return (
+      <>
+        <div className={Styles.noResults}>
+          <h3>Leider konnten wir keine Rezepte finden!</h3>
+          <p>Versuch es doch nochmal mit ein paar anderen Zutaten.</p>
+        </div>
+      </>
+    );
+  }
+  return (
+    <>
+      {data.map((recipe) => (
+        <RecipePreview
+          key={recipe.id}
+          name={recipe.attributes.name}
+          image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
+          description={recipe.attributes.description}
+          onClick={() => {
+            setSelectedRecipe(recipe);
+            setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url);
+          }}
+        />
+      ))}
 
       {selectedRecipe && (
         <RecipeDetails
@@ -71,4 +67,3 @@ Result.defaultProps = {
   error: undefined,
   firstSearch: false
 };
-
