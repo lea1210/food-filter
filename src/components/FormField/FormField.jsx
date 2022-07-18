@@ -4,11 +4,25 @@ import { useForm } from '../../contexts/FormContext/FormContext';
 import Styling from './FormField.module.css';
 import PropTypes from 'prop-types';
 
+/**
+ * Displays a formfield
+ * @param initialValue
+ * @param required
+ * @param label
+ * @param type
+ * @param name
+ * @param errorMessage
+ * @param pattern
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const FormField = ({ initialValue, required, label, type, name, errorMessage, pattern = /.*/ }) => {
   const { setValue, initFormField, formFields } = useForm();
 
+  //get the formfield with the given name
   const formField = formFields[name];
 
+  //check if value fits the pattern and if required fields are filled
   const validateFormField = (value) => {
     if (required && !value) return false;
     return pattern.test(value);
@@ -24,7 +38,7 @@ const FormField = ({ initialValue, required, label, type, name, errorMessage, pa
   }, []);
 
   return (
-    <div className={Styling.formField}>
+    <div>
       <Input
         value={formField?.value}
         error={formField?.error}

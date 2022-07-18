@@ -3,9 +3,26 @@ import { useCallback, useState } from 'react';
 import Styles from '../Checkbox/Checkbox.module.css';
 import React from 'react';
 
+/**
+ * Displays a checkbox with slider
+ * @param name
+ * @param error
+ * @param children
+ * @param hint
+ * @param value
+ * @param checked
+ * @param className
+ * @param onChange
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Checkbox = ({ name, error, children, hint, value, checked, className, onChange }) => {
   const [id] = useState(`checkbox-${Math.random().toString(16).slice(2)}`);
 
+  /**
+   * Sets new value for checked in onChange
+   * @type {(function(*): void)|*}
+   */
   const handleChange = useCallback(
     (event) => {
       onChange(event.target.checked);
@@ -14,19 +31,15 @@ export const Checkbox = ({ name, error, children, hint, value, checked, classNam
   );
 
   return (
-    <div data-testid={`checkboxField-${name ?? ''}`} className={`${Styles.element} ${className}`}>
+    <div data-testid={`checkboxField-${name ?? ''}`}>
       {children && (
         <label data-testid="label" htmlFor={id} className={Styles.label}>
           {children}
         </label>
       )}
-      <span data-testid="hint" className={Styles.hint}>
-        {hint}
-      </span>
       <label className={Styles.switch}>
         <input
           data-testid={`checkbox${name ? '-' + name : ''}`}
-          className={`${Styles.input} ${error ? Styles.error : ''}`}
           id={id}
           type="checkbox"
           value={value ?? ''}

@@ -2,9 +2,26 @@ import PropTypes from 'prop-types';
 import Styling from './Input.module.css';
 import { useCallback, useState } from 'react';
 
+/**
+ * displays an input field
+ * @param name
+ * @param value
+ * @param error
+ * @param hint
+ * @param type
+ * @param placeholder
+ * @param className
+ * @param onChange
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Input = ({ name, value, error, hint, type, placeholder, className, onChange }) => {
   const [id] = useState(`input-${Math.random().toString(16).slice(2)}`);
 
+  /**
+   * Sets new value for input in onChange
+   * @type {(function(*): void)|*}
+   * */
   const handleChange = useCallback(
     (event) => {
       onChange(event.target.value);

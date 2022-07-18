@@ -1,3 +1,14 @@
+/**
+ * register via API call
+ * @param username
+ * @param email
+ * @param password
+ * @param isVegan
+ * @param isVegetarian
+ * @param isGlutenfree
+ * @param isLaktosefree
+ * @returns {Promise<any>}
+ */
 export const registration = (
   username,
   email,
@@ -16,7 +27,6 @@ export const registration = (
     glutenfree: isGlutenfree,
     lactosefree: isLaktosefree
   };
-  console.log(user);
   return fetch('http://localhost:1337/api/auth/local/register', {
     method: 'POST',
     headers: {
@@ -31,12 +41,3 @@ export const registration = (
     return res.json();
   });
 };
-
-/*user.propTypes = {
-    children: PropTypes.node,
-    hint: PropTypes.string,
-    type: PropTypes.string,
-    className: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    placeholder: PropTypes.string,
-};*/

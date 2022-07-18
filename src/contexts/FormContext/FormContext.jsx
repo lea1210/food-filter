@@ -7,6 +7,13 @@ export const FormContext = React.createContext(undefined);
 export function FormContextProvider({ children }) {
   const [formFields, setFormFields] = useState({});
 
+  /**
+   * initialize from field
+   * @param name
+   * @param validation
+   * @param errorMessage
+   * @param initialValue
+   */
   const initFormField = ({
     name,
     validation = () => true,
@@ -24,12 +31,21 @@ export function FormContextProvider({ children }) {
     });
   };
 
+  /**
+   * set new value to form field
+   * @param name
+   * @param value
+   */
   const setValue = (name, value) =>
     setFormFields((prevFormFields) => {
       prevFormFields[name].value = value;
       return { ...prevFormFields };
     });
 
+  /**
+   * validate formfield values
+   * @returns {boolean}
+   */
   const validate = () => {
     const { hasError, formFields: updatedFormFields } = validateFormFields(formFields);
     setFormFields({ ...updatedFormFields });

@@ -1,3 +1,8 @@
+/**
+ * check if all formfields are valid
+ * @param formFields
+ * @returns {{hasError: boolean, formFields}}
+ */
 export const validateFormFields = (formFields) => {
   let hasError = false;
 
@@ -10,6 +15,11 @@ export const validateFormFields = (formFields) => {
   return { hasError, formFields };
 };
 
+/**
+ * check if formfield has an error
+ * @param field
+ * @returns {*|boolean}
+ */
 export const validateFormField = (field) => {
   field.error = !field.validation(field.value);
   return field.error;

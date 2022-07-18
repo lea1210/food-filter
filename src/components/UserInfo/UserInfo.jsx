@@ -6,6 +6,11 @@ import { Checkbox } from '../Checkbox/Checkbox';
 import React, { useState } from 'react';
 import { setNewUserInfo } from '../../hooks/useUserInfo';
 
+/**
+ * Displays the username and his preferences
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const UserInfo = () => {
   const [setUpdatedUserInfo] = useState(false);
   const { logout } = useLogin();
@@ -19,11 +24,17 @@ const UserInfo = () => {
   const [isGlutenfree, setIsGlutenfree] = useState(user.glutenfree);
   const [isLactosefree, setIsLactosefree] = useState(user.lactosefree);
 
+  /**
+   * Log out and close userinfo
+   */
   const onClickLogout = () => {
     logout();
     closeUserInfo();
   };
 
+  /**
+   * Update userinfos and post to API to refresh userinfos
+   */
   const onClickSave = () => {
     setIsUpdated(false);
     setNewUserInfo(user.id, isVegan, isVegetarian, isLactosefree, isGlutenfree).then((result) => {
@@ -33,6 +44,9 @@ const UserInfo = () => {
     closeUserInfo();
   };
 
+  /**
+   * Close the user info window
+   */
   const onClickCancel = () => {
     closeUserInfo();
   };

@@ -6,6 +6,10 @@ export const ExcludedContext = React.createContext(undefined);
 export function ExcludedContextProvider({ children }) {
   const [excludedList, setExcludedList] = useState([]);
 
+  /**
+   * add new ingredient to list of excluded ingredients
+   * @param newExcluded
+   */
   const addExcluded = (newExcluded) => {
     if (newExcluded !== '') {
       const newList = [...excludedList];
@@ -14,6 +18,10 @@ export function ExcludedContextProvider({ children }) {
     }
   };
 
+  /**
+   * delete ingredient from list of excluded ingredients
+   * @param name
+   */
   const deleteExcluded = (name) => {
     const newList = [...excludedList];
     for (let i = 0; i < newList.length; i++) {

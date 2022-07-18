@@ -6,6 +6,11 @@ import { getUser } from '../../contexts/LoginContext/login';
 import { useLogin } from '../../contexts/LoginContext/LoginContext';
 import { useUser } from '../../contexts/UserInfoContext/UserInfoContext';
 
+/**
+ * displays the chosen preferences
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Preferences = () => {
   const user = getUser();
   const { isLoggedIn } = useLogin();
@@ -21,6 +26,9 @@ export const Preferences = () => {
     isLactosefree
   } = usePreferences();
 
+  /**
+   * update preference tags depending on login status and in case the user changed his preferences
+   */
   useEffect(() => {
     if (isLoggedIn) {
       handleChangeVegan(user.vegan);

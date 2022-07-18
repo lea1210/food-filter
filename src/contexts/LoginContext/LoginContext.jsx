@@ -16,6 +16,12 @@ export function LoginContextProvider({ children }) {
     handleChangeLactosefree
   } = usePreferences();
 
+  /**
+   * login via API call
+   * @param user
+   * @param password
+   * @returns {Promise<boolean>}
+   */
   const handleLogin = async (user, password) => {
     resetError();
     return await login(user, password).then((result) => {
@@ -26,6 +32,9 @@ export function LoginContextProvider({ children }) {
     });
   };
 
+  /**
+   * logout and reset preferences
+   */
   const handleLogout = () => {
     logout();
     setIsLoggedIn(false);

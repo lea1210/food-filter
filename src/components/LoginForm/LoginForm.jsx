@@ -10,6 +10,13 @@ import { useLoginForm } from '../../contexts/LoginFormContext/LoginFormContext';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+/**
+ * wrapped login form
+ * @param children
+ * @param setIsOpen
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const FormContextWrapper = ({ children, setIsOpen }) => {
   return (
     <FormContextProvider>
@@ -18,6 +25,11 @@ const FormContextWrapper = ({ children, setIsOpen }) => {
   );
 };
 
+/**
+ * form for user login
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const LoginForm = () => {
   const { closeLoginForm } = useLoginForm();
   const { openUserInfo } = useUser();
@@ -25,6 +37,10 @@ const LoginForm = () => {
   const [isLogginIn, setIsLogginIn] = useState(false);
   const { login, loginError } = useLogin();
 
+  /**
+   * call login function with values from input-fields
+   * @param event
+   */
   const submit = (event) => {
     event.preventDefault();
 

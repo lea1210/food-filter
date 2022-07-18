@@ -1,6 +1,16 @@
 import PropTypes from 'prop-types';
 import Style from './Button.module.css';
 
+/**
+ * Displays a button
+ * @param testID
+ * @param type
+ * @param className
+ * @param onClick
+ * @param children
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Button = ({ testID, type, className, onClick, children }) => {
   return (
     <button
