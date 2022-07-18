@@ -6,17 +6,14 @@ import React from 'react';
 /**
  * Displays a checkbox with slider
  * @param name
- * @param error
  * @param children
- * @param hint
  * @param value
  * @param checked
- * @param className
  * @param onChange
  * @returns {JSX.Element}
  * @constructor
  */
-export const Checkbox = ({ name, error, children, hint, value, checked, className, onChange }) => {
+export const Checkbox = ({ name, children, value, checked, onChange }) => {
   const [id] = useState(`checkbox-${Math.random().toString(16).slice(2)}`);
 
   /**
@@ -54,23 +51,17 @@ export const Checkbox = ({ name, error, children, hint, value, checked, classNam
 
 Checkbox.defaultProps = {
   children: undefined,
-  error: false,
-  hint: undefined,
   type: 'text',
-  className: undefined,
   placeholder: undefined,
   name: ''
 };
 
 Checkbox.propTypes = {
   children: PropTypes.node,
-  hint: PropTypes.string,
   type: PropTypes.string,
-  className: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   name: PropTypes.string,
-  error: PropTypes.bool,
   value: PropTypes.string,
   checked: PropTypes.bool
 };
