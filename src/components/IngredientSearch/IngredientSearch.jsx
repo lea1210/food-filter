@@ -35,15 +35,19 @@ export const IngredientSearch = ({ loadRecipes }) => {
           onChange={(e) => setSearchValue(e.target.value)}
           value={searchValue}
           className={Styles.centerInput}
+          data-testid="ingredientSearchInputField"
         />
         <br />
         <IngredientSuggestion ingredients={data} />
       </div>
       <div>
-        <button className={Styles.input} onClick={onClickAdd}>
+        <button className={Styles.input} data-testid="addIngredientButton" onClick={onClickAdd}>
           Hinzufügen
         </button>
-        <button className={Styles.input} onClick={onClickExclude}>
+        <button
+          className={Styles.input}
+          data-testid="excludeIngredientButton"
+          onClick={onClickExclude}>
           Ausschließen
         </button>
       </div>

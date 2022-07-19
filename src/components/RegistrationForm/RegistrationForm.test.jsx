@@ -4,14 +4,24 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import promise from 'promise';
 import { act } from 'react-dom/test-utils';
 import RegistrationFormContextWrapper from './RegistrationForm';
+import { useRegistration } from '../../contexts/RegistrationContext/RegistrationContext';
+import RegistrationForm from './RegistrationForm';
 
 const mockOnSubmit = jest.fn(() => promise);
 
 describe('Registration', () => {
   describe('Registration with valid input', () => {
     it('should validate an input', async () => {
-      const wrapper = render(<RegistrationFormContextWrapper onSubmit={mockOnSubmit} />);
+      //const wrapper = render(<RegistrationFormContextWrapper setIsOpenRegisterForm={undefined} />);
+      const wrapper = ({ children }) => (
+        <RegistrationFormContextWrapper setIsOpenRegisterForm={undefined}>
+          {children}
+        </RegistrationFormContextWrapper>
+      );
+
+      render(<RegistrationForm />, { wrapper });
       const promise = Promise.resolve();
+
       fireEvent.change(screen.getByLabelText('Username*'), { target: { value: 'testuser' } });
       fireEvent.change(screen.getByLabelText('E-Mail*'), { target: { value: 'testuser' } });
       fireEvent.change(screen.getByLabelText('Passwort*'), { target: { value: 'testuser' } });

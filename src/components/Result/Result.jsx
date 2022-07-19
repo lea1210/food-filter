@@ -64,4 +64,3 @@ Result.defaultProps = {
   error: undefined,
   firstSearch: false
 };
-
