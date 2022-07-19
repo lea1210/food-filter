@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');
-
 .switch {
   position: relative;
   display: inline-block;
@@ -41,11 +39,11 @@
 }
 
 input:checked + .slider {
-  background-color: #417552;
+  background-color: var(--primary-color);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #417552;
+  box-shadow: 0 0 1px var(--primary-color);
 }
 
 input:checked + .slider:before {

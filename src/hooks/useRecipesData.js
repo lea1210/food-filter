@@ -5,11 +5,26 @@ import { usePreferences } from '../contexts/PreferencesContext/PreferencesContex
 
 const API_URL = 'http://localhost:1337/api/recipes';
 
+/**
+ * extract json
+ * @param result
+ * @returns {Promise<*>}
+ */
 async function extractResult(result) {
   if (result.ok) return await result.json();
   else throw new Error(`something went wrong: ${JSON.stringify(result)}`);
 }
 
+/**
+ * build filterparams with ingredients and preferences
+ * @param ingredientList
+ * @param excludedList
+ * @param vegan
+ * @param vegetarian
+ * @param lactosefree
+ * @param glutenfree
+ * @returns {string}
+ */
 function determineFilterParams(
   ingredientList,
   excludedList,
@@ -24,6 +39,7 @@ function determineFilterParams(
   let filterParams;
   let ingredientCounter = 0;
 
+  //add every selected ingredient to params
   ingredientList.map((ingredient) => {
     if (ingredientCounter === 0) {
       ingredientParams += '?';
@@ -39,20 +55,44 @@ function determineFilterParams(
   });
 
   filterParams = ingredientParams + excludedParams.slice(0, -1);
-  if (vegan) filterParams += '&filters[vegan]=true';
-  if (vegetarian) filterParams += '&filters[vegetarian]=true';
-  if (glutenfree) filterParams += '&filters[glutenfree]=true';
-  if (lactosefree) filterParams += '&filters[lactosefree]=true';
+
+  //add preference = true in case user selected it
+  if (vegan)
+    filterParams === ''
+      ? (filterParams = '?filters[vegan]=true')
+      : (filterParams += '&filters[vegan]=true');
+  if (vegetarian)
+    filterParams === ''
+      ? (filterParams = '?filters[vegetarian]=true')
+      : (filterParams += '&filters[vegetarian]=true');
+  if (glutenfree)
+    filterParams === ''
+      ? (filterParams = '?filters[glutenfree]=true')
+      : (filterParams += '&filters[glutenfree]=true');
+  if (lactosefree)
+    filterParams === ''
+      ? (filterParams = '?filters[lactosefree]=true')
+      : (filterParams += '&filters[lactosefree]=true');
 
   filterParams === '' ? (filterParams = '?') : (filterParams += '&');
+  //add pagination and populate
   return filterParams + 'pagination[page]=1&pagination[pageSize]=100&populate=*';
 }
 
+/**
+ * remove recipes with excluded ingredients
+ * @param recipes
+ * @param excludedList
+ * @returns {*}
+ */
 function removeExcludedRecipes(recipes, excludedList) {
   return recipes.filter(function (recipe) {
     for (let i = 0; i < recipe.attributes.ingredients.data.length; i++) {
       for (let j = 0; j < excludedList.length; j++) {
-        if (excludedList[j].name === recipe.attributes.ingredients.data[i].attributes.name) {
+        if (
+          excludedList[j].name.toLowerCase() ===
+          recipe.attributes.ingredients.data[i].attributes.name
+        ) {
           return false;
         }
       }
@@ -61,11 +101,20 @@ function removeExcludedRecipes(recipes, excludedList) {
   });
 }
 
+/**
+ * fetch recipes from api
+ * @param filterParams
+ * @returns {Promise<*>}
+ */
 export const fetchRecipes = async (filterParams) => {
   const result = await fetch(API_URL + filterParams);
   return await extractResult(result);
 };
 
+/**
+ * get recipe rsultlist
+ * @returns {{data: ?, firstSearch: boolean, loadRecipes: loadRecipes, error: ?, loading: boolean}}
+ */
 export const useRecipesData = () => {
   const [data, setData] = useState(undefined);
   const [error, setError] = useState(undefined);
@@ -77,9 +126,6 @@ export const useRecipesData = () => {
 
   //setError(undefined);
   //setLoading(true);
-
-  // useMemo verwenden damit getriggert wird wenn parameter sich ändern
-  // return für hook
 
   const loadRecipes = () => {
     const filterParams = determineFilterParams(
@@ -96,6 +142,7 @@ export const useRecipesData = () => {
         .then((recipes) => {
           const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);
           setData(finaleRecipes);
+          console.log(finaleRecipes);
           setFirstSearch(true);
         })
         .catch((e) => setError(e))
@@ -105,9 +152,5 @@ export const useRecipesData = () => {
     }
   };
 
-  // useEffect(() => {
-  //     console.log("effect");
-  //     loadRecipes(filterParams);
-  // }, [filterParams]);
   return { data, error, loading, loadRecipes, firstSearch };
 };

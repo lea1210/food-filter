@@ -3,6 +3,15 @@ import { Recipe } from '../Recipe/Recipe';
 import Styles from '../RecipePreview/RecipePreview.module.css';
 import PropTypes from 'prop-types';
 
+/**
+ * Show a preview of the recipe with only name, image and description in resultlist
+ * @param name
+ * @param onClick
+ * @param description
+ * @param image
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const RecipePreview = ({ name, onClick, description, image }) => {
   return (
     <>

@@ -7,6 +7,16 @@ export const RegistrationContext = React.createContext(undefined);
 export function RegistrationContextProvider({ children }) {
   const [isRegistered, setIsRegistered] = useState(false);
 
+  /**
+   * call register function
+   * @param user
+   * @param password
+   * @param email
+   * @param isVegan
+   * @param isVegetarian
+   * @param isGlutenfree
+   * @param isLaktosefree
+   */
   const handleRegistration = (
     user,
     password,

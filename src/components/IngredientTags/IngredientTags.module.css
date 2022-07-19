@@ -1,19 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
-
 .headline {
   font-family: var(--primary-font);
   font-weight: 400;
   color: var(--font-color);
 }
-.upperBox{
-    margin-bottom: 40px;
-    width: 80%;
-    float: left;
+.upperBox {
+  margin-bottom: 40px;
+  width: 80%;
+  float: left;
 }
-
-.lowerBox{
-    margin-bottom: 40px;
-    width: 80%;
-    float: left;
-
+.lowerBox {
+  margin-bottom: 40px;
+  width: 80%;
+  float: left;
 }

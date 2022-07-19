@@ -2,6 +2,17 @@ import Styles from '../Recipe/Recipe.module.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+/**
+ * displays a recipe
+ * @param name
+ * @param onClick
+ * @param image
+ * @param ingredientlist
+ * @param description
+ * @param preperation
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Recipe = ({ name, onClick, image, ingredientlist, description, preperation }) => {
   return (
     <div

@@ -1,12 +1,16 @@
 import Styles from './Footer.module.css';
 
+/**
+ * Displays the footer
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Footer = () => {
   return (
     <div className={Styles.footer}>
       <div className={Styles.flex}>
         <div className={Styles.elementLeft}>
           <h3>FoodFilter</h3>
-
           <h4>Resources</h4>
           <p>Strapi</p>
           <p>Strapi</p>

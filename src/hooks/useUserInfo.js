@@ -3,6 +3,15 @@ import { getToken } from '../contexts/LoginContext/login';
 const API_URL = 'http://localhost:1337/api/users';
 const KEY_USER = 'user';
 
+/**
+ * update user preferences via API call
+ * @param id
+ * @param vegan
+ * @param vegetarian
+ * @param lactosefree
+ * @param glutenfree
+ * @returns {Promise<Response>}
+ */
 const updateUser = async (id, vegan, vegetarian, lactosefree, glutenfree) => {
   return fetch(API_URL + '/' + id, {
     method: 'PUT',

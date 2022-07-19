@@ -1,21 +1,65 @@
-.recipe{
-    text-align: left;
-    display: block;
-    right: 5%;
-    left: 2%;
-
+.recipe {
+  text-align: left;
+  display: block;
+  right: 5%;
+  left: 2%;
 }
 
-.Container {
-    z-index: 3;
-    display: flex;
-    padding: 1px;
-    align-items: stretch;
-    left: 2%;
-    right: 10%;
-    margin-left: 2%;
-    margin-right: 10%;
-    margin-bottom: 2%;
+.container {
+  z-index: 3;
+  display: flex;
+  padding: 1px;
+  align-items: stretch;
+  left: 2%;
+  right: 10%;
+  margin-left: 2%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+}
+.imgingr {
+  display: flex;
+}
+.image {
+  width: 50%;
+  height: 50%;
+  margin: 15px;
+  flex: 50%;
+  border-radius: var(--border-radius);
+}
+.ingredients {
+  font-family: var(--primary-font);
+  color: var(--font-color);
+  flex: 50%;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .imgingr {
+    display: block;
+  }
+  .image {
+    flex: 100%;
+    margin-left: 25%;
+  }
+  .ingredients {
+    flex: 100%;
+    margin: 0;
+  }
+}
+
+.headline {
+  text-align: center;
+  font-family: var(--primary-font);
+  color: var(--font-color);
+  font-size: 28px;
+  font-weight: bold;
+  margin: 2px;
+}
+.description {
+  margin: 30px 30px 40px 30px;
+  font-family: var(--primary-font);
+  color: var(--font-color);
+  text-align: center;
 }
 
 @keyframes slideIn {
@@ -35,27 +79,26 @@
   color: var(--font-color);
 }
 .preferences {
-    text-align: left;
-    margin-right: 2%;
-    margin-left: 98%;
-    margin-top: 2%;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    color: var(--font-color);
-    font-family: var(--primary-font);
-}
-
-.label{
-    text-align: left;
-}
-
-.preparation {
+  color: var(--font-color);
   font-family: var(--primary-font);
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.prefLabel {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--font-color);
+  margin-right: 5px;
+}
+
+.label {
+  text-align: left;
   color: var(--font-color);
 }
 
-.ingredients {
+.preparation {
+  margin-top: 30px;
   font-family: var(--primary-font);
   color: var(--font-color);
 }
@@ -73,10 +116,10 @@
 }
 
 .headlines {
-    font-size: 14px;
-    right: 10%;
-    font-family: var(--primary-font);
-    color: var(--font-color);
+  font-size: 14px;
+  right: 10%;
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }
 .Button {
   position: absolute;
@@ -96,26 +139,44 @@
 }
 
 .recipeContext {
-    max-width: 600px;
-    margin: 0 auto;
-    float: left;
+  margin: 0 auto;
+  float: left;
 }
 
 .recipeForm {
-    z-index: 3;
-    transition: transform 500ms;
-    box-sizing: border-box;
-    position: absolute;
-    background-color: white;
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
-    border-radius: 5px;
-    padding: 70px 90px 70px 90px;
-    max-width: 900px;
-    top: 130px;
-    bottom: 130px;
-    left:30px;
-    right: 30px;
-    margin: 0 auto;
-    overflow: auto;
+  z-index: 3;
+  transition: transform 500ms;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: white;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.34);
+  border-radius: 5px;
+  padding: 70px 90px 70px 90px;
+  max-width: 1000px;
+  top: 60px;
+  bottom: 60px;
+  left: 30px;
+  right: 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
 
+.delete {
+  height: 5px;
+  width: 150px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.delete:after {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  content: '\d7';
+  font-size: 50px;
+  color: var(--primary-color);
+  line-height: 10px;
+  text-align: center;
+  z-index: 1;
 }

@@ -2,6 +2,12 @@ const AUTH_URL = 'http://localhost:1337/api/auth/local';
 const KEY_TOKEN = 'jwt';
 const KEY_USER = 'user';
 
+/**
+ * authenticate user with API call
+ * @param username
+ * @param password
+ * @returns {Promise<Response>}
+ */
 const authenticate = (username, password) => {
   return fetch(AUTH_URL, {
     method: 'POST',
@@ -30,14 +36,28 @@ const authenticate = (username, password) => {
     });
 };
 
+/**
+ * get user's token
+ * @returns {string|null}
+ */
 export const getToken = () => {
   return localStorage.getItem(KEY_TOKEN) ?? null;
 };
 
+/**
+ * get user object
+ * @returns {any|null}
+ */
 export const getUser = () => {
   return JSON.parse(localStorage.getItem(KEY_USER)) ?? null;
 };
 
+/**
+ * in case of successful authentication set token and user object to local storage
+ * @param user
+ * @param password
+ * @returns {Promise<boolean>}
+ */
 export const login = async (user, password) => {
   const authData = await authenticate(user, password);
   if (authData) {
@@ -49,6 +69,9 @@ export const login = async (user, password) => {
   }
 };
 
+/**
+ * remove token and user object from local storage
+ */
 export const logout = () => {
   localStorage.removeItem(KEY_TOKEN);
   localStorage.removeItem(KEY_USER);

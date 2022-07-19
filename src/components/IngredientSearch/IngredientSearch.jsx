@@ -6,21 +6,36 @@ import { useIngredients } from '../../contexts/IngredientContext/IngredientConte
 import { useSearchValue } from '../../contexts/SearchValueContext/SearchValueContext';
 import PropTypes from 'prop-types';
 
+/**
+ * displays the search for ingredients
+ * @param loadRecipes
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const IngredientSearch = ({ loadRecipes }) => {
   const { searchValue, setSearchValue } = useSearchValue();
   const { addIngredient } = useIngredients();
   const { addExcluded } = useExcludedIngredients();
   const { data } = useIngredientsData(searchValue);
 
+  /**
+   * call loadRecipes to get Recipes from API
+   */
   const onClickSearch = () => {
     loadRecipes();
   };
 
+  /**
+   * add value to list of ingredients and clear search input
+   */
   const onClickAdd = () => {
     addIngredient(searchValue);
     setSearchValue('');
   };
 
+  /**
+   * add value to list of excluded ingredients and clear search input
+   */
   const onClickExclude = () => {
     addExcluded(searchValue);
     setSearchValue('');
