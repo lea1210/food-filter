@@ -77,7 +77,10 @@ function removeExcludedRecipes(recipes, excludedList) {
   return recipes.filter(function (recipe) {
     for (let i = 0; i < recipe.attributes.ingredients.data.length; i++) {
       for (let j = 0; j < excludedList.length; j++) {
-        if (excludedList[j].name === recipe.attributes.ingredients.data[i].attributes.name) {
+        if (
+          excludedList[j].name.toLowerCase() ===
+          recipe.attributes.ingredients.data[i].attributes.name
+        ) {
           return false;
         }
       }
