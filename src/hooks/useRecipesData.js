@@ -57,10 +57,22 @@ function determineFilterParams(
   filterParams = ingredientParams + excludedParams.slice(0, -1);
 
   //add preference = true in case user selected it
-  if (vegan) filterParams += '&filters[vegan]=true';
-  if (vegetarian) filterParams += '&filters[vegetarian]=true';
-  if (glutenfree) filterParams += '&filters[glutenfree]=true';
-  if (lactosefree) filterParams += '&filters[lactosefree]=true';
+  if (vegan)
+    filterParams === ''
+      ? (filterParams = '?filters[vegan]=true')
+      : (filterParams += '&filters[vegan]=true');
+  if (vegetarian)
+    filterParams === ''
+      ? (filterParams = '?filters[vegetarian]=true')
+      : (filterParams += '&filters[vegetarian]=true');
+  if (glutenfree)
+    filterParams === ''
+      ? (filterParams = '?filters[glutenfree]=true')
+      : (filterParams += '&filters[glutenfree]=true');
+  if (lactosefree)
+    filterParams === ''
+      ? (filterParams = '?filters[lactosefree]=true')
+      : (filterParams += '&filters[lactosefree]=true');
 
   filterParams === '' ? (filterParams = '?') : (filterParams += '&');
   //add pagination and populate
