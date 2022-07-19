@@ -98,7 +98,7 @@ export const fetchRecipes = async (filterParams) => {
 
 /**
  * get recipe rsultlist
- * @returns {{data: unknown, firstSearch: boolean, loadRecipes: loadRecipes, error: unknown, loading: boolean}}
+ * @returns {{data: ?, firstSearch: boolean, loadRecipes: loadRecipes, error: ?, loading: boolean}}
  */
 export const useRecipesData = () => {
   const [data, setData] = useState(undefined);
