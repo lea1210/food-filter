@@ -7,9 +7,16 @@ export function UserInfoContextProvider({ children }) {
   const [isUserInfoOpened, setIsUserInfoOpened] = useState(false);
   const [isUpdated, setIsUpdated] = useState(false);
 
+  /**
+   * open user info
+   */
   const openUserInfo = () => {
     setIsUserInfoOpened(true);
   };
+
+  /**
+   * close user info
+   */
   const closeUserInfo = () => {
     setIsUserInfoOpened(false);
   };

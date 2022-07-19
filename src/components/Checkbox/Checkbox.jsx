@@ -3,9 +3,23 @@ import { useCallback, useState } from 'react';
 import Styles from '../Checkbox/Checkbox.module.css';
 import React from 'react';
 
-export const Checkbox = ({ name, error, children, hint, value, checked, className, onChange }) => {
+/**
+ * Displays a checkbox with slider
+ * @param name
+ * @param children
+ * @param value
+ * @param checked
+ * @param onChange
+ * @returns {JSX.Element}
+ * @constructor
+ */
+export const Checkbox = ({ name, children, value, checked, onChange }) => {
   const [id] = useState(`checkbox-${Math.random().toString(16).slice(2)}`);
 
+  /**
+   * Sets new value for checked in onChange
+   * @type {(function(*): void)|*}
+   */
   const handleChange = useCallback(
     (event) => {
       onChange(event.target.checked);
@@ -14,19 +28,15 @@ export const Checkbox = ({ name, error, children, hint, value, checked, classNam
   );
 
   return (
-    <div data-testid={`checkboxField-${name ?? ''}`} className={`${Styles.element} ${className}`}>
+    <div data-testid={`checkboxField-${name ?? ''}`}>
       {children && (
         <label data-testid="label" htmlFor={id} className={Styles.label}>
           {children}
         </label>
       )}
-      <span data-testid="hint" className={Styles.hint}>
-        {hint}
-      </span>
       <label className={Styles.switch}>
         <input
           data-testid={`checkbox${name ? '-' + name : ''}`}
-          className={`${Styles.input} ${error ? Styles.error : ''}`}
           id={id}
           type="checkbox"
           value={value ?? ''}
@@ -41,23 +51,17 @@ export const Checkbox = ({ name, error, children, hint, value, checked, classNam
 
 Checkbox.defaultProps = {
   children: undefined,
-  error: false,
-  hint: undefined,
   type: 'text',
-  className: undefined,
   placeholder: undefined,
   name: ''
 };
 
 Checkbox.propTypes = {
   children: PropTypes.node,
-  hint: PropTypes.string,
   type: PropTypes.string,
-  className: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   name: PropTypes.string,
-  error: PropTypes.bool,
   value: PropTypes.string,
   checked: PropTypes.bool
 };

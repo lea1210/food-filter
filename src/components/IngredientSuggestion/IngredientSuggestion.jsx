@@ -2,9 +2,20 @@ import Styles from './IngredientSuggestion.module.css';
 import { useSearchValue } from '../../contexts/SearchValueContext/SearchValueContext';
 import PropTypes from 'prop-types';
 
+/**
+ * displays ingredient suggestion
+ * @param ingredients
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const IngredientSuggestion = ({ ingredients }) => {
   const { setSearchValue } = useSearchValue();
 
+  /**
+   * Capitalize ingredients for suggestion
+   * @param name
+   * @returns {string}
+   */
   const capitalize = (name) => {
     let newName = '';
 
@@ -15,6 +26,7 @@ export const IngredientSuggestion = ({ ingredients }) => {
     return newName.slice(0, -1);
   };
 
+  //show ingredients if there are any
   if (ingredients === undefined || ingredients.length < 1) {
     return <></>;
   } else {

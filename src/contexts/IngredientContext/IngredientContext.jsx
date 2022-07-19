@@ -6,6 +6,10 @@ export const IngredientContext = React.createContext(undefined);
 export function IngredientContextProvider({ children }) {
   const [ingredientList, setIngredientList] = useState([]);
 
+  /**
+   * add ingredient to ingredientlist
+   * @param newIngredient
+   */
   const addIngredient = (newIngredient) => {
     if (newIngredient !== '') {
       const newList = [...ingredientList];
@@ -14,6 +18,10 @@ export function IngredientContextProvider({ children }) {
     }
   };
 
+  /**
+   * delete ingredient from ingredientlist
+   * @param name
+   */
   const deleteIngredient = (name) => {
     const newList = [...ingredientList];
     for (let i = 0; i < newList.length; i++) {

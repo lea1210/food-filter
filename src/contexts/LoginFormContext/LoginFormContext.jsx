@@ -5,9 +5,17 @@ export const LoginFormContext = React.createContext(undefined);
 
 export function LoginFormContextProvider({ children }) {
   const [isLoginFormOpened, setIsLoginFormOpened] = useState(false);
+
+  /**
+   * open login form
+   */
   const openLoginForm = () => {
     setIsLoginFormOpened(true);
   };
+
+  /**
+   * close login form
+   */
   const closeLoginForm = () => {
     setIsLoginFormOpened(false);
   };

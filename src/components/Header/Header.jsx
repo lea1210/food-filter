@@ -5,6 +5,11 @@ import { useLogin } from '../../contexts/LoginContext/LoginContext';
 import UserInfo from '../UserInfo/UserInfo';
 import { useUser } from '../../contexts/UserInfoContext/UserInfoContext';
 
+/**
+ * Displays the header
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Header = () => {
   const { isUserInfoOpened } = useUser();
   const { isLoggedIn } = useLogin();

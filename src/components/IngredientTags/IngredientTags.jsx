@@ -3,6 +3,11 @@ import { useExcludedIngredients } from '../../contexts/ExcludedContext/ExcludedC
 import IngredientList from '../IngredientList/IngredientList';
 import Styles from './IngredientTags.module.css';
 
+/**
+ * displays all the given ingredienttags
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const IngredientTags = () => {
   const { ingredientList } = useIngredients();
   const { excludedList } = useExcludedIngredients();

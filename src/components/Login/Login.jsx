@@ -4,6 +4,11 @@ import UserInfo from '../UserInfo/UserInfo';
 import LoginForm from '../LoginForm/LoginForm';
 import { useUser } from '../../contexts/UserInfoContext/UserInfoContext';
 
+/**
+ * holds the login form and user info
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const Login = () => {
   const { isUserInfoOpened } = useUser();
   const { isLoginFormOpened } = useLoginForm();

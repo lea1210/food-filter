@@ -2,8 +2,15 @@ import React from 'react';
 import Styles from '../RecipeDetails/RecipeDetails.module.css';
 import PropTypes from 'prop-types';
 
+/**
+ * displays the detailed recipe view
+ * @param image
+ * @param recipe
+ * @param onClose
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const RecipeDetails = ({ image, recipe, onClose }) => {
-  console.log('vegan:' + recipe.attributes.vegan);
   return (
     <>
       <div className={Styles.recipeFormBackdrop}>

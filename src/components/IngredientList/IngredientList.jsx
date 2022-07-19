@@ -3,6 +3,12 @@ import Style from './IngredientList.module.css';
 import Ingredient from '../Ingredient/Ingredient';
 import PropTypes from 'prop-types';
 
+/**
+ * displays a list of ingredient tags
+ * @param ingredients
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const IngredientList = ({ ingredients }) => {
   return (
     <>

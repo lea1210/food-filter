@@ -4,12 +4,23 @@ import { RecipeDetails } from '../RecipeDetails/RecipeDetails';
 import { RecipePreview } from '../RecipePreview/RecipePreview';
 import Styles from './Result.module.css';
 
+/**
+ * Displays results of the recipe search
+ * @param loading
+ * @param data
+ * @param error
+ * @param firstSearch
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Result = ({ loading, data, error, firstSearch }) => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [selectedRecipeImage, setSelectedRecipeImage] = useState(null);
 
+  //show loading screen
   if (loading) {
     return <h1>Loading...</h1>;
+    //in case of error show error message
   } else if (!loading && error) {
     return (
       <div>
@@ -17,6 +28,7 @@ export const Result = ({ loading, data, error, firstSearch }) => {
         <p className={Styles.description}>{`${error}`}</p>
       </div>
     );
+    //after the first search and if there are no recipes
   } else if (data.length < 1 && firstSearch === true) {
     return (
       <>
