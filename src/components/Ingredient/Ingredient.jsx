@@ -29,7 +29,7 @@ export const Ingredient = ({ name }) => {
     <>
       <div className={Styles.dark}>
         {name}
-        <div className={Styles.delete} onClick={onClickDelete}></div>
+        <div className={Styles.delete} data-testid="ingredientTag" onClick={onClickDelete}></div>
       </div>
     </>
   );

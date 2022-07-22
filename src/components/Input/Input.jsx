@@ -35,7 +35,7 @@ export const Input = ({ name, value, error, hint, type, placeholder, className, 
         {hint}
       </span>
       <input
-        data-testid={`input${name ? '-' + name : ''}`}
+        data-testid={`input${name}`}
         className={`${Styling.input} ${error ? Styling.error : ''}`}
         id={id}
         type={type}

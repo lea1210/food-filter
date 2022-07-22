@@ -88,6 +88,7 @@ const RegistrationForm = () => {
                     label="E-Mail*"
                     type="text"
                     required
+                    data-testid="emailInput"
                   />
                   <FormField
                     pattern={/.{6,42}/}
@@ -96,6 +97,7 @@ const RegistrationForm = () => {
                     label="Passwort*"
                     type="password"
                     required={true}
+                    data-testid="passwordInput"
                   />
                 </div>
                 <div className={Styles.buttonBox}>
@@ -105,7 +107,7 @@ const RegistrationForm = () => {
                   <Checkbox onChange={setIsVegetarian}>
                     <label>vegetarisch</label>
                   </Checkbox>
-                  <Checkbox onChange={setIsLactosefree}>
+                  <Checkbox onChange={setIsLactosefree} name={'lactosefree'}>
                     <label>laktosefrei</label>
                   </Checkbox>
                   <Checkbox onChange={setIsGlutenfree}>
@@ -113,9 +115,13 @@ const RegistrationForm = () => {
                   </Checkbox>
                 </div>
                 <div className={Styles.bottomButtons}>
-                  <button className={Styles.registerButton + ' ' + Styles.baseButton} type="submit">
+                  <button
+                    className={Styles.registerButton + ' ' + Styles.baseButton}
+                    type="submit"
+                    data-testid="registerSubmitButton">
                     Registrieren
                   </button>
+
                   <Link to="/">
                     <button className={Styles.cancelButton + ' ' + Styles.baseButton}>
                       Abbrechen
