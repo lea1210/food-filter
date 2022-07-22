@@ -93,6 +93,7 @@ button {
 .cancelButton {
   position: relative;
   right: 250%;
+  top: 85%;
   background-color: var(--secondary-color);
 }
 
@@ -114,7 +115,7 @@ button {
 
 .fieldBox {
   float: left;
-  padding: 10% 3% 10% 3%;
+  padding: 30px 10px 30px 10px;
 }
 
 .infotext {
