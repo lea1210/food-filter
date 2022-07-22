@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="style issues">
+    <list default="true" id="9516c074-0794-4f2a-a056-ffda6201a841" name="Changes" comment="fixed preference buttons for registration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RegistrationForm/RegistrationForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationForm/RegistrationForm.module.css" afterDir="false" />
     </list>
@@ -70,7 +70,7 @@
       <workItem from="1655821907765" duration="2623000" />
       <workItem from="1656058011434" duration="6174000" />
       <workItem from="1656663462531" duration="652000" />
-      <workItem from="1658490593937" duration="1169000" />
+      <workItem from="1658490593937" duration="2631000" />
     </task>
     <task id="LOCAL-00001" summary="created RecipeView">
       <created>1654245226454</created>
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657274899581</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixed preference buttons for registration">
+      <created>1658491806684</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658491806684</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +286,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created RecipeView" />
     <MESSAGE value="filled RecipeView with first content and buttons" />
     <MESSAGE value="splitted Recipe up in Recipe Details and Recipe Preview" />
     <MESSAGE value="added content and data" />
@@ -304,7 +310,8 @@
     <MESSAGE value="styled recipe preview" />
     <MESSAGE value="fixed error" />
     <MESSAGE value="style issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="style issues" />
+    <MESSAGE value="fixed preference buttons for registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed preference buttons for registration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

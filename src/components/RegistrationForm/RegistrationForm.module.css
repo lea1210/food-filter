@@ -85,17 +85,17 @@ button {
 }
 
 .registerButton {
-  position: absolute;
-  left: 80%;
+  position: relative;
+  left: 110%;
   top: 85%;
 }
 
 .cancelButton {
-  position: absolute;
-  left: 7%;
-  top: 85%;
+  position: relative;
+  right: 250%;
   background-color: var(--secondary-color);
 }
+
 .bottomButtons {
   float: bottom;
   padding: 25px;
@@ -108,7 +108,7 @@ button {
   margin: 10px;
   float: right;
   position: absolute;
-  right: 8%;
+  right: 4%;
 
 }
 
@@ -128,7 +128,7 @@ button {
 .image {
   float: left;
   margin: 0;
-  padding: 0;
+  padding: 0 8% 0 0;
   width: 400px;
   height: 400px;
 }
