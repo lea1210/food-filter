@@ -7,7 +7,7 @@ export const LoginContext = React.createContext(undefined);
 
 export function LoginContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(!!getToken());
-  const [setIsLogginIn] = useState(false);
+  const [isLogginIn, setIsLogginIn] = useState(false);
   const [loginError, setLoginError] = useState(false);
   const {
     handleChangeVegan,
@@ -57,7 +57,8 @@ export function LoginContextProvider({ children }) {
         getUser,
         loginError,
         resetError,
-        isLoggedIn
+        isLoggedIn,
+        isLogginIn
       }}>
       {children}
     </LoginContext.Provider>

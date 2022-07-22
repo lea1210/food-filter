@@ -51,7 +51,6 @@ export const Result = ({ loading, data, error, firstSearch }) => {
           }}
         />
       ))}
-
       {selectedRecipe && (
         <RecipeDetails
           recipe={selectedRecipe}
