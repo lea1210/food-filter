@@ -1,35 +1,41 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import promise from 'promise';
-import { act } from 'react-dom/test-utils';
-import RegistrationFormContextWrapper from './RegistrationForm';
-import { useRegistration } from '../../contexts/RegistrationContext/RegistrationContext';
+import { RegistrationContextProvider } from '../../contexts/RegistrationContext/RegistrationContext';
 import RegistrationForm from './RegistrationForm';
+import { BrowserRouter } from 'react-router-dom';
 
-const mockOnSubmit = jest.fn(() => promise);
+global.fetch = jest.fn();
 
 describe('Registration', () => {
   describe('Registration with valid input', () => {
     it('should validate an input', async () => {
-      //const wrapper = render(<RegistrationFormContextWrapper setIsOpenRegisterForm={undefined} />);
-      const wrapper = ({ children }) => (
-        <RegistrationFormContextWrapper setIsOpenRegisterForm={undefined}>
-          {children}
-        </RegistrationFormContextWrapper>
+      fetch.mockImplementation(() =>
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({ registered: 'true' })
+        })
       );
 
-      render(<RegistrationForm />, { wrapper });
-      const promise = Promise.resolve();
+      render(
+        <BrowserRouter>
+          <RegistrationContextProvider>
+            <RegistrationForm />
+          </RegistrationContextProvider>
+        </BrowserRouter>
+      );
 
-      fireEvent.change(screen.getByLabelText('Username*'), { target: { value: 'testuser' } });
-      fireEvent.change(screen.getByLabelText('E-Mail*'), { target: { value: 'testuser' } });
-      fireEvent.change(screen.getByLabelText('Passwort*'), { target: { value: 'testuser' } });
-      const button = wrapper.findByText('Registrieren');
-      fireEvent.click(button);
-      expect(mockOnSubmit).toHaveBeenCalled();
+      fireEvent.change(screen.getByTestId('inputusername'), {
+        target: { value: 'testuser' }
+      });
+      fireEvent.change(screen.getByTestId('inputemail'), {
+        target: { value: 'testuser@user.de' }
+      });
+      fireEvent.change(screen.getByTestId('inputpassword'), { target: { value: 'testuser' } });
 
-      await act(() => promise);
+      fireEvent.click(screen.getByTestId('registerSubmitButton'));
+
+      expect(fetch).toHaveBeenCalled();
     });
   });
 });

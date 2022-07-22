@@ -40,16 +40,18 @@ export const Result = ({ loading, data, error, firstSearch }) => {
   return (
     <>
       {data.map((recipe) => (
-        <RecipePreview
-          key={recipe.id}
-          name={recipe.attributes.name}
-          image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
-          description={recipe.attributes.description}
-          onClick={() => {
-            setSelectedRecipe(recipe);
-            setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url);
-          }}
-        />
+        <div key={recipe.id} data-testid={`recipePreview${recipe.attributes.name}`}>
+          <RecipePreview
+            key={recipe.id}
+            name={recipe.attributes.name}
+            image={`http://localhost:1337` + recipe.attributes.image.data[0].attributes.url}
+            description={recipe.attributes.description}
+            onClick={() => {
+              setSelectedRecipe(recipe);
+              setSelectedRecipeImage(recipe.attributes.image.data[0].attributes.url);
+            }}
+          />
+        </div>
       ))}
 
       {selectedRecipe && (

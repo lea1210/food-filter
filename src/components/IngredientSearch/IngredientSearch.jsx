@@ -66,7 +66,7 @@ export const IngredientSearch = ({ loadRecipes }) => {
           Ausschließen
         </button>
       </div>
-      <button className={Styles.search} onClick={onClickSearch}>
+      <button className={Styles.search} data-testid="searchRecipeButton" onClick={onClickSearch}>
         Suchen
       </button>
     </div>

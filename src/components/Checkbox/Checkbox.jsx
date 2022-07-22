@@ -28,7 +28,7 @@ export const Checkbox = ({ name, children, value, checked, onChange }) => {
   );
 
   return (
-    <div data-testid={`checkboxField-${name ?? ''}`}>
+    <div data-testid={`checkbox${name}`}>
       {children && (
         <label data-testid="label" htmlFor={id} className={Styles.label}>
           {children}
@@ -36,7 +36,6 @@ export const Checkbox = ({ name, children, value, checked, onChange }) => {
       )}
       <label className={Styles.switch}>
         <input
-          data-testid={`checkbox${name ? '-' + name : ''}`}
           id={id}
           type="checkbox"
           value={value ?? ''}
