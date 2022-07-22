@@ -12,7 +12,6 @@ import { setNewUserInfo } from '../../hooks/useUserInfo';
  * @constructor
  */
 const UserInfo = () => {
-  const [setUpdatedUserInfo] = useState(false);
   const { logout } = useLogin();
   const { setIsUpdated } = useUser();
   const { closeUserInfo } = useUser();
@@ -37,8 +36,7 @@ const UserInfo = () => {
    */
   const onClickSave = () => {
     setIsUpdated(false);
-    setNewUserInfo(user.id, isVegan, isVegetarian, isLactosefree, isGlutenfree).then((result) => {
-      setUpdatedUserInfo(result);
+    setNewUserInfo(user.id, isVegan, isVegetarian, isLactosefree, isGlutenfree).then(() => {
       setIsUpdated(true);
     });
     closeUserInfo();

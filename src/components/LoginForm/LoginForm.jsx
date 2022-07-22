@@ -92,7 +92,7 @@ const LoginForm = () => {
         )}
         <br />
         <label className={Styles.registerLabel}>Noch kein Konto? Jetzt </label>
-        <Link className={Styles.registerLink} to="/register">
+        <Link className={Styles.registerLink} to="/register" onClick={closeLoginForm}>
           registrieren
         </Link>
       </form>

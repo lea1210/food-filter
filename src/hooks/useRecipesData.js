@@ -136,13 +136,11 @@ export const useRecipesData = () => {
       isLactosefree,
       isGlutenfree
     );
-    console.log(filterParams);
     if (filterParams !== undefined) {
       fetchRecipes(filterParams)
         .then((recipes) => {
           const finaleRecipes = removeExcludedRecipes(recipes.data, excludedList);
           setData(finaleRecipes);
-          console.log(finaleRecipes);
           setFirstSearch(true);
         })
         .catch((e) => setError(e))

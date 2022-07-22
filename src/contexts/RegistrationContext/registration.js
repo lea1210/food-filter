@@ -34,7 +34,6 @@ export const registration = (
     },
     body: JSON.stringify(user)
   }).then((res) => {
-    console.log(res);
     if (!res.ok) {
       throw new Error('registration failed');
     }
