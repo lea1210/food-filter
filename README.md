@@ -2,8 +2,7 @@
 FoodFilter besteht neben dem React-Frontend aus einem Strapi-Backend, welches zusätzlich gestartet werden muss, um die Anwendung vollumfänglich verwenden zu können.
 
 ## React-Frontend
-1) Git-Respository, welches sich im RhodeCode befindet clonen:
-https://scm.mi.hs-rm.de/rhodecode/2022webeng/2022webeng01/FoodFilter
+1) Git-Respository clonen
 2) npm install ausführen
 3) npm run start ausführen, um Anwendung zu starten
 
